@@ -32,19 +32,19 @@
       line-height: 1.6;
     }
 
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(247,244,239,.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--rule);
-  padding: 0 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 200px;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,244,239,.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 200px;
+    }
 
     .brand {
       display: flex;
@@ -417,14 +417,14 @@ nav {
 
     .contact-note { font-size: 13px; color: var(--muted); line-height: 1.65; max-width: 380px; }
 
-footer {
-  padding: 0 48px 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  border-top: 1px solid var(--rule);
-}
+    footer {
+      padding: 0 48px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      border-top: 1px solid var(--rule);
+    }
 
     .footer-logo {
       height: 160px;
@@ -491,7 +491,7 @@ footer {
     }
 
     @media (max-width: 780px) {
-       nav { padding: 0 20px; height: 120px; }
+      nav { padding: 0 20px; height: 120px; }
       .brand-logo { height: 100px; }
       .nav-links { display: none; }
       .hero { padding: 56px 20px; min-height: 68vh; }
@@ -709,127 +709,123 @@ footer {
       <div>
         <p class="body-lg">The market has fundamentally reoriented around clinical data. Pharma is spending more than ever on licensing and acquisitions, but concentrating it across <strong>fewer, higher-conviction deals</strong> — and those deals are increasingly targeting companies with clinical-stage assets and de-risked data packages. The inflection point is the value inflection point.</p>
 
-       <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);margin-top:36px;margin-bottom:36px;">
-  <div class="stat-cell">
-    <strong>83%</strong>
-    <span>Of biopharma M&amp;A transactions in H1 2023 focused on Phase 3 or commercial-stage assets — up from 59% in 2019. Source: IQVIA</span>
-  </div>
-  <div class="stat-cell">
-    <strong>$138B</strong>
-    <span>Biopharma M&amp;A in 2025 across 129 deals — described as the strongest M&amp;A year since 2019, driven by patent cliff anxiety and clinical-stage targets. Source: DealForma / J.P. Morgan</span>
-  </div>
-  <div class="stat-cell">
-    <strong>$33.8B</strong>
-    <span>Biotech VC deployed in 2025 — across fewer deals than ever, with median round size up 34% vs. 2024 as investors concentrate larger checks into a smaller pool of clinical-stage companies. Source: PitchBook</span>
-  </div>
-  <div class="stat-cell">
-    <strong>75%</strong>
-    <span>Of 2025 follow-on equity raises came from companies with Phase 2 or Phase 3 lead programs — investors now require demonstrated clinical validation before committing capital. Source: Pharma Almanac / GlobalData</span>
-  </div>
-</div>
-  <span>Of 2025 follow-on equity raises came from companies with Phase 2 or Phase 3 lead programs — investors now require demonstrated clinical validation before committing public or private capital. Source: Pharma Almanac / GlobalData</span>
-</div>
-            <span>Of new drugs approved in 2025 originated in biotech — up dramatically from a decade ago, when most came from pharma internal R&amp;D. Source: International Biotechnology Trust</span>
+        <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);margin-top:36px;margin-bottom:36px;">
+          <div class="stat-cell">
+            <strong>83%</strong>
+            <span>Of biopharma M&amp;A transactions in H1 2023 focused on Phase 3 or commercial-stage assets — up from 59% in 2019. Source: IQVIA</span>
+          </div>
+          <div class="stat-cell">
+            <strong>$138B</strong>
+            <span>Biopharma M&amp;A in 2025 across 129 deals — described as the strongest M&amp;A year since 2019, driven by patent cliff anxiety and clinical-stage targets. Source: DealForma / J.P. Morgan</span>
+          </div>
+          <div class="stat-cell">
+            <strong>$33.8B</strong>
+            <span>Biotech VC deployed in 2025 — across fewer deals than ever, with median round size up 34% vs. 2024 as investors concentrate larger checks into a smaller pool of clinical-stage companies. Source: PitchBook</span>
+          </div>
+          <div class="stat-cell">
+            <strong>75%</strong>
+            <span>Of 2025 follow-on equity raises came from companies with Phase 2 or Phase 3 lead programs — investors now require demonstrated clinical validation before committing capital. Source: Pharma Almanac / GlobalData</span>
           </div>
         </div>
 
         <div class="chart-label">Share of biopharma M&amp;A deals targeting de-risked (Phase 3+) assets &mdash; IQVIA, with 2025 trend note</div>
         <div class="chart-outer">
-  <div style="display:flex;gap:12px;align-items:flex-end;">
-    <!-- Y axis -->
-    <div style="display:flex;flex-direction:column;justify-content:space-between;height:160px;flex-shrink:0;padding-bottom:1px;">
-      <span style="font-size:10px;color:var(--muted);">100%</span>
-      <span style="font-size:10px;color:var(--muted);">75%</span>
-      <span style="font-size:10px;color:var(--muted);">50%</span>
-      <span style="font-size:10px;color:var(--muted);">25%</span>
-      <span style="font-size:10px;color:var(--muted);">0%</span>
-    </div>
+          <div style="display:flex;gap:12px;align-items:flex-end;">
+            <!-- Y axis -->
+            <div style="display:flex;flex-direction:column;justify-content:space-between;height:160px;flex-shrink:0;padding-bottom:1px;">
+              <span style="font-size:10px;color:var(--muted);">100%</span>
+              <span style="font-size:10px;color:var(--muted);">75%</span>
+              <span style="font-size:10px;color:var(--muted);">50%</span>
+              <span style="font-size:10px;color:var(--muted);">25%</span>
+              <span style="font-size:10px;color:var(--muted);">0%</span>
+            </div>
 
-    <!-- Bars -->
-    <div style="flex:1;display:flex;align-items:flex-end;gap:8px;height:160px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);">
+            <!-- Bars -->
+            <div style="flex:1;display:flex;align-items:flex-end;gap:8px;height:160px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);">
 
-      <!-- 2019: Preclin+Ph1 31%, Ph2 10%, Ph3 31%, Commercial 28% -->
-      <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-        <div style="flex:1;"></div>
-        <div style="height:28%;background:#c8d8e8;"></div>
-        <div style="height:31%;background:#6a9dbf;"></div>
-        <div style="height:10%;background:#2d6a8f;"></div>
-        <div style="height:31%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
-      </div>
+              <!-- 2019: Preclin+Ph1 31%, Ph2 10%, Ph3 31%, Commercial 28% -->
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+                <div style="flex:1;"></div>
+                <div style="height:28%;background:#c8d8e8;"></div>
+                <div style="height:31%;background:#6a9dbf;"></div>
+                <div style="height:10%;background:#2d6a8f;"></div>
+                <div style="height:31%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
+              </div>
 
-      <!-- 2022: Preclin+Ph1 26%, Ph2 ~0%, Ph3 29%, Commercial 45% -->
-      <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-        <div style="flex:1;"></div>
-        <div style="height:45%;background:#c8d8e8;"></div>
-        <div style="height:29%;background:#6a9dbf;"></div>
-        <div style="height:0%;background:#2d6a8f;"></div>
-        <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
-      </div>
+              <!-- 2022: Preclin+Ph1 26%, Ph2 ~0%, Ph3 29%, Commercial 45% -->
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+                <div style="flex:1;"></div>
+                <div style="height:45%;background:#c8d8e8;"></div>
+                <div style="height:29%;background:#6a9dbf;"></div>
+                <div style="height:0%;background:#2d6a8f;"></div>
+                <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
+              </div>
 
-      <!-- H1 2023: Preclin+Ph1 17%, Ph2 ~0%, Ph3 25%, Commercial 58% -->
-      <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-        <div style="flex:1;"></div>
-        <div style="height:58%;background:#c8d8e8;"></div>
-        <div style="height:25%;background:#6a9dbf;"></div>
-        <div style="height:0%;background:#2d6a8f;"></div>
-        <div style="height:17%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
-      </div>
+              <!-- H1 2023: Preclin+Ph1 17%, Ph2 ~0%, Ph3 25%, Commercial 58% -->
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+                <div style="flex:1;"></div>
+                <div style="height:58%;background:#c8d8e8;"></div>
+                <div style="height:25%;background:#6a9dbf;"></div>
+                <div style="height:0%;background:#2d6a8f;"></div>
+                <div style="height:17%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
+              </div>
 
-      <!-- 2024: Preclin+Ph1 26%, Ph2 24%, Ph3 42%, Commercial 8% -->
-      <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-        <div style="flex:1;"></div>
-        <div style="height:8%;background:#c8d8e8;"></div>
-        <div style="height:42%;background:#6a9dbf;"></div>
-        <div style="height:24%;background:#2d6a8f;"></div>
-        <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
-      </div>
+              <!-- 2024: Preclin+Ph1 26%, Ph2 24%, Ph3 42%, Commercial 8% -->
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+                <div style="flex:1;"></div>
+                <div style="height:8%;background:#c8d8e8;"></div>
+                <div style="height:42%;background:#6a9dbf;"></div>
+                <div style="height:24%;background:#2d6a8f;"></div>
+                <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
+              </div>
 
-      <!-- 2025: Commercial 49%, Ph3 28%, remainder ~23% Preclin+Ph1+Ph2 — dashed/caveated -->
-      <div style="flex:1;display:flex;flex-direction:column;height:100%;opacity:.75;">
-        <div style="flex:1;"></div>
-        <div style="height:49%;background:#c8d8e8;border:1px dashed #aaa;border-bottom:none;box-sizing:border-box;"></div>
-        <div style="height:28%;background:#6a9dbf;border-left:1px dashed #aaa;border-right:1px dashed #aaa;box-sizing:border-box;"></div>
-        <div style="height:23%;background:var(--accent);opacity:.7;border-radius:2px 2px 0 0;border:1px dashed var(--accent);border-bottom:none;box-sizing:border-box;"></div>
-      </div>
+              <!-- 2025: Commercial 49%, Ph3 28%, remainder ~23% Preclin+Ph1+Ph2 — dashed/caveated -->
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;opacity:.75;">
+                <div style="flex:1;"></div>
+                <div style="height:49%;background:#c8d8e8;border:1px dashed #aaa;border-bottom:none;box-sizing:border-box;"></div>
+                <div style="height:28%;background:#6a9dbf;border-left:1px dashed #aaa;border-right:1px dashed #aaa;box-sizing:border-box;"></div>
+                <div style="height:23%;background:var(--accent);opacity:.7;border-radius:2px 2px 0 0;border:1px dashed var(--accent);border-bottom:none;box-sizing:border-box;"></div>
+              </div>
 
-    </div>
-  </div>
+            </div>
+          </div>
 
-  <!-- X labels -->
-  <div style="display:flex;gap:8px;padding:8px 0 4px;padding-left:36px;">
-    <div class="bar-lbl">2019</div>
-    <div class="bar-lbl">2022</div>
-    <div class="bar-lbl">H1 2023</div>
-    <div class="bar-lbl">2024</div>
-    <div class="bar-lbl" style="color:var(--muted);font-style:italic;">2025*</div>
-  </div>
+          <!-- X labels -->
+          <div style="display:flex;gap:8px;padding:8px 0 4px;padding-left:36px;">
+            <div class="bar-lbl">2019</div>
+            <div class="bar-lbl">2022</div>
+            <div class="bar-lbl">H1 2023</div>
+            <div class="bar-lbl">2024</div>
+            <div class="bar-lbl" style="color:var(--muted);font-style:italic;">2025*</div>
+          </div>
 
-  <!-- Legend -->
-  <div style="display:flex;flex-wrap:wrap;gap:16px;padding:12px 0 8px;padding-left:36px;border-top:1px solid var(--rule);margin-top:8px;">
-    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-      <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
-      Preclinical + Phase 1
-    </div>
-    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-      <div style="width:12px;height:12px;background:#2d6a8f;border-radius:2px;flex-shrink:0;"></div>
-      Phase 2
-    </div>
-    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-      <div style="width:12px;height:12px;background:#6a9dbf;border-radius:2px;flex-shrink:0;"></div>
-      Phase 3
-    </div>
-    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-      <div style="width:12px;height:12px;background:#c8d8e8;border-radius:2px;flex-shrink:0;"></div>
-      Commercial
-    </div>
-    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-      <div style="width:12px;height:12px;border:1px dashed #aaa;border-radius:2px;flex-shrink:0;"></div>
-      * 2025 full-year IQVIA (stage-mix per IQVIA 2026 Outlook; Ph2 share not separately reported)
-    </div>
-  </div>
+          <!-- Legend -->
+          <div style="display:flex;flex-wrap:wrap;gap:16px;padding:12px 0 8px;padding-left:36px;border-top:1px solid var(--rule);margin-top:8px;">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+              <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
+              Preclinical + Phase 1
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+              <div style="width:12px;height:12px;background:#2d6a8f;border-radius:2px;flex-shrink:0;"></div>
+              Phase 2
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+              <div style="width:12px;height:12px;background:#6a9dbf;border-radius:2px;flex-shrink:0;"></div>
+              Phase 3
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+              <div style="width:12px;height:12px;background:#c8d8e8;border-radius:2px;flex-shrink:0;"></div>
+              Commercial
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+              <div style="width:12px;height:12px;border:1px dashed #aaa;border-radius:2px;flex-shrink:0;"></div>
+              * 2025 full-year IQVIA (stage-mix per IQVIA 2026 Outlook; Ph2 share not separately reported)
+            </div>
+          </div>
 
-  <p class="chart-source">Source: IQVIA Biopharma M&A blog series (2023, 2025, 2026 Outlook editions). Analysis covers majority-stake acquisitions ≥$1B enterprise value. 2019 and H1 2023 from IQVIA "Trends in Biopharma M&A: Seeking Value"; 2024 and 2025 from IQVIA "Biopharma M&A: Outlook for 2025/2026." 2022 interpolated from reported step-changes. Phase 2 share not separately broken out for 2022, H1 2023, or 2025 by IQVIA; shown as combined with adjacent segments per source methodology.</p>
-</div>
+          <p class="chart-source">Source: IQVIA Biopharma M&A blog series (2023, 2025, 2026 Outlook editions). Analysis covers majority-stake acquisitions ≥$1B enterprise value. 2019 and H1 2023 from IQVIA "Trends in Biopharma M&A: Seeking Value"; 2024 and 2025 from IQVIA "Biopharma M&A: Outlook for 2025/2026." 2022 interpolated from reported step-changes. Phase 2 share not separately broken out for 2022, H1 2023, or 2025 by IQVIA; shown as combined with adjacent segments per source methodology.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -861,54 +857,55 @@ footer {
 
   <script>
     const countryData = {
-  // Americas
-  840: { name: "United States",    authority: "FDA" },
-  124: { name: "Canada",           authority: "Health Canada" },
-  76:  { name: "Brazil",           authority: "ANVISA" },
-  // EU / EMA Centralized
-  372: { name: "Ireland",          authority: "EMA (Centralized)" },
-  250: { name: "France",           authority: "EMA (Centralized)" },
-  276: { name: "Germany",          authority: "EMA (Centralized)" },
-  56:  { name: "Belgium",          authority: "EMA (Centralized)" },
-  528: { name: "Netherlands",      authority: "EMA (Centralized)" },
-  752: { name: "Sweden",           authority: "EMA (Centralized)" },
-  380: { name: "Italy",            authority: "EMA (Centralized)" },
-  616: { name: "Poland",           authority: "EMA (Centralized)" },
-  203: { name: "Czech Republic",   authority: "EMA (Centralized)" },
-  40:  { name: "Austria",          authority: "EMA (Centralized)" },
-  208: { name: "Denmark",          authority: "EMA (Centralized)" },
-  246: { name: "Finland",          authority: "EMA (Centralized)" },
-  300: { name: "Greece",           authority: "EMA (Centralized)" },
-  348: { name: "Hungary",          authority: "EMA (Centralized)" },
-  724: { name: "Spain",            authority: "EMA (Centralized)" },
-  620: { name: "Portugal",         authority: "EMA (Centralized)" },
-  642: { name: "Romania",          authority: "EMA (Centralized)" },
-  100: { name: "Bulgaria",         authority: "EMA (Centralized)" },
-  191: { name: "Croatia",          authority: "EMA (Centralized)" },
-  196: { name: "Cyprus",           authority: "EMA (Centralized)" },
-  233: { name: "Estonia",          authority: "EMA (Centralized)" },
-  428: { name: "Latvia",           authority: "EMA (Centralized)" },
-  440: { name: "Lithuania",        authority: "EMA (Centralized)" },
-  442: { name: "Luxembourg",       authority: "EMA (Centralized)" },
-  470: { name: "Malta",            authority: "EMA (Centralized)" },
-  703: { name: "Slovakia",         authority: "EMA (Centralized)" },
-  705: { name: "Slovenia",         authority: "EMA (Centralized)" },
-  // Non-EU Europe
-  756: { name: "Switzerland",      authority: "Swissmedic" },
-  826: { name: "United Kingdom",   authority: "MHRA" },
-  643: { name: "Russia",           authority: "Roszdravnadzor" },
-  // Middle East / Africa
-  422: { name: "Lebanon",          authority: "Ministry of Health" },
-  818: { name: "Egypt",            authority: "Egyptian Drug Authority (EDA)" },
-  // Asia-Pacific
-  392: { name: "Japan",            authority: "PMDA" },
-  156: { name: "China",            authority: "NMPA" },
-  410: { name: "South Korea",      authority: "MFDS" },
-  608: { name: "Philippines",      authority: "FDA-PH" },
-  702: { name: "Singapore",        authority: "HSA" },
-  36:  { name: "Australia",        authority: "TGA" },
-  554: { name: "New Zealand",      authority: "Medsafe" },
-};
+      // Americas
+      840: { name: "United States",   authority: "FDA" },
+      124: { name: "Canada",          authority: "Health Canada" },
+      76:  { name: "Brazil",          authority: "ANVISA" },
+      // EU / EMA Centralized
+      372: { name: "Ireland",         authority: "EMA (Centralized)" },
+      250: { name: "France",          authority: "EMA (Centralized)" },
+      276: { name: "Germany",         authority: "EMA (Centralized)" },
+      56:  { name: "Belgium",         authority: "EMA (Centralized)" },
+      528: { name: "Netherlands",     authority: "EMA (Centralized)" },
+      752: { name: "Sweden",          authority: "EMA (Centralized)" },
+      380: { name: "Italy",           authority: "EMA (Centralized)" },
+      616: { name: "Poland",          authority: "EMA (Centralized)" },
+      203: { name: "Czech Republic",  authority: "EMA (Centralized)" },
+      40:  { name: "Austria",         authority: "EMA (Centralized)" },
+      208: { name: "Denmark",         authority: "EMA (Centralized)" },
+      246: { name: "Finland",         authority: "EMA (Centralized)" },
+      300: { name: "Greece",          authority: "EMA (Centralized)" },
+      348: { name: "Hungary",         authority: "EMA (Centralized)" },
+      724: { name: "Spain",           authority: "EMA (Centralized)" },
+      620: { name: "Portugal",        authority: "EMA (Centralized)" },
+      642: { name: "Romania",         authority: "EMA (Centralized)" },
+      100: { name: "Bulgaria",        authority: "EMA (Centralized)" },
+      191: { name: "Croatia",         authority: "EMA (Centralized)" },
+      196: { name: "Cyprus",          authority: "EMA (Centralized)" },
+      233: { name: "Estonia",         authority: "EMA (Centralized)" },
+      428: { name: "Latvia",          authority: "EMA (Centralized)" },
+      440: { name: "Lithuania",       authority: "EMA (Centralized)" },
+      442: { name: "Luxembourg",      authority: "EMA (Centralized)" },
+      470: { name: "Malta",           authority: "EMA (Centralized)" },
+      703: { name: "Slovakia",        authority: "EMA (Centralized)" },
+      705: { name: "Slovenia",        authority: "EMA (Centralized)" },
+      // Non-EU Europe
+      756: { name: "Switzerland",     authority: "Swissmedic" },
+      826: { name: "United Kingdom",  authority: "MHRA" },
+      643: { name: "Russia",          authority: "Roszdravnadzor" },
+      // Middle East / Africa
+      422: { name: "Lebanon",         authority: "Ministry of Health" },
+      818: { name: "Egypt",           authority: "Egyptian Drug Authority (EDA)" },
+      376: { name: "Israel",          authority: "Ministry of Health (MOH)" },
+      // Asia-Pacific
+      392: { name: "Japan",           authority: "PMDA" },
+      156: { name: "China",           authority: "NMPA" },
+      410: { name: "South Korea",     authority: "MFDS" },
+      608: { name: "Philippines",     authority: "FDA-PH" },
+      702: { name: "Singapore",       authority: "HSA" },
+      36:  { name: "Australia",       authority: "TGA" },
+      554: { name: "New Zealand",     authority: "Medsafe" },
+    };
 
     const width = 960, height = 500;
     const svg = d3.select("#map-svg");
