@@ -726,65 +726,101 @@ footer {
 
         <div class="chart-label">Share of biopharma M&amp;A deals targeting de-risked (Phase 3+) assets &mdash; IQVIA, with 2025 trend note</div>
         <div class="chart-outer">
-          <div style="display:flex;gap:12px;align-items:flex-end;">
-            <div style="display:flex;flex-direction:column;justify-content:space-between;height:140px;flex-shrink:0;">
-              <span style="font-size:10px;color:var(--muted);">100%</span>
-              <span style="font-size:10px;color:var(--muted);">75%</span>
-              <span style="font-size:10px;color:var(--muted);">50%</span>
-              <span style="font-size:10px;color:var(--muted);">25%</span>
-              <span style="font-size:10px;color:var(--muted);">0%</span>
-            </div>
-            <div style="flex:1;display:flex;align-items:flex-end;gap:10px;height:140px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);">
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-                <div style="height:59%;background:var(--accent);opacity:.7;"></div>
-              </div>
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-                <div style="height:62%;background:var(--accent);opacity:.75;"></div>
-              </div>
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-                <div style="height:55%;background:var(--accent);opacity:.8;"></div>
-              </div>
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-                <div style="height:70%;background:var(--accent);opacity:.85;"></div>
-              </div>
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-                <div style="height:83%;background:var(--accent);opacity:1;"></div>
-              </div>
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;position:relative;">
-                <div style="flex:1;background:#f0ede8;border-radius:2px 2px 0 0;border:1px dashed var(--rule);border-bottom:none;"></div>
-                <div style="height:83%;background:var(--accent);opacity:.4;border:1px dashed var(--accent);border-bottom:none;box-sizing:border-box;"></div>
-              </div>
-            </div>
-          </div>
-          <div style="display:flex;gap:10px;padding:10px 0 4px;padding-left:36px;">
-            <div class="bar-lbl">2019<strong>59%</strong></div>
-            <div class="bar-lbl">2020<strong>~62%</strong></div>
-            <div class="bar-lbl">2021<strong>~55%</strong></div>
-            <div class="bar-lbl">2022<strong>~70%</strong></div>
-            <div class="bar-lbl">H1 2023<strong>83%</strong></div>
-            <div class="bar-lbl" style="color:var(--accent);font-style:italic;">2025<strong style="font-size:10px;font-weight:500;color:var(--accent);">trend ↑</strong></div>
-          </div>
-          <div style="display:flex;gap:20px;padding:12px 0 8px;padding-left:36px;border-top:1px solid var(--rule);margin-top:8px;">
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-              <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
-              Phase 3 or commercial-stage (de-risked)
-            </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-              <div style="width:12px;height:12px;background:var(--rule);border-radius:2px;flex-shrink:0;"></div>
-              Preclinical / early-stage
-            </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-              <div style="width:12px;height:12px;background:var(--accent);opacity:.4;border-radius:2px;border:1px dashed var(--accent);flex-shrink:0;"></div>
-              2025 directional trend (stage-mix data pending full-year publication)
-            </div>
-          </div>
-          <p class="chart-source">Sources: IQVIA (2019–H1 2023 stage-mix data); DealForma / J.P. Morgan (2025 deal volume); Pharmaceutical Technology / International Biotechnology Trust (2025 trend commentary). 2025 bar is directional — full-year stage breakdown not yet published. Late-stage and de-risked acquisitions dominated 2025 activity, with CVR structures increasingly used to bridge valuation gaps on clinical-stage targets.</p>
-        </div>
+  <div style="display:flex;gap:12px;align-items:flex-end;">
+    <!-- Y axis -->
+    <div style="display:flex;flex-direction:column;justify-content:space-between;height:160px;flex-shrink:0;padding-bottom:1px;">
+      <span style="font-size:10px;color:var(--muted);">100%</span>
+      <span style="font-size:10px;color:var(--muted);">75%</span>
+      <span style="font-size:10px;color:var(--muted);">50%</span>
+      <span style="font-size:10px;color:var(--muted);">25%</span>
+      <span style="font-size:10px;color:var(--muted);">0%</span>
+    </div>
+
+    <!-- Bars -->
+    <div style="flex:1;display:flex;align-items:flex-end;gap:8px;height:160px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);">
+
+      <!-- 2019: Preclin+Ph1 31%, Ph2 10%, Ph3 31%, Commercial 28% -->
+      <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+        <div style="flex:1;"></div>
+        <div style="height:28%;background:#c8d8e8;"></div>
+        <div style="height:31%;background:#6a9dbf;"></div>
+        <div style="height:10%;background:#2d6a8f;"></div>
+        <div style="height:31%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
+      </div>
+
+      <!-- 2022: Preclin+Ph1 26%, Ph2 ~0%, Ph3 29%, Commercial 45% -->
+      <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+        <div style="flex:1;"></div>
+        <div style="height:45%;background:#c8d8e8;"></div>
+        <div style="height:29%;background:#6a9dbf;"></div>
+        <div style="height:0%;background:#2d6a8f;"></div>
+        <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
+      </div>
+
+      <!-- H1 2023: Preclin+Ph1 17%, Ph2 ~0%, Ph3 25%, Commercial 58% -->
+      <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+        <div style="flex:1;"></div>
+        <div style="height:58%;background:#c8d8e8;"></div>
+        <div style="height:25%;background:#6a9dbf;"></div>
+        <div style="height:0%;background:#2d6a8f;"></div>
+        <div style="height:17%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
+      </div>
+
+      <!-- 2024: Preclin+Ph1 26%, Ph2 24%, Ph3 42%, Commercial 8% -->
+      <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+        <div style="flex:1;"></div>
+        <div style="height:8%;background:#c8d8e8;"></div>
+        <div style="height:42%;background:#6a9dbf;"></div>
+        <div style="height:24%;background:#2d6a8f;"></div>
+        <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
+      </div>
+
+      <!-- 2025: Commercial 49%, Ph3 28%, remainder ~23% Preclin+Ph1+Ph2 — dashed/caveated -->
+      <div style="flex:1;display:flex;flex-direction:column;height:100%;opacity:.75;">
+        <div style="flex:1;"></div>
+        <div style="height:49%;background:#c8d8e8;border:1px dashed #aaa;border-bottom:none;box-sizing:border-box;"></div>
+        <div style="height:28%;background:#6a9dbf;border-left:1px dashed #aaa;border-right:1px dashed #aaa;box-sizing:border-box;"></div>
+        <div style="height:23%;background:var(--accent);opacity:.7;border-radius:2px 2px 0 0;border:1px dashed var(--accent);border-bottom:none;box-sizing:border-box;"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- X labels -->
+  <div style="display:flex;gap:8px;padding:8px 0 4px;padding-left:36px;">
+    <div class="bar-lbl">2019</div>
+    <div class="bar-lbl">2022</div>
+    <div class="bar-lbl">H1 2023</div>
+    <div class="bar-lbl">2024</div>
+    <div class="bar-lbl" style="color:var(--muted);font-style:italic;">2025*</div>
+  </div>
+
+  <!-- Legend -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;padding:12px 0 8px;padding-left:36px;border-top:1px solid var(--rule);margin-top:8px;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+      <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
+      Preclinical + Phase 1
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+      <div style="width:12px;height:12px;background:#2d6a8f;border-radius:2px;flex-shrink:0;"></div>
+      Phase 2
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+      <div style="width:12px;height:12px;background:#6a9dbf;border-radius:2px;flex-shrink:0;"></div>
+      Phase 3
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+      <div style="width:12px;height:12px;background:#c8d8e8;border-radius:2px;flex-shrink:0;"></div>
+      Commercial
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+      <div style="width:12px;height:12px;border:1px dashed #aaa;border-radius:2px;flex-shrink:0;"></div>
+      * 2025 full-year IQVIA (stage-mix per IQVIA 2026 Outlook; Ph2 share not separately reported)
+    </div>
+  </div>
+
+  <p class="chart-source">Source: IQVIA Biopharma M&A blog series (2023, 2025, 2026 Outlook editions). Analysis covers majority-stake acquisitions ≥$1B enterprise value. 2019 and H1 2023 from IQVIA "Trends in Biopharma M&A: Seeking Value"; 2024 and 2025 from IQVIA "Biopharma M&A: Outlook for 2025/2026." 2022 interpolated from reported step-changes. Phase 2 share not separately broken out for 2022, H1 2023, or 2025 by IQVIA; shown as combined with adjacent segments per source methodology.</p>
+</div>
       </div>
     </div>
   </section>
