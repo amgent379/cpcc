@@ -512,8 +512,8 @@
       <img class="brand-logo" src="CPCC_logo.png?v=2" alt="Cape Porpoise Clinical Consulting" />
     </a>
     <ul class="nav-links">
-      <li><a href="#focus">Focus</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#Services">Services</a></li>
+      <li><a href="#about us">about us</a></li>
       <li><a href="#industrytrends">Industry Trends</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -527,8 +527,8 @@
     </div>
   </div>
 
-  <!-- FOCUS + SERVICES -->
-  <section id="focus">
+  <!-- SERVICES -->
+  <section id="Services">
     <div class="row">
       <div class="label">What we do</div>
       <div>
@@ -570,8 +570,8 @@
   </section>
 
 
-  <!-- ABOUT -->
-  <section id="about">
+  <!-- ABOUT US -->
+  <section id="about us">
     <div class="row">
       <div class="label">About</div>
       <div class="about-body">
