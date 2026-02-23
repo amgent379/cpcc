@@ -41,21 +41,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 64px;
+      height: 80px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 4px;
       text-decoration: none;
       color: var(--ink);
     }
 
     .brand-logo {
-      height: 100px;
+      height: 68px;
       width: auto;
-      mix-blend-mode: multiply;
       display: block;
     }
 
@@ -402,7 +400,22 @@
     .contact-note { font-size: 13px; color: var(--muted); line-height: 1.65; max-width: 380px; }
 
     footer {
-      padding: 22px 48px;
+      padding: 0 48px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .footer-logo {
+      height: 160px;
+      width: auto;
+      display: block;
+      margin: 40px auto 20px;
+    }
+
+    .footer-meta {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -417,14 +430,16 @@
     }
 
     @media (max-width: 780px) {
-      nav { padding: 0 20px; }
+      nav { padding: 0 20px; height: 68px; }
+      .brand-logo { height: 52px; }
       .nav-links { display: none; }
       .hero { padding: 56px 20px; min-height: 68vh; }
       .row { grid-template-columns: 1fr; gap: 14px; padding: 52px 20px; }
       .svc-cols { grid-template-columns: 1fr; }
       .stat-grid-4 { grid-template-columns: 1fr 1fr; }
       .stat-grid-3 { grid-template-columns: 1fr 1fr; }
-      footer { padding: 18px 20px; }
+      footer { padding: 0 20px 24px; }
+      .footer-logo { height: 100px; }
     }
   </style>
 </head>
@@ -437,10 +452,9 @@
     </a>
     <ul class="nav-links">
       <li><a href="#focus">Focus</a></li>
-      <li><a href="#industrytrends">Industry Trends</a></li>
       <li><a href="#expertise">Expertise</a></li>
-      <li><a href="#credentials">Track Record</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#industrytrends">Industry Trends</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -453,8 +467,6 @@
     </div>
   </div>
 
-
-  
   <!-- FOCUS + SERVICES -->
   <section id="focus">
     <div class="row">
@@ -497,9 +509,7 @@
     </div>
   </section>
 
-
-  
-  <!-- EXPERTISE -->
+  <!-- EXPERTISE + TRACK RECORD COMBINED -->
   <section id="expertise">
     <div class="row">
       <div class="label">Expertise</div>
@@ -552,12 +562,35 @@
             <span class="tag">Pharmica Consulting</span>
           </div>
         </div>
+
+        <!-- TRACK RECORD folded in -->
+        <div style="margin-top:52px;">
+          <div style="font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">Track Record</div>
+          <p class="body-lg" style="font-size:15.5px;margin-bottom:28px;">Over 18 years inside small and midsize biotech across Boston and Cambridge, Amanda has guided programs from first-in-human through FDA approval, exits, and partnerships. Two FDA-approved drugs. Twelve INDs. Three NDA contributions. A career built entirely in small biotech — working across every function, and knowing how to move programs forward with lean teams and limited resources.</p>
+          <div class="stat-grid stat-grid-4">
+            <div class="stat-cell"><strong>18+</strong><span>Years in clinical biotech leadership</span></div>
+            <div class="stat-cell"><strong>12+</strong><span>INDs filed</span></div>
+            <div class="stat-cell"><strong>3</strong><span>NDA contributions</span></div>
+            <div class="stat-cell"><strong>2</strong><span>FDA-approved therapies</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="row">
+      <div class="label">About</div>
+      <div class="about-body">
+        <p>CPCC is led by <strong>Amanda McEwen</strong> — <a href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener">LinkedIn</a> — SVP of Clinical Development at Salubris Biotherapeutics, where she leads the JK07 program, a first-in-class ErbB4 agonist in Phase 2b for heart failure.</p>
+        <p>Amanda has spent her entire career inside small biotech, where the boundaries between clinical development, regulatory affairs, operations, data management, and pharmacovigilance are rarely as clean as an org chart suggests. That breadth — built from years of doing the work across functions, not just overseeing it — is what CPCC brings to client teams. She embeds fluidly with both small founding teams that need a full clinical function built out, and larger organizations that need senior capacity on a specific workstream or at a critical juncture.</p>
+        <p>Her career highlights include key contributions to two FDA-approved therapies: <strong>Inbrija</strong>, for Parkinson's disease, and <strong>Rivfloza</strong>, for a rare genetic liver disease. She is especially passionate about early-phase development and has led several initiatives spanning preclinical research through clinical proof of concept.</p>
+        <p>Beyond her industry role, Amanda is an <strong>Executive Fellow at Harvard Business School</strong> and adjunct faculty in <strong>Northeastern University's MS in Regulatory Affairs</strong> program. She is also a current PhD candidate in Business Analytics at Bentley University. She earned her BA from the College of the Holy Cross and a Master of Research Methods in Psychology from the University of York in England.</p>
+      </div>
+    </div>
+  </section>
 
-  
   <!-- INDUSTRY TRENDS -->
   <section id="industrytrends">
     <div class="row">
@@ -602,36 +635,6 @@
     </div>
   </section>
 
-
-  
-  <!-- TRACK RECORD -->
-  <section id="credentials">
-    <div class="row">
-      <div class="label">Track Record</div>
-      <div>
-        <p class="body-lg" style="margin-bottom:36px;">Over 18 years inside small and midsize biotech across Boston and Cambridge, Amanda has guided programs from first-in-human through FDA approval, exits, and partnerships. Two FDA-approved drugs. Twelve INDs. Three NDA contributions. A career built entirely in small biotech — working across every function, and knowing how to move programs forward with lean teams and limited resources.</p>
-        <div class="stat-grid stat-grid-4">
-          <div class="stat-cell"><strong>18+</strong><span>Years in clinical biotech leadership</span></div>
-          <div class="stat-cell"><strong>12+</strong><span>INDs filed</span></div>
-          <div class="stat-cell"><strong>3</strong><span>NDA contributions</span></div>
-          <div class="stat-cell"><strong>2</strong><span>FDA-approved therapies</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="row">
-      <div class="label">About</div>
-      <div class="about-body">
-        <p>Her career highlights include key contributions to two FDA-approved therapies: Inbrija™, for Parkinson’s disease, and Rivfloza™, for a rare genetic liver disease. She is especially passionate about early-phase development and has led several initiatives spanning preclinical research through clinical proof of concept.
-
-Beyond her industry role, Amanda is an Executive Fellow at Harvard Business School and adjunct faculty in Northeastern University’s MS in Regulatory Affairs program. She is also a current PhD candidate in Business Analytics at Bentley University. She earned her BA from the College of the Holy Cross and a Master of Research Methods in Psychology from the University of York in England.
-
-
-  </section>
-
   <!-- CONTACT -->
   <section id="contact">
     <div class="row">
@@ -647,15 +650,13 @@ Beyond her industry role, Amanda is an Executive Fellow at Harvard Business Scho
     </div>
   </section>
 
-<footer>
-  <div style="width:100%;display:flex;justify-content:center;padding:40px 0 24px;">
-    <img src="CPCC_logo.png" alt="Cape Porpoise Clinical Consulting" style="height:120px;width:auto;mix-blend-mode:multiply;opacity:.6;" />
-  </div>
-  <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-    <p>&#169; <span id="y"></span> Cape Porpoise Clinical Consulting</p>
-    <p>Cambridge, Massachusetts</p>
-  </div>
-</footer>
+  <footer>
+    <img class="footer-logo" src="CPCC_logo.png" alt="Cape Porpoise Clinical Consulting" />
+    <div class="footer-meta">
+      <p>&#169; <span id="y"></span> Cape Porpoise Clinical Consulting</p>
+      <p>Cambridge, Massachusetts</p>
+    </div>
+  </footer>
 
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
