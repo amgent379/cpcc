@@ -47,28 +47,16 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 13px;
+      gap: 4px;
       text-decoration: none;
       color: var(--ink);
     }
 
-    .brand-text { line-height: 1; }
-
-    .brand-name {
+    .brand-logo {
+      height: 48px;
+      width: auto;
+      mix-blend-mode: multiply;
       display: block;
-      font-family: var(--serif);
-      font-size: 13px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .brand-sub {
-      display: block;
-      font-size: 10px;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 3px;
     }
 
     .nav-links { display: flex; gap: 24px; list-style: none; }
@@ -431,7 +419,6 @@
     @media (max-width: 780px) {
       nav { padding: 0 20px; }
       .nav-links { display: none; }
-      .brand-sub { display: none; }
       .hero { padding: 56px 20px; min-height: 68vh; }
       .row { grid-template-columns: 1fr; gap: 14px; padding: 52px 20px; }
       .svc-cols { grid-template-columns: 1fr; }
@@ -446,10 +433,7 @@
 
   <nav>
     <a class="brand" href="#top">
-      <div class="brand-text">
-        <span class="brand-name">CPCC</span>
-        <span class="brand-sub">Cape Porpoise Clinical Consulting</span>
-      </div>
+      <img class="brand-logo" src="CPCC_logo.png" alt="Cape Porpoise Clinical Consulting" />
     </a>
     <ul class="nav-links">
       <li><a href="#focus">Focus</a></li>
@@ -469,7 +453,7 @@
     </div>
   </div>
 
-  <!-- FOCUS + SERVICES COMBINED -->
+  <!-- FOCUS + SERVICES -->
   <section id="focus">
     <div class="row">
       <div class="label">What we do</div>
@@ -617,7 +601,7 @@
     <div class="row">
       <div class="label">Track Record</div>
       <div>
-        <p class="body-lg" style="margin-bottom:36px;">Over 18 years inside small and midsize biotech across Boston and Cambridge, Amanda has guided programs from first-in-human through FDA approval, exits, and partnerships. Two FDA-approved drugs. Twelve INDs. Three NDA contributions. A career built entirely in small biotech — wearing many hats, working across every function, and knowing how to move programs forward with lean teams and limited resources.</p>
+        <p class="body-lg" style="margin-bottom:36px;">Over 18 years inside small and midsize biotech across Boston and Cambridge, Amanda has guided programs from first-in-human through FDA approval, exits, and partnerships. Two FDA-approved drugs. Twelve INDs. Three NDA contributions. A career built entirely in small biotech — working across every function, and knowing how to move programs forward with lean teams and limited resources.</p>
         <div class="stat-grid stat-grid-4">
           <div class="stat-cell"><strong>18+</strong><span>Years in clinical biotech leadership</span></div>
           <div class="stat-cell"><strong>12+</strong><span>INDs filed</span></div>
@@ -634,7 +618,7 @@
       <div class="label">About</div>
       <div class="about-body">
         <p>CPCC is led by <strong>Amanda McEwen</strong> — <a href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener">LinkedIn</a> — SVP of Clinical Development at Salubris Biotherapeutics, where she leads the JK07 program, a first-in-class ErbB4 agonist in Phase 2b for heart failure.</p>
-        <p>Amanda is a career small-biotech professional. Over 18 years she has worked inside lean teams where clinical, regulatory, operations, data management, and pharmacovigilance often fall to the same handful of people. That experience — wearing many hats, building programs from scratch, and knowing how to move fast without cutting corners — is exactly what CPCC brings to client teams. She embeds fluidly with both small founding teams that need a full clinical function built out, and larger organizations that need senior capacity on a specific workstream or at a critical juncture.</p>
+        <p>Amanda has spent her entire career inside small biotech, where the boundaries between clinical development, regulatory affairs, operations, data management, and pharmacovigilance are rarely as clean as an org chart suggests. That breadth — built from years of doing the work across functions, not just overseeing it — is what CPCC brings to client teams. She embeds fluidly with both small founding teams that need a full clinical function built out, and larger organizations that need senior capacity on a specific workstream or at a critical juncture.</p>
         <p>Her programs include contributions to two FDA-approved therapies: <strong>Inbrija</strong> (inhaled levodopa for Parkinson's OFF episodes, approved 2018) and <strong>Rivfloza</strong> (for primary hyperoxaluria type 1). Her work spans antibody fusions, ADCs, RNAi, inhaled delivery, small molecules, and microbiome therapeutics across neurology, cardiovascular, rare disease, oncology, pain, and GI.</p>
         <p>She is an <strong>Executive Fellow at Harvard Business School</strong> in entrepreneurship and life sciences, and <strong>adjunct faculty at Northeastern University</strong> in the MS in Regulatory Affairs program.</p>
       </div>
