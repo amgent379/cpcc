@@ -168,7 +168,6 @@
 
     .body-lg:last-child { margin-bottom: 0; }
 
-    /* TAG GROUPS */
     .tag-group { margin-bottom: 28px; }
     .tag-group:last-child { margin-bottom: 0; }
 
@@ -192,7 +191,6 @@
       background: #fff;
     }
 
-    /* STAT GRIDS */
     .stat-grid {
       display: grid;
       gap: 1px;
@@ -241,7 +239,6 @@
       line-height: 1.45;
     }
 
-    /* CHART */
     .chart-label {
       font-size: 10.5px;
       font-weight: 700;
@@ -259,41 +256,12 @@
       background: var(--paper);
     }
 
-    .bars {
-      display: flex;
-      align-items: flex-end;
-      gap: 10px;
-      height: 110px;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .bar-col { flex: 1; }
-
-    .bar-fill {
-      width: 100%;
-      background: var(--accent);
-      border-radius: 2px 2px 0 0;
-    }
-
-    .bar-labels {
-      display: flex;
-      gap: 10px;
-      padding: 10px 0 16px;
-    }
-
     .bar-lbl {
       flex: 1;
       text-align: center;
       font-size: 11px;
       color: var(--muted);
       line-height: 1.5;
-    }
-
-    .bar-lbl strong {
-      display: block;
-      font-size: 12px;
-      color: var(--ink);
-      font-weight: 600;
     }
 
     .chart-source {
@@ -305,7 +273,6 @@
       margin-top: 4px;
     }
 
-    /* SERVICES */
     .svc-cols {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -364,7 +331,6 @@
       background: var(--rule);
     }
 
-    /* ABOUT */
     .about-body p {
       font-size: 15.5px;
       line-height: 1.78;
@@ -385,7 +351,6 @@
 
     .about-body a:hover { border-color: var(--accent); }
 
-    /* CONTACT */
     .contact-tag {
       font-family: var(--serif);
       font-size: 25px;
@@ -443,7 +408,6 @@
 
     footer p { font-size: 12px; color: var(--muted); }
 
-    /* MAP */
     .map-container {
       border: 1px solid var(--rule);
       border-radius: 5px;
@@ -512,15 +476,15 @@
       <img class="brand-logo" src="CPCC_logo.png?v=2" alt="Cape Porpoise Clinical Consulting" />
     </a>
     <ul class="nav-links">
-      <li><a href="#Services">Services</a></li>
-      <li><a href="#about us">about us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#industrytrends">Industry Trends</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <div class="hero" id="top">
-    <div class="eyebrow">Cape Porpoise Clinical Consulting, LLC     &middot;      Cambridge, MA</div>
+    <div class="eyebrow">Cape Porpoise Clinical Consulting, LLC &middot; Cambridge, MA</div>
     <h1>Helping lean biotech<br>chart a course to <em>meaningful clinical inflection points.</em></h1>
     <div class="cta-row">
       <a class="btn" href="#contact">Get in touch</a>
@@ -528,7 +492,7 @@
   </div>
 
   <!-- SERVICES -->
-  <section id="Services">
+  <section id="services">
     <div class="row">
       <div class="label">What we do</div>
       <div>
@@ -569,20 +533,19 @@
     </div>
   </section>
 
-
-  <!-- ABOUT US -->
-  <section id="about us">
+  <!-- ABOUT + EXPERTISE -->
+  <section id="about">
     <div class="row">
       <div class="label">About</div>
-      <div class="about-body">
-        <p>CPCC is led by <strong>Amanda McEwen</strong> — <a href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener">LinkedIn</a> — SVP of Clinical Development at Salubris Biotherapeutics, where she leads the JK07 program, a first-in-class ErbB4 agonist in Phase 2b for heart failure.</p>
-        <p>Amanda has spent her entire career inside small biotech, where the boundaries between clinical development, regulatory affairs, operations, data management, and pharmacovigilance are rarely as clean as an org chart suggests. That breadth — built from years of doing the work across functions, not just overseeing it — is what CPCC brings to client teams. She embeds fluidly with both small founding teams that need a full clinical function built out, and larger organizations that need senior capacity on a specific workstream or at a critical juncture.</p>
-        <p>Her career highlights include key contributions to two FDA-approved therapies: <strong>Inbrija</strong>, for Parkinson's disease, and <strong>Rivfloza</strong>, for a rare genetic liver disease. She is especially passionate about early-phase development and has led several initiatives spanning preclinical research through clinical proof of concept.</p>
-        <p>Beyond her industry role, Amanda is an <strong>Executive Fellow at Harvard Business School</strong> and adjunct faculty in <strong>Northeastern University's MS in Regulatory Affairs</strong> program. She is also a current PhD candidate in Business Analytics at Bentley University. She earned her BA from the College of the Holy Cross and a Master of Research Methods in Psychology from the University of York in England.</p>
-      </div>
-    </div>
-  </section>
-        
+      <div>
+
+        <div class="about-body" style="margin-bottom:48px;">
+          <p>CPCC is led by <strong>Amanda McEwen</strong> — <a href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener">LinkedIn</a> — SVP of Clinical Development at Salubris Biotherapeutics, where she leads the JK07 program, a first-in-class ErbB4 agonist in Phase 2b for heart failure.</p>
+          <p>Amanda has spent her entire career inside small biotech, where the boundaries between clinical development, regulatory affairs, operations, data management, and pharmacovigilance are rarely as clean as an org chart suggests. That breadth — built from years of doing the work across functions, not just overseeing it — is what CPCC brings to client teams. She embeds fluidly with both small founding teams that need a full clinical function built out, and larger organizations that need senior capacity on a specific workstream or at a critical juncture.</p>
+          <p>Her career highlights include key contributions to two FDA-approved therapies: <strong>Inbrija</strong>, for Parkinson's disease, and <strong>Rivfloza</strong>, for a rare genetic liver disease. She is especially passionate about early-phase development and has led several initiatives spanning preclinical research through clinical proof of concept.</p>
+          <p>Beyond her industry role, Amanda is an <strong>Executive Fellow at Harvard Business School</strong> and adjunct faculty in <strong>Northeastern University's MS in Regulatory Affairs</strong> program. She is also a current PhD candidate in Business Analytics at Bentley University. She earned her BA from the College of the Holy Cross and a Master of Research Methods in Psychology from the University of York in England.</p>
+        </div>
+
         <div class="tag-group">
           <div class="tag-group-title">Therapeutic Areas</div>
           <div class="tags">
@@ -696,7 +659,6 @@
     </div>
   </section>
 
-
   <!-- INDUSTRY TRENDS -->
   <section id="industrytrends">
     <div class="row">
@@ -726,7 +688,6 @@
         <div class="chart-label">Share of biopharma M&amp;A deals targeting de-risked (Phase 3+) assets &mdash; IQVIA, with 2025 trend note</div>
         <div class="chart-outer">
           <div style="display:flex;gap:12px;align-items:flex-end;">
-            <!-- Y axis -->
             <div style="display:flex;flex-direction:column;justify-content:space-between;height:160px;flex-shrink:0;padding-bottom:1px;">
               <span style="font-size:10px;color:var(--muted);">100%</span>
               <span style="font-size:10px;color:var(--muted);">75%</span>
@@ -734,11 +695,7 @@
               <span style="font-size:10px;color:var(--muted);">25%</span>
               <span style="font-size:10px;color:var(--muted);">0%</span>
             </div>
-
-            <!-- Bars -->
             <div style="flex:1;display:flex;align-items:flex-end;gap:8px;height:160px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);">
-
-              <!-- 2019: Preclin+Ph1 31%, Ph2 10%, Ph3 31%, Commercial 28% -->
               <div style="flex:1;display:flex;flex-direction:column;height:100%;">
                 <div style="flex:1;"></div>
                 <div style="height:28%;background:#c8d8e8;"></div>
@@ -746,8 +703,6 @@
                 <div style="height:10%;background:#2d6a8f;"></div>
                 <div style="height:31%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
               </div>
-
-              <!-- 2022: Preclin+Ph1 26%, Ph2 ~0%, Ph3 29%, Commercial 45% -->
               <div style="flex:1;display:flex;flex-direction:column;height:100%;">
                 <div style="flex:1;"></div>
                 <div style="height:45%;background:#c8d8e8;"></div>
@@ -755,8 +710,6 @@
                 <div style="height:0%;background:#2d6a8f;"></div>
                 <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
               </div>
-
-              <!-- H1 2023: Preclin+Ph1 17%, Ph2 ~0%, Ph3 25%, Commercial 58% -->
               <div style="flex:1;display:flex;flex-direction:column;height:100%;">
                 <div style="flex:1;"></div>
                 <div style="height:58%;background:#c8d8e8;"></div>
@@ -764,8 +717,6 @@
                 <div style="height:0%;background:#2d6a8f;"></div>
                 <div style="height:17%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
               </div>
-
-              <!-- 2024: Preclin+Ph1 26%, Ph2 24%, Ph3 42%, Commercial 8% -->
               <div style="flex:1;display:flex;flex-direction:column;height:100%;">
                 <div style="flex:1;"></div>
                 <div style="height:8%;background:#c8d8e8;"></div>
@@ -773,19 +724,15 @@
                 <div style="height:24%;background:#2d6a8f;"></div>
                 <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
               </div>
-
-              <!-- 2025: Commercial 49%, Ph3 28%, remainder ~23% Preclin+Ph1+Ph2 — dashed/caveated -->
               <div style="flex:1;display:flex;flex-direction:column;height:100%;opacity:.75;">
                 <div style="flex:1;"></div>
                 <div style="height:49%;background:#c8d8e8;border:1px dashed #aaa;border-bottom:none;box-sizing:border-box;"></div>
                 <div style="height:28%;background:#6a9dbf;border-left:1px dashed #aaa;border-right:1px dashed #aaa;box-sizing:border-box;"></div>
                 <div style="height:23%;background:var(--accent);opacity:.7;border-radius:2px 2px 0 0;border:1px dashed var(--accent);border-bottom:none;box-sizing:border-box;"></div>
               </div>
-
             </div>
           </div>
 
-          <!-- X labels -->
           <div style="display:flex;gap:8px;padding:8px 0 4px;padding-left:36px;">
             <div class="bar-lbl">2019</div>
             <div class="bar-lbl">2022</div>
@@ -794,7 +741,6 @@
             <div class="bar-lbl" style="color:var(--muted);font-style:italic;">2025*</div>
           </div>
 
-          <!-- Legend -->
           <div style="display:flex;flex-wrap:wrap;gap:16px;padding:12px 0 8px;padding-left:36px;border-top:1px solid var(--rule);margin-top:8px;">
             <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
               <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
@@ -852,11 +798,9 @@
 
   <script>
     const countryData = {
-      // Americas
       840: { name: "United States",   authority: "FDA" },
       124: { name: "Canada",          authority: "Health Canada" },
       76:  { name: "Brazil",          authority: "ANVISA" },
-      // EU / EMA Centralized
       372: { name: "Ireland",         authority: "EMA (Centralized)" },
       250: { name: "France",          authority: "EMA (Centralized)" },
       276: { name: "Germany",         authority: "EMA (Centralized)" },
@@ -884,15 +828,12 @@
       470: { name: "Malta",           authority: "EMA (Centralized)" },
       703: { name: "Slovakia",        authority: "EMA (Centralized)" },
       705: { name: "Slovenia",        authority: "EMA (Centralized)" },
-      // Non-EU Europe
       756: { name: "Switzerland",     authority: "Swissmedic" },
       826: { name: "United Kingdom",  authority: "MHRA" },
       643: { name: "Russia",          authority: "Roszdravnadzor" },
-      // Middle East / Africa
       422: { name: "Lebanon",         authority: "Ministry of Health" },
       818: { name: "Egypt",           authority: "Egyptian Drug Authority (EDA)" },
       376: { name: "Israel",          authority: "Ministry of Health (MOH)" },
-      // Asia-Pacific
       392: { name: "Japan",           authority: "PMDA" },
       156: { name: "China",           authority: "NMPA" },
       410: { name: "South Korea",     authority: "MFDS" },
