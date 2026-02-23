@@ -30,19 +30,19 @@
       line-height: 1.6;
     }
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(247,244,239,.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--rule);
-      padding: 0 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
-    }
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247,244,239,.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+}
 
     .brand {
       display: flex;
@@ -399,13 +399,14 @@
 
     .contact-note { font-size: 13px; color: var(--muted); line-height: 1.65; max-width: 380px; }
 
-    footer {
-      padding: 0 48px 28px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    }
+footer {
+  padding: 0 48px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
 
     .footer-logo {
       height: 160px;
@@ -430,7 +431,7 @@
     }
 
     @media (max-width: 780px) {
-      nav { padding: 0 20px; height: 68px; }
+       nav { padding: 0 20px; height: 120px; }
       .brand-logo { height: 100px; }
       .nav-links { display: none; }
       .hero { padding: 56px 20px; min-height: 68vh; }
