@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 
   <style>
     :root {
@@ -206,6 +208,7 @@ nav {
     .stat-cell {
       background: var(--paper);
       padding: 24px 20px;
+      text-align: center;
     }
 
     .stat-cell strong {
@@ -219,6 +222,21 @@ nav {
 
     .stat-cell span {
       font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .stat-cell .stat-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .stat-cell .stat-desc {
+      font-size: 12px;
       color: var(--muted);
       line-height: 1.45;
     }
@@ -425,6 +443,48 @@ footer {
 
     footer p { font-size: 12px; color: var(--muted); }
 
+    /* MAP */
+    .map-container {
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      background: #cfe0ed;
+      overflow: hidden;
+      position: relative;
+      margin-top: 24px;
+    }
+    #map-svg { width: 100%; height: auto; display: block; }
+    .country-path { fill: #e2ddd7; stroke: #fff; stroke-width: 0.4; }
+    .country-path.active {
+      fill: var(--accent);
+      stroke: #fff;
+      stroke-width: 0.6;
+      cursor: pointer;
+      opacity: .85;
+      transition: opacity .15s;
+    }
+    .country-path.active:hover { opacity: 1; }
+    .map-tooltip {
+      position: absolute;
+      background: var(--ink);
+      color: #fff;
+      font-size: 11px;
+      font-family: var(--sans);
+      padding: 5px 10px;
+      border-radius: 3px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .1s;
+      white-space: nowrap;
+      z-index: 10;
+    }
+    .map-note {
+      padding: 10px 16px;
+      border-top: 1px solid var(--rule);
+      background: var(--paper);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
     @keyframes up {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -449,7 +509,7 @@ footer {
 
   <nav>
     <a class="brand" href="#top">
-      <img class="brand-logo" src="CPCC_logo.png" alt="Cape Porpoise Clinical Consulting" />
+      <img class="brand-logo" src="CPCC_logo.png?v=2" alt="Cape Porpoise Clinical Consulting" />
     </a>
     <ul class="nav-links">
       <li><a href="#focus">Focus</a></li>
@@ -510,11 +570,12 @@ footer {
     </div>
   </section>
 
-  <!-- EXPERTISE + TRACK RECORD COMBINED -->
+  <!-- EXPERTISE + TRACK RECORD + GLOBAL REACH -->
   <section id="expertise">
     <div class="row">
       <div class="label">Expertise</div>
       <div>
+
         <div class="tag-group">
           <div class="tag-group-title">Therapeutic Areas</div>
           <div class="tags">
@@ -564,17 +625,66 @@ footer {
           </div>
         </div>
 
-        <!-- TRACK RECORD folded in -->
+        <!-- TRACK RECORD + GLOBAL REACH -->
         <div style="margin-top:52px;">
-          <div style="font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">Track Record</div>
-          <p class="body-lg" style="font-size:15.5px;margin-bottom:28px;">Over 18 years inside small and midsize biotech across Boston and Cambridge, Amanda has guided programs from first-in-human through FDA approval, exits, and partnerships. Two FDA-approved drugs. Twelve INDs. Three NDA contributions. A career built entirely in small biotech — working across every function, and knowing how to move programs forward with lean teams and limited resources.</p>
-          <div class="stat-grid stat-grid-4">
-            <div class="stat-cell"><strong>18+</strong><span>Years in clinical biotech leadership</span></div>
-            <div class="stat-cell"><strong>12+</strong><span>INDs filed</span></div>
-            <div class="stat-cell"><strong>3</strong><span>NDA contributions</span></div>
-            <div class="stat-cell"><strong>2</strong><span>FDA-approved therapies</span></div>
+          <div style="font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">Track Record &amp; Global Reach</div>
+          <p class="body-lg" style="font-size:15.5px;margin-bottom:28px;">Over 18 years inside small and midsize biotech across Boston and Cambridge, Amanda has guided programs from first-in-human through FDA approval, exits, and partnerships. A career built entirely in small biotech — working across every function, and knowing how to move programs forward with lean teams and limited resources — spanning 25+ countries and four major regulatory regions.</p>
+
+          <div class="stat-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px;">
+            <div class="stat-cell">
+              <strong>~10</strong>
+              <div class="stat-label">FIH / Phase 1</div>
+              <div class="stat-desc">First-in-human &amp; clinical pharmacology</div>
+            </div>
+            <div class="stat-cell">
+              <strong>~12</strong>
+              <div class="stat-label">Phase 2</div>
+              <div class="stat-desc">Proof-of-concept &amp; dose-finding</div>
+            </div>
+            <div class="stat-cell">
+              <strong>~7</strong>
+              <div class="stat-label">Phase 3</div>
+              <div class="stat-desc">Registrational &amp; confirmatory trials</div>
+            </div>
+            <div class="stat-cell">
+              <strong>18+</strong>
+              <div class="stat-label">Years</div>
+              <div class="stat-desc">Clinical biotech leadership</div>
+            </div>
+            <div class="stat-cell">
+              <strong>12+</strong>
+              <div class="stat-label">INDs Filed</div>
+              <div class="stat-desc">Across multiple therapeutic areas</div>
+            </div>
+            <div class="stat-cell">
+              <strong>25+</strong>
+              <div class="stat-label">Countries</div>
+              <div class="stat-desc">Clinical trial &amp; regulatory submission experience</div>
+            </div>
+            <div class="stat-cell">
+              <strong style="font-size:22px;">FDA</strong>
+              <div class="stat-label">Americas</div>
+              <div class="stat-desc">Health Canada · ANVISA</div>
+            </div>
+            <div class="stat-cell">
+              <strong style="font-size:22px;">EMA</strong>
+              <div class="stat-label">Europe</div>
+              <div class="stat-desc">Centralized · MHRA · Swissmedic</div>
+            </div>
+            <div class="stat-cell">
+              <strong style="font-size:22px;">APAC</strong>
+              <div class="stat-label">Asia-Pacific</div>
+              <div class="stat-desc">PMDA · NMPA · TGA · MFDS · HSA</div>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <div class="map-tooltip" id="map-tooltip"></div>
+            <svg id="map-svg" viewBox="0 0 960 500"></svg>
+            <div class="map-note">Hover highlighted countries for health authority</div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -592,126 +702,102 @@ footer {
     </div>
   </section>
 
- <!-- INDUSTRY TRENDS -->
-<section id="industrytrends">
-  <div class="row">
-    <div class="label">Clinical Data Fuels M&amp;A</div>
-    <div>
-      <p class="body-lg">The market has fundamentally reoriented around clinical data. Pharma is spending more than ever on licensing and acquisitions, but concentrating it across <strong>fewer, higher-conviction deals</strong> — and those deals are increasingly targeting companies with clinical-stage assets and de-risked data packages. The inflection point is the value inflection point.</p>
+  <!-- INDUSTRY TRENDS -->
+  <section id="industrytrends">
+    <div class="row">
+      <div class="label">Clinical Data Fuels M&amp;A</div>
+      <div>
+        <p class="body-lg">The market has fundamentally reoriented around clinical data. Pharma is spending more than ever on licensing and acquisitions, but concentrating it across <strong>fewer, higher-conviction deals</strong> — and those deals are increasingly targeting companies with clinical-stage assets and de-risked data packages. The inflection point is the value inflection point.</p>
 
-      <div class="stat-grid stat-grid-3" style="margin-top:36px;margin-bottom:36px;">
-        <div class="stat-cell">
-          <strong>83%</strong>
-          <span>Of biopharma M&amp;A transactions in H1 2023 focused on Phase 3 or commercial-stage assets — up from 59% in 2019. Source: IQVIA</span>
-        </div>
-        <div class="stat-cell">
-          <strong>$138B</strong>
-          <span>Biopharma M&amp;A in 2025 across 129 deals — described as the strongest M&amp;A year since 2019, driven by patent cliff anxiety and clinical-stage targets. Source: DealForma / J.P. Morgan</span>
-        </div>
-        <div class="stat-cell">
-          <strong>70%</strong>
-          <span>Of new drugs approved in 2025 originated in biotech — up dramatically from a decade ago, when most came from pharma internal R&amp;D. Source: International Biotechnology Trust</span>
-        </div>
-      </div>
-
-      <!-- Stacked bar chart: clinical vs preclinical/early deal share -->
-      <div class="chart-label">Share of biopharma M&amp;A deals targeting de-risked (Phase 3+) assets &mdash; IQVIA, with 2025 trend note</div>
-      <div class="chart-outer">
-
-        <div style="display:flex;gap:12px;align-items:flex-end;">
-
-          <!-- Y axis -->
-          <div style="display:flex;flex-direction:column;justify-content:space-between;height:140px;flex-shrink:0;">
-            <span style="font-size:10px;color:var(--muted);">100%</span>
-            <span style="font-size:10px;color:var(--muted);">75%</span>
-            <span style="font-size:10px;color:var(--muted);">50%</span>
-            <span style="font-size:10px;color:var(--muted);">25%</span>
-            <span style="font-size:10px;color:var(--muted);">0%</span>
+        <div class="stat-grid stat-grid-3" style="margin-top:36px;margin-bottom:36px;">
+          <div class="stat-cell">
+            <strong>83%</strong>
+            <span>Of biopharma M&amp;A transactions in H1 2023 focused on Phase 3 or commercial-stage assets — up from 59% in 2019. Source: IQVIA</span>
           </div>
-
-          <!-- Bars -->
-          <div style="flex:1;display:flex;align-items:flex-end;gap:10px;height:140px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);">
-
-            <!-- 2019: 59% -->
-            <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-              <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-              <div style="height:59%;background:var(--accent);opacity:.7;"></div>
-            </div>
-
-            <!-- 2020: ~62% -->
-            <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-              <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-              <div style="height:62%;background:var(--accent);opacity:.75;"></div>
-            </div>
-
-            <!-- 2021: ~55% -->
-            <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-              <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-              <div style="height:55%;background:var(--accent);opacity:.8;"></div>
-            </div>
-
-            <!-- 2022: ~70% -->
-            <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-              <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-              <div style="height:70%;background:var(--accent);opacity:.85;"></div>
-            </div>
-
-            <!-- H1 2023: 83% -->
-            <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-              <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-              <div style="height:83%;background:var(--accent);opacity:1;"></div>
-            </div>
-
-            <!-- 2025: annotation bar, no hard % -->
-            <div style="flex:1;display:flex;flex-direction:column;height:100%;position:relative;">
-              <div style="flex:1;background:#f0ede8;border-radius:2px 2px 0 0;border:1px dashed var(--rule);border-bottom:none;"></div>
-              <div style="height:83%;background:var(--accent);opacity:.4;border:1px dashed var(--accent);border-bottom:none;box-sizing:border-box;"></div>
-            </div>
-
+          <div class="stat-cell">
+            <strong>$138B</strong>
+            <span>Biopharma M&amp;A in 2025 across 129 deals — described as the strongest M&amp;A year since 2019, driven by patent cliff anxiety and clinical-stage targets. Source: DealForma / J.P. Morgan</span>
+          </div>
+          <div class="stat-cell">
+            <strong>70%</strong>
+            <span>Of new drugs approved in 2025 originated in biotech — up dramatically from a decade ago, when most came from pharma internal R&amp;D. Source: International Biotechnology Trust</span>
           </div>
         </div>
 
-        <!-- X labels -->
-        <div style="display:flex;gap:10px;padding:10px 0 4px;padding-left:36px;">
-          <div class="bar-lbl">2019<strong>59%</strong></div>
-          <div class="bar-lbl">2020<strong>~62%</strong></div>
-          <div class="bar-lbl">2021<strong>~55%</strong></div>
-          <div class="bar-lbl">2022<strong>~70%</strong></div>
-          <div class="bar-lbl">H1 2023<strong>83%</strong></div>
-          <div class="bar-lbl" style="color:var(--accent);font-style:italic;">2025<strong style="font-size:10px;font-weight:500;color:var(--accent);">trend ↑</strong></div>
+        <div class="chart-label">Share of biopharma M&amp;A deals targeting de-risked (Phase 3+) assets &mdash; IQVIA, with 2025 trend note</div>
+        <div class="chart-outer">
+          <div style="display:flex;gap:12px;align-items:flex-end;">
+            <div style="display:flex;flex-direction:column;justify-content:space-between;height:140px;flex-shrink:0;">
+              <span style="font-size:10px;color:var(--muted);">100%</span>
+              <span style="font-size:10px;color:var(--muted);">75%</span>
+              <span style="font-size:10px;color:var(--muted);">50%</span>
+              <span style="font-size:10px;color:var(--muted);">25%</span>
+              <span style="font-size:10px;color:var(--muted);">0%</span>
+            </div>
+            <div style="flex:1;display:flex;align-items:flex-end;gap:10px;height:140px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);">
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
+                <div style="height:59%;background:var(--accent);opacity:.7;"></div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
+                <div style="height:62%;background:var(--accent);opacity:.75;"></div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
+                <div style="height:55%;background:var(--accent);opacity:.8;"></div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
+                <div style="height:70%;background:var(--accent);opacity:.85;"></div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+                <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
+                <div style="height:83%;background:var(--accent);opacity:1;"></div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;height:100%;position:relative;">
+                <div style="flex:1;background:#f0ede8;border-radius:2px 2px 0 0;border:1px dashed var(--rule);border-bottom:none;"></div>
+                <div style="height:83%;background:var(--accent);opacity:.4;border:1px dashed var(--accent);border-bottom:none;box-sizing:border-box;"></div>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;padding:10px 0 4px;padding-left:36px;">
+            <div class="bar-lbl">2019<strong>59%</strong></div>
+            <div class="bar-lbl">2020<strong>~62%</strong></div>
+            <div class="bar-lbl">2021<strong>~55%</strong></div>
+            <div class="bar-lbl">2022<strong>~70%</strong></div>
+            <div class="bar-lbl">H1 2023<strong>83%</strong></div>
+            <div class="bar-lbl" style="color:var(--accent);font-style:italic;">2025<strong style="font-size:10px;font-weight:500;color:var(--accent);">trend ↑</strong></div>
+          </div>
+          <div style="display:flex;gap:20px;padding:12px 0 8px;padding-left:36px;border-top:1px solid var(--rule);margin-top:8px;">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+              <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
+              Phase 3 or commercial-stage (de-risked)
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+              <div style="width:12px;height:12px;background:var(--rule);border-radius:2px;flex-shrink:0;"></div>
+              Preclinical / early-stage
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+              <div style="width:12px;height:12px;background:var(--accent);opacity:.4;border-radius:2px;border:1px dashed var(--accent);flex-shrink:0;"></div>
+              2025 directional trend (stage-mix data pending full-year publication)
+            </div>
+          </div>
+          <p class="chart-source">Sources: IQVIA (2019–H1 2023 stage-mix data); DealForma / J.P. Morgan (2025 deal volume); Pharmaceutical Technology / International Biotechnology Trust (2025 trend commentary). 2025 bar is directional — full-year stage breakdown not yet published. Late-stage and de-risked acquisitions dominated 2025 activity, with CVR structures increasingly used to bridge valuation gaps on clinical-stage targets.</p>
         </div>
-
-        <!-- Legend -->
-        <div style="display:flex;gap:20px;padding:12px 0 8px;padding-left:36px;border-top:1px solid var(--rule);margin-top:8px;">
-          <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-            <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
-            Phase 3 or commercial-stage (de-risked)
-          </div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-            <div style="width:12px;height:12px;background:var(--rule);border-radius:2px;flex-shrink:0;"></div>
-            Preclinical / early-stage
-          </div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-            <div style="width:12px;height:12px;background:var(--accent);opacity:.4;border-radius:2px;border:1px dashed var(--accent);flex-shrink:0;"></div>
-            2025 directional trend (stage-mix data pending full-year publication)
-          </div>
-        </div>
-
-        <p class="chart-source">Sources: IQVIA (2019–H1 2023 stage-mix data); DealForma / J.P. Morgan (2025 deal volume); Pharmaceutical Technology / International Biotechnology Trust (2025 trend commentary). 2025 bar is directional — full-year stage breakdown not yet published. Late-stage and de-risked acquisitions dominated 2025 activity, with CVR structures increasingly used to bridge valuation gaps on clinical-stage targets.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="row">
       <div class="label">Contact</div>
       <div>
         <p class="contact-tag">Let's talk about where your program is and what it needs to get to the next inflection point.</p>
-       <div class="contact-links">
-  <a class="contact-link" href="mailto:amanda.gentile@gmail.com">Email Amanda <span class="arr">&#8594;</span></a>
-  <a class="contact-link" href="tel:+16176459160">Call Amanda <span class="arr">&#8594;</span></a>
-</div>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:amanda.gentile@gmail.com">Email Amanda <span class="arr">&#8594;</span></a>
+          <a class="contact-link" href="tel:+16176459160">Call Amanda <span class="arr">&#8594;</span></a>
         </div>
         <p class="contact-note">First call covers program stage, near-term goals, key deliverables, and timeline. A simple statement of work follows. No long procurement cycles.</p>
       </div>
@@ -719,7 +805,7 @@ footer {
   </section>
 
   <footer>
-    <img class="footer-logo" src="CPCC_logo.png" alt="Cape Porpoise Clinical Consulting" />
+    <img class="footer-logo" src="CPCC_logo.png?v=2" alt="Cape Porpoise Clinical Consulting" />
     <div class="footer-meta">
       <p>&#169; <span id="y"></span> Cape Porpoise Clinical Consulting</p>
       <p>Cambridge, Massachusetts</p>
@@ -727,5 +813,74 @@ footer {
   </footer>
 
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+
+  <script>
+    const countryData = {
+      840: { name: "United States",  authority: "FDA" },
+      124: { name: "Canada",         authority: "Health Canada" },
+      76:  { name: "Brazil",         authority: "ANVISA" },
+      372: { name: "Ireland",        authority: "EMA (Centralized)" },
+      250: { name: "France",         authority: "EMA (Centralized)" },
+      276: { name: "Germany",        authority: "EMA (Centralized)" },
+      56:  { name: "Belgium",        authority: "EMA (Centralized)" },
+      528: { name: "Netherlands",    authority: "EMA (Centralized)" },
+      752: { name: "Sweden",         authority: "EMA (Centralized)" },
+      756: { name: "Switzerland",    authority: "Swissmedic" },
+      380: { name: "Italy",          authority: "EMA (Centralized)" },
+      616: { name: "Poland",         authority: "EMA (Centralized)" },
+      203: { name: "Czech Republic", authority: "EMA (Centralized)" },
+      826: { name: "United Kingdom", authority: "MHRA" },
+      643: { name: "Russia",         authority: "Roszdravnadzor" },
+      422: { name: "Lebanon",        authority: "Ministry of Health" },
+      818: { name: "Egypt",          authority: "Egyptian Drug Authority (EDA)" },
+      392: { name: "Japan",          authority: "PMDA" },
+      156: { name: "China",          authority: "NMPA" },
+      410: { name: "South Korea",    authority: "MFDS" },
+      608: { name: "Philippines",    authority: "FDA-PH" },
+      702: { name: "Singapore",      authority: "HSA" },
+      36:  { name: "Australia",      authority: "TGA" },
+      554: { name: "New Zealand",    authority: "Medsafe" },
+    };
+
+    const width = 960, height = 500;
+    const svg = d3.select("#map-svg");
+    const projection = d3.geoNaturalEarth1()
+      .scale(153)
+      .translate([width / 2, height / 2]);
+    const pathGen = d3.geoPath().projection(projection);
+    const tooltip = document.getElementById("map-tooltip");
+    const mapContainer = document.querySelector(".map-container");
+
+    fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
+      .then(r => r.json())
+      .then(world => {
+        const countries = topojson.feature(world, world.objects.countries);
+        svg.selectAll(".country-path")
+          .data(countries.features)
+          .enter()
+          .append("path")
+          .attr("class", d => countryData[+d.id] ? "country-path active" : "country-path")
+          .attr("d", pathGen)
+          .on("mouseenter", function(event, d) {
+            const c = countryData[+d.id];
+            if (!c) return;
+            tooltip.textContent = `${c.name} — ${c.authority}`;
+            tooltip.style.opacity = "1";
+          })
+          .on("mousemove", function(event) {
+            const rect = mapContainer.getBoundingClientRect();
+            let tx = event.clientX - rect.left + 14;
+            let ty = event.clientY - rect.top - 32;
+            if (tx + 300 > rect.width) tx = event.clientX - rect.left - 310;
+            if (ty < 0) ty = event.clientY - rect.top + 16;
+            tooltip.style.left = tx + "px";
+            tooltip.style.top = ty + "px";
+          })
+          .on("mouseleave", function(event, d) {
+            if (countryData[+d.id]) tooltip.style.opacity = "0";
+          });
+      });
+  </script>
+
 </body>
 </html>
