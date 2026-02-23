@@ -243,6 +243,56 @@
 
     .stat span { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
 
+    /* CHART */
+    .chart-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .chart-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      height: 160px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 8px;
+    }
+
+    .chart-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .chart-bar {
+      width: 100%;
+      background: var(--accent);
+      border-radius: 2px 2px 0 0;
+    }
+
+    .chart-bar-label {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .chart-bar-label strong { color: var(--ink); display: block; }
+
+    .chart-source {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 16px;
+      max-width: 560px;
+      line-height: 1.55;
+    }
+
     .svc-cols {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -311,6 +361,15 @@
 
     .about-body p:last-child { margin-bottom: 0; }
     .about-body strong { color: var(--ink); font-weight: 600; }
+
+    .about-body a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color .15s;
+    }
+
+    .about-body a:hover { border-color: var(--accent); }
 
     .contact-tag {
       font-family: var(--serif);
@@ -382,6 +441,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#focus">Focus</a></li>
+      <li><a href="#why-now">Why Now</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
@@ -403,6 +463,42 @@
       <div class="focus-body">
         <p>CPCC works exclusively with <strong>early clinical-stage biotech companies</strong> to navigate the path from program initiation to the first meaningful clinical inflection point: the data, regulatory decisions, and milestones that unlock the next chapter.</p>
         <p>Whether you need a senior thought partner at the investor or FDA table, or someone to build the documents and run the work, CPCC covers the full range. High-level development strategy through hands-on execution and submission-ready deliverables.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-now">
+    <div class="row">
+      <div class="label">Why Now</div>
+      <div>
+        <p style="font-size:18px;line-height:1.7;max-width:660px;margin-bottom:36px;">
+          In today's market, <strong>clinical data is the currency of biotech value creation.</strong> Partnerships, M&amp;A, and financing rounds increasingly hinge on clean early readouts — not pipeline potential alone. Large pharma, facing patent cliffs and depleted pipelines, is actively hunting for clinical-stage assets with de-risked data packages. In 2022–24, a higher proportion of biopharma deals focused on assets already in clinical development, reversing a prior trend toward earlier-stage innovation. Getting to that first inflection point, efficiently and credibly, is what creates optionality.
+        </p>
+
+        <div class="chart-label">Biopharma deal value by year (USD billions) &mdash; LSEG / IQVIA / McKinsey</div>
+        <div class="chart-bars">
+          <div class="chart-bar-wrap">
+            <div class="chart-bar" style="height:52px;opacity:.7;"></div>
+            <div class="chart-bar-label">2020<strong>$98B</strong></div>
+          </div>
+          <div class="chart-bar-wrap">
+            <div class="chart-bar" style="height:130px;opacity:.8;"></div>
+            <div class="chart-bar-label">2021<strong>$189B</strong></div>
+          </div>
+          <div class="chart-bar-wrap">
+            <div class="chart-bar" style="height:42px;opacity:.7;"></div>
+            <div class="chart-bar-label">2022<strong>$84B</strong></div>
+          </div>
+          <div class="chart-bar-wrap">
+            <div class="chart-bar" style="height:160px;"></div>
+            <div class="chart-bar-label">2023<strong>$244B</strong></div>
+          </div>
+          <div class="chart-bar-wrap">
+            <div class="chart-bar" style="height:112px;opacity:.85;"></div>
+            <div class="chart-bar-label">2024<strong>$191B</strong></div>
+          </div>
+        </div>
+        <p class="chart-source">Sources: LSEG, IQVIA, McKinsey. Deal values reflect biopharma acquisitions of majority stakes exceeding $1B. 2023 marked the highest aggregate deal value since 2019. From 2022 onward, dealmaking has shifted decisively toward clinical-stage assets with existing data packages.</p>
       </div>
     </div>
   </section>
@@ -472,7 +568,7 @@
         <div class="svc-col">
           <div class="svc-col-label">Strategic</div>
           <div class="svc-col-title">Advisory and Consulting</div>
-          <p class="svc-desc">Senior judgment at the table for investor and/or regualtory interactions and program-level planning.</p>
+          <p class="svc-desc">Senior judgment at the table for investor and regulatory interactions and program-level planning.</p>
           <ul class="svc-list">
             <li>Clinical and regulatory development plans</li>
             <li>Trial design and endpoint strategy</li>
@@ -488,7 +584,7 @@
           <p class="svc-desc">Submission-ready deliverables built directly. First drafts that hold up through review.</p>
           <ul class="svc-list">
             <li>Medical writing: IBs, protocols, ICFs, CSRs</li>
-            <li>IND and CTA preparation </li>
+            <li>IND and CTA preparation and submission</li>
             <li>Regulatory correspondence and agency responses</li>
             <li>Clinical trial project management</li>
             <li>Vendor oversight and operational problem-solving</li>
@@ -503,8 +599,8 @@
     <div class="row">
       <div class="label">About</div>
       <div class="about-body">
-        <p>CPCC is led by <strong>Amanda Gentile McEwen</strong>, SVP of Clinical Development at Salubris Biotherapeutics, where she leads the JK07 program, a first-in-class ErbB4 agonist in Phase 2b for heart failure.</p>
-        <p>Amanda has spent more than 18 years inside small to midsize biotech teams in Boston and Cambridge, running programs from first-in-human through FDA-approval accross multiple therapeutic areas and treatment modalities, including contributions to two FDA-approved products, <strong>Inbrija</strong> (inhaled levodopa for Parkinson's OFF episodes, approved 2018) and <strong>Rivfloza</strong> (for primary hyperoxaluria type 1). Her work spans antibody fusions, ADCs, RNAi, inhaled delivery, small molecules, and microbiome therapeutics across neurology, cardiovascular, rare disease, oncology, pain, and GI.</p>
+        <p>CPCC is led by <strong>Amanda McEwen</strong> — <a href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener">LinkedIn</a> — SVP of Clinical Development at Salubris Biotherapeutics, where she leads the JK07 program, a first-in-class ErbB4 agonist in Phase 2b for heart failure.</p>
+        <p>Amanda has spent more than 16 years inside small to midsize biotech teams in Boston and Cambridge, running programs from first-in-human through FDA-approved therapies, including <strong>Inbrija</strong> (inhaled levodopa for Parkinson's OFF episodes, approved 2018) and <strong>Rivfloza</strong> (for primary hyperoxaluria type 1). Her work spans antibody fusions, ADCs, RNAi, inhaled delivery, small molecules, and microbiome therapeutics across neurology, cardiovascular, rare disease, oncology, pain, and GI.</p>
         <p>She is an <strong>Executive Fellow at Harvard Business School</strong> in entrepreneurship and life sciences, and <strong>adjunct faculty at Northeastern University</strong> in the MS in Regulatory Affairs program.</p>
       </div>
     </div>
