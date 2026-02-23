@@ -592,7 +592,7 @@ footer {
     </div>
   </section>
 
-  <!-- INDUSTRY TRENDS -->
+ <!-- INDUSTRY TRENDS -->
 <section id="industrytrends">
   <div class="row">
     <div class="label">Clinical Data Fuels M&amp;A</div>
@@ -602,27 +602,26 @@ footer {
       <div class="stat-grid stat-grid-3" style="margin-top:36px;margin-bottom:36px;">
         <div class="stat-cell">
           <strong>83%</strong>
-          <span>Of biopharma M&amp;A transactions in H1 2023 focused on assets in Phase 3 or already on market — up from 59% in 2019. Source: IQVIA</span>
+          <span>Of biopharma M&amp;A transactions in H1 2023 focused on Phase 3 or commercial-stage assets — up from 59% in 2019. Source: IQVIA</span>
         </div>
         <div class="stat-cell">
-          <strong>4x</strong>
-          <span>Drop in preclinical-stage IPO value in 2024 vs 2023 — public investors shifting hard toward clinical-stage assets. Source: GlobalData</span>
+          <strong>$138B</strong>
+          <span>Biopharma M&amp;A in 2025 across 129 deals — described as the strongest M&amp;A year since 2019, driven by patent cliff anxiety and clinical-stage targets. Source: DealForma / J.P. Morgan</span>
         </div>
         <div class="stat-cell">
-          <strong>$228B</strong>
-          <span>Biopharma M&amp;A in 2025 — up 73% from 2024 — driven by patent cliffs and abundance of clinical-stage targets with de-risked data. Source: Vision Lifesciences</span>
+          <strong>70%</strong>
+          <span>Of new drugs approved in 2025 originated in biotech — up dramatically from a decade ago, when most came from pharma internal R&amp;D. Source: International Biotechnology Trust</span>
         </div>
       </div>
 
       <!-- Stacked bar chart: clinical vs preclinical/early deal share -->
-      <div class="chart-label">Share of biopharma M&amp;A deals by asset stage &mdash; IQVIA</div>
+      <div class="chart-label">Share of biopharma M&amp;A deals targeting de-risked (Phase 3+) assets &mdash; IQVIA, with 2025 trend note</div>
       <div class="chart-outer">
 
-        <!-- Y-axis labels + bars -->
         <div style="display:flex;gap:12px;align-items:flex-end;">
 
           <!-- Y axis -->
-          <div style="display:flex;flex-direction:column;justify-content:space-between;height:140px;padding-bottom:0;flex-shrink:0;">
+          <div style="display:flex;flex-direction:column;justify-content:space-between;height:140px;flex-shrink:0;">
             <span style="font-size:10px;color:var(--muted);">100%</span>
             <span style="font-size:10px;color:var(--muted);">75%</span>
             <span style="font-size:10px;color:var(--muted);">50%</span>
@@ -633,66 +632,76 @@ footer {
           <!-- Bars -->
           <div style="flex:1;display:flex;align-items:flex-end;gap:10px;height:140px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);">
 
-            <!-- 2019: 59% de-risked (Ph3+commercial), 41% early -->
-            <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-              <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div><!-- early: 41% -->
-              <div style="height:59%;background:var(--accent);opacity:.9;"></div><!-- de-risked: 59% -->
-            </div>
-
-            <!-- 2020: ~62% de-risked -->
+            <!-- 2019: 59% -->
             <div style="flex:1;display:flex;flex-direction:column;height:100%;">
               <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-              <div style="height:62%;background:var(--accent);opacity:.9;"></div>
+              <div style="height:59%;background:var(--accent);opacity:.7;"></div>
             </div>
 
-            <!-- 2021: 29% commercial (lower de-risked share, more platform deals) ~55% -->
+            <!-- 2020: ~62% -->
             <div style="flex:1;display:flex;flex-direction:column;height:100%;">
               <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-              <div style="height:55%;background:var(--accent);opacity:.9;"></div>
+              <div style="height:62%;background:var(--accent);opacity:.75;"></div>
             </div>
 
-            <!-- 2022: step up, 45% commercial alone, ~70% de-risked total -->
+            <!-- 2021: ~55% -->
             <div style="flex:1;display:flex;flex-direction:column;height:100%;">
               <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
-              <div style="height:70%;background:var(--accent);opacity:.9;"></div>
+              <div style="height:55%;background:var(--accent);opacity:.8;"></div>
             </div>
 
-            <!-- H1 2023: 83% de-risked (Ph3+commercial) -->
+            <!-- 2022: ~70% -->
+            <div style="flex:1;display:flex;flex-direction:column;height:100%;">
+              <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
+              <div style="height:70%;background:var(--accent);opacity:.85;"></div>
+            </div>
+
+            <!-- H1 2023: 83% -->
             <div style="flex:1;display:flex;flex-direction:column;height:100%;">
               <div style="flex:1;background:var(--rule);border-radius:2px 2px 0 0;"></div>
               <div style="height:83%;background:var(--accent);opacity:1;"></div>
+            </div>
+
+            <!-- 2025: annotation bar, no hard % -->
+            <div style="flex:1;display:flex;flex-direction:column;height:100%;position:relative;">
+              <div style="flex:1;background:#f0ede8;border-radius:2px 2px 0 0;border:1px dashed var(--rule);border-bottom:none;"></div>
+              <div style="height:83%;background:var(--accent);opacity:.4;border:1px dashed var(--accent);border-bottom:none;box-sizing:border-box;"></div>
             </div>
 
           </div>
         </div>
 
         <!-- X labels -->
-        <div style="display:flex;gap:10px;padding:10px 0 16px;padding-left:36px;">
+        <div style="display:flex;gap:10px;padding:10px 0 4px;padding-left:36px;">
           <div class="bar-lbl">2019<strong>59%</strong></div>
-          <div class="bar-lbl">2020<strong>62%</strong></div>
-          <div class="bar-lbl">2021<strong>55%</strong></div>
-          <div class="bar-lbl">2022<strong>70%</strong></div>
+          <div class="bar-lbl">2020<strong>~62%</strong></div>
+          <div class="bar-lbl">2021<strong>~55%</strong></div>
+          <div class="bar-lbl">2022<strong>~70%</strong></div>
           <div class="bar-lbl">H1 2023<strong>83%</strong></div>
+          <div class="bar-lbl" style="color:var(--accent);font-style:italic;">2025<strong style="font-size:10px;font-weight:500;color:var(--accent);">trend ↑</strong></div>
         </div>
 
         <!-- Legend -->
-        <div style="display:flex;gap:20px;padding-bottom:16px;padding-left:36px;">
+        <div style="display:flex;gap:20px;padding:12px 0 8px;padding-left:36px;border-top:1px solid var(--rule);margin-top:8px;">
           <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-            <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;opacity:.9;flex-shrink:0;"></div>
+            <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
             Phase 3 or commercial-stage (de-risked)
           </div>
           <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
             <div style="width:12px;height:12px;background:var(--rule);border-radius:2px;flex-shrink:0;"></div>
             Preclinical / early-stage
           </div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
+            <div style="width:12px;height:12px;background:var(--accent);opacity:.4;border-radius:2px;border:1px dashed var(--accent);flex-shrink:0;"></div>
+            2025 directional trend (stage-mix data pending full-year publication)
+          </div>
         </div>
 
-        <p class="chart-source">Source: IQVIA. Share of biopharma M&amp;A transactions (majority-stake, &gt;$1B) focused on de-risked targets with assets in Phase 3 or on market. The single most important factor in acquisition premium is the quality and differentiation of clinical data (Vision Lifesciences, 2025). Companies "built to buy" — with clean data, organized regulatory dossiers, and clear IP — close deals faster and at higher premiums.</p>
+        <p class="chart-source">Sources: IQVIA (2019–H1 2023 stage-mix data); DealForma / J.P. Morgan (2025 deal volume); Pharmaceutical Technology / International Biotechnology Trust (2025 trend commentary). 2025 bar is directional — full-year stage breakdown not yet published. Late-stage and de-risked acquisitions dominated 2025 activity, with CVR structures increasingly used to bridge valuation gaps on clinical-stage targets.</p>
       </div>
     </div>
   </div>
 </section>
-
   <!-- CONTACT -->
   <section id="contact">
     <div class="row">
