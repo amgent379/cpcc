@@ -63,7 +63,9 @@ def fetch(source, url):
     out.sort(key=lambda x: x["date"] or "", reverse=True)
     print(f"{source}: {len(items)} items in feed, {len(out)} usable, {len(body)} bytes, root <{root.tag}>")
     if not out:
-        print(body[:400].decode("utf-8", "replace"))
+        first = next(root.iter("item"), None)
+        if first is not None:
+            print(ET.tostring(first)[:700].decode("utf-8", "replace"))
     return out[:PER_SOURCE]
 
 
