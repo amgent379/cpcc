@@ -606,6 +606,23 @@
       color: var(--muted);
     }
 
+    @media (max-width: 480px) {
+      .brand-name { display: none; }
+      .nav-links { gap: 12px; }
+    }
+    @media (max-width: 480px) {
+      .contact-link { font-size: 17px; overflow-wrap: anywhere; }
+      .stat-grid { grid-template-columns: 1fr 1fr !important; }
+      .stat-cell { padding: 18px 12px; }
+      .stat-cell strong { font-size: 30px; }
+      .chart { overflow: hidden; }
+    }
+    @media (max-width: 380px) {
+      .nav-links { gap: 9px; }
+      .nav-links a { font-size: 11.5px; }
+      .brand-mark { height: 32px; }
+    }
+
     @keyframes up {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -677,6 +694,7 @@
       <span class="brand-name"><span class="brand-line1">Cape Porpoise</span><span class="brand-line2">Clinical Consulting</span></span>
     </a>
     <ul class="nav-links">
+      <li><a href="#how"><span class="hide-sm">How we </span>Engage</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#industrytrends"><span class="hide-sm">Industry </span>Trends</a></li>
@@ -691,7 +709,7 @@
         <p class="hero-sub">Hands-on clinical operations and program leadership, backed by development strategy: as your fractional clinical leader, on a defined project, or as a senior advisor.</p>
         <div class="cta-row">
           <a class="btn" href="#contact">Get in touch</a>
-          <a class="link-quiet" href="#engage">See how we work together</a>
+          <a class="link-quiet" href="#how">See how we work together</a>
         </div>
       </div>
       <svg class="chart" viewBox="0 0 600 440" role="img" aria-label="A chart showing a porpoise balancing a beach ball on its nose as it swims a plotted course from candidate through IND and first-in-human to clinical proof of concept, with the course continuing on toward filing and market">
@@ -770,7 +788,7 @@
               </g>
             </g>
           </svg>
-          <div class="engage-title">How we engage</div>
+          <div class="engage-title" id="how">How we engage</div>
         </div>
         <div class="svc-cols engage-cols bleed">
           <div class="svc-col featured">
