@@ -46,7 +46,13 @@ def fetch(source, url):
     base = root.get("{http://www.w3.org/XML/1998/namespace}base") or (channel.findtext("link") if channel is not None else None) or url
     items = []
     for it in root.iter("item"):
-        items.append((it.findtext("title"), it.findtext("link"), parse_date(it.findtext("pubDate"))))
+        t = it.find("title")
+        title = "".join(t.itertext()) if t is not None else None
+        link = (it.findtext("link") or "").strip()
+        if not link and t is not None:
+            a = t.find("a")
+            link = a.get("href") if a is not None else ""
+        items.append((title, link, parse_date(it.findtext("pubDate"))))
     for it in root.iter(ATOM + "entry"):
         link = it.find(ATOM + "link")
         items.append((it.findtext(ATOM + "title"), link.get("href") if link is not None else None,
@@ -61,11 +67,7 @@ def fetch(source, url):
         out.append({"title": " ".join(title.split()), "link": link, "source": source,
                     "date": date.isoformat() if date else None})
     out.sort(key=lambda x: x["date"] or "", reverse=True)
-    print(f"{source}: {len(items)} items in feed, {len(out)} usable, {len(body)} bytes, root <{root.tag}>")
-    if not out:
-        first = next(root.iter("item"), None)
-        if first is not None:
-            print(ET.tostring(first)[:700].decode("utf-8", "replace"))
+    print(f"{source}: {len(items)} items in feed, {len(out)} usable")
     return out[:PER_SOURCE]
 
 
