@@ -40,7 +40,8 @@ def parse_date(text):
 def fetch(source, url):
     req = urllib.request.Request(url, headers={"User-Agent": "CPCC-headlines/1.0 (+https://capeporpoiseclinical.com)"})
     with urllib.request.urlopen(req, timeout=20) as r:
-        root = ET.fromstring(r.read())
+        body = r.read()
+    root = ET.fromstring(body)
     channel = root.find("channel")
     base = root.get("{http://www.w3.org/XML/1998/namespace}base") or (channel.findtext("link") if channel is not None else None) or url
     items = []
@@ -60,6 +61,9 @@ def fetch(source, url):
         out.append({"title": " ".join(title.split()), "link": link, "source": source,
                     "date": date.isoformat() if date else None})
     out.sort(key=lambda x: x["date"] or "", reverse=True)
+    print(f"{source}: {len(items)} items in feed, {len(out)} usable, {len(body)} bytes, root <{root.tag}>")
+    if not out:
+        print(body[:400].decode("utf-8", "replace"))
     return out[:PER_SOURCE]
 
 
