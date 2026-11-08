@@ -43,7 +43,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 200px;
+      height: 92px;
     }
 
     .brand {
@@ -54,7 +54,7 @@
     }
 
     .brand-logo {
-      height: 240px;
+      height: 72px;
       width: auto;
       display: block;
     }
@@ -392,7 +392,7 @@
     }
 
     .footer-logo {
-      height: 160px;
+      height: 120px;
       width: auto;
       display: block;
       margin: 40px auto 20px;
@@ -455,16 +455,18 @@
     }
 
     @media (max-width: 780px) {
-      nav { padding: 0 20px; height: 120px; }
-      .brand-logo { height: 100px; }
-      .nav-links { display: none; }
+      nav { padding: 0 16px; height: 68px; }
+      .brand-logo { height: 50px; }
+      .nav-links { gap: 14px; }
+      .nav-links a { font-size: 10.5px; letter-spacing: .05em; }
+      .hide-sm { display: none; }
       .hero { padding: 56px 20px; min-height: 68vh; }
       .row { grid-template-columns: 1fr; gap: 14px; padding: 52px 20px; }
       .svc-cols { grid-template-columns: 1fr; }
       .stat-grid-4 { grid-template-columns: 1fr 1fr; }
       .stat-grid-3 { grid-template-columns: 1fr 1fr; }
       footer { padding: 0 20px 24px; }
-      .footer-logo { height: 100px; }
+      .footer-logo { height: 90px; }
     }
   </style>
 </head>
@@ -473,12 +475,12 @@
 
   <nav>
     <a class="brand" href="#top">
-      <img class="brand-logo" src="CPCC_logo.png?v=2" alt="Cape Porpoise Clinical Consulting" />
+      <img class="brand-logo" src="CPCC_logo.png?v=3" alt="Cape Porpoise Clinical Consulting" />
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#industrytrends">Industry Trends</a></li>
+      <li><a href="#industrytrends"><span class="hide-sm">Industry </span>Trends</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -516,9 +518,9 @@
           <div class="svc-col">
             <div class="svc-col-label">Execution</div>
             <div class="svc-col-title">Clinical and Regulatory Work</div>
-            <p class="svc-desc">Clinical/Regulatory deliverbles with quality built in.</p>
+            <p class="svc-desc">Clinical and regulatory deliverables with quality built in.</p>
             <ul class="svc-list">
-              <li>Regulatory correspondence and dossier authoring (briefing documents, IND amendments, etc) </li>
+              <li>Regulatory correspondence and dossier authoring (briefing documents, IND amendments, etc.)</li>
               <li>Clinical trial project management</li>
               <li>IND and CTA preparation and submission</li>
               <li>Data management and pharmacovigilance oversight</li>
@@ -540,7 +542,7 @@
 
         <div class="about-body" style="margin-bottom:48px;">
           <p>CPCC is led by <strong>Amanda McEwen</strong> — <a href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener">LinkedIn</a> — SVP of Clinical Development at Salubris Biotherapeutics, where she leads the JK07 program, a first-in-class ErbB4 agonist in Phase 2b for heart failure.</p>
-          <p>Amanda has spent her entire career working within small amd mid-size biotech, where the boundaries between functional areas are rarely as clean as an org chart suggests. That breadth — built from years of doing the work across functions, not just overseeing it — is what CPCC brings to client teams. She embeds fluidly with both small founding teams that need a full clinical function built out, and larger organizations that need senior capacity on a specific workstream or at a critical juncture.</p>
+          <p>Amanda has spent her entire career working within small and mid-size biotech, where the boundaries between functional areas are rarely as clean as an org chart suggests. That breadth — built from years of doing the work across functions, not just overseeing it — is what CPCC brings to client teams. She embeds fluidly with both small founding teams that need a full clinical function built out, and larger organizations that need senior capacity on a specific workstream or at a critical juncture.</p>
           <p>Her career highlights include key contributions to two FDA-approved therapies: <strong>Inbrija</strong>, for Parkinson's disease, and <strong>Rivfloza</strong>, for a rare genetic liver disease. She is especially passionate about early-phase development and has led several initiatives spanning preclinical research through clinical proof of concept.</p>
           <p>Beyond her industry role, Amanda serves as an Executive Fellow at Harvard Business School, helping educate and mentor newly minted entrepreneurs in the biotech space and also serves as adjunct faculty in Northeastern University's MS in Regulatory Affairs program, where she teaches classes on therapeutic product development and pharmacovigilance. Amanda is a current PhD candidate in Business Analytics at Bentley University. She earned her BA from the College of the Holy Cross and a Master of Research Methods in Psychology from the University of York in England.</p>
         </div>
@@ -618,7 +620,7 @@
         <!-- TRACK RECORD + GLOBAL REACH -->
         <div style="margin-top:52px;">
           <div style="font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">Track Record &amp; Global Reach</div>
-          <p class="body-lg" style="font-size:15.5px;margin-bottom:28px;">Over 18 years inside small and midsize biotech across Boston and Cambridge, Amanda has guided programs from first-in-human through FDA approval, exits, and partnerships. A career built entirely in small biotech — working across every function, and knowing how to move programs forward with lean teams and limited resources — spanning 25+ countries and four major regulatory regions.</p>
+          <p class="body-lg" style="font-size:15.5px;margin-bottom:28px;">Over 16 years inside small and midsize biotech across Boston and Cambridge, Amanda has guided programs from first-in-human through FDA approval, exits, and partnerships. A career built entirely in small biotech — working across every function, and knowing how to move programs forward with lean teams and limited resources — spanning 25+ countries and four major regulatory regions.</p>
 
           <div class="stat-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px;">
             <div class="stat-cell">
@@ -637,7 +639,7 @@
               <div class="stat-desc">Registrational &amp; confirmatory trials</div>
             </div>
             <div class="stat-cell">
-              <strong>17+</strong>
+              <strong>16+</strong>
               <div class="stat-label">Years</div>
               <div class="stat-desc">Clinical biotech leadership</div>
             </div>
@@ -807,10 +809,6 @@
     </div>
   </section>
 
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACT -->
   <section id="contact">
     <div class="row">
@@ -826,7 +824,7 @@
   </section>
 
   <footer>
-    <img class="footer-logo" src="CPCC_logo.png?v=2" alt="Cape Porpoise Clinical Consulting" />
+    <img class="footer-logo" src="CPCC_logo.png?v=3" alt="Cape Porpoise Clinical Consulting" />
     <div class="footer-meta">
       <p>&#169; <span id="y"></span> Cape Porpoise Clinical Consulting, LLC</p>
       <p>Cambridge, Massachusetts</p>
