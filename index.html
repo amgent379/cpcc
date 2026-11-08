@@ -281,6 +281,35 @@
       .ticker-btn { display: none; }
     }
 
+    .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0 8px; }
+    .chart-card { background: #fff; border-radius: 6px; padding: 22px 22px 18px; margin: 0; }
+    .chart-cap { font-family: var(--serif); font-size: 19px; color: var(--ink); margin-bottom: 18px; }
+    .chart-note { font-size: 12px; color: var(--muted); line-height: 1.5; margin-top: 14px; }
+    .vbars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; height: 230px; align-items: end; border-bottom: 1px solid var(--rule); padding-bottom: 0; }
+    .vb { display: flex; flex-direction: column; justify-content: flex-end; height: 100%; position: relative; }
+    .vb-val { font-size: 13.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; text-align: center; }
+    .vb-val span { display: block; font-weight: 400; font-size: 11.5px; color: var(--muted); }
+    .vb-bar { background: var(--accent); border-radius: 3px 3px 0 0; }
+    .vb-bar.hot { background: var(--course); }
+    .vb-2026 .vb-val { position: absolute; bottom: calc(52% + 8px); left: 0; right: 0; }
+    .vb-stack { position: relative; height: calc(100% - 4px); }
+    .vb-ghost { position: absolute; bottom: 0; left: 0; right: 0; border: 1.5px dashed #9fb0cf; border-bottom: none; border-radius: 3px 3px 0 0; }
+    .vb-ghost span { position: absolute; top: 6px; left: 0; right: 0; text-align: center; font-size: 11px; color: var(--muted); line-height: 1.3; padding: 0 4px; }
+    .vb-stack .vb-bar { position: absolute; bottom: 0; left: 0; right: 0; }
+    .vb-lbl { position: absolute; bottom: -24px; left: 0; right: 0; text-align: center; font-size: 13px; color: var(--muted); }
+    .vbars { margin-bottom: 30px; }
+    .hstack { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
+    .hs-row { display: grid; grid-template-columns: 44px 1fr; align-items: center; gap: 10px; }
+    .hs-yr { font-size: 13px; font-weight: 600; color: var(--ink); }
+    .hs-bar { display: flex; height: 44px; border-radius: 4px; overflow: hidden; }
+    .seg { display: flex; align-items: center; justify-content: center; font-size: 12.5px; font-weight: 600; color: #fff; }
+    .seg.pre, .legend .pre { background: var(--course); }
+    .seg.p3, .legend .p3 { background: #6f8fd6; }
+    .seg.com, .legend .com { background: var(--navy); }
+    .legend { list-style: none; display: flex; gap: 18px; margin-top: 16px; font-size: 12.5px; color: var(--muted); }
+    .legend li { display: flex; align-items: center; gap: 6px; }
+    .legend i { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
+
     .xp { border-top: 1px solid var(--rule); margin-bottom: 14px; }
     .xp-row {
       display: grid;
@@ -593,7 +622,7 @@
       .bleed, .svc-cols.bleed { margin-left: 0; width: 100%; }
       .title-row { grid-template-columns: 1fr; gap: 0; margin: 36px 0 0; width: 100%; }
       .title-art { max-width: 150px; }
-      .trigger-list, .steps { grid-template-columns: 1fr; }
+      .trigger-list, .steps, .charts { grid-template-columns: 1fr; }
       .ticker-head { padding: 12px 20px 0; }
       .xp-row { grid-template-columns: 1fr; gap: 4px; }
       .xp-out { text-align: left; }
@@ -1055,7 +1084,33 @@
             <span>Share of biopharma venture funding going to early-stage companies in 2025, down from 44% in 2020, as investors concentrate on later, de-risked programs. Source: PitchBook</span>
           </div>
         </div>
-        <p class="chart-source" style="border-top:none;">Sources: IQVIA, &ldquo;Biopharma M&amp;A: Outlook for 2026&rdquo; (Jan 2026) and &ldquo;Mid-year 2026 update&rdquo; (Jul 2026), majority-stake acquisitions &ge;$250M; EY data as reported by BioXconomy (H1 2026); PitchBook data as reported by Fierce Biotech (2025).</p>
+        <div class="charts">
+          <figure class="chart-card">
+            <figcaption class="chart-cap">Biopharma M&amp;A deal value</figcaption>
+            <div class="vbars" role="img" aria-label="Bar chart. Biopharma M&amp;A deal value: about 57 billion dollars in 2024, 133 billion in 2025, and 130 billion in the first half of 2026 alone, against an IQVIA best-case projection of 250 billion for the full year.">
+              <div class="vb"><div class="vb-val">~$57B</div><div class="vb-bar" style="height:22.8%"></div><div class="vb-lbl">2024</div></div>
+              <div class="vb"><div class="vb-val">$133B</div><div class="vb-bar" style="height:53.2%"></div><div class="vb-lbl">2025</div></div>
+              <div class="vb vb-2026"><div class="vb-val">$130B <span>first half</span></div>
+                <div class="vb-stack"><div class="vb-ghost" style="height:100%"><span>$250B best-case full year</span></div><div class="vb-bar hot" style="height:52%"></div></div>
+                <div class="vb-lbl">2026</div></div>
+            </div>
+            <p class="chart-note">Majority-stake acquisitions &ge;$250M. 2024 derived from IQVIA's reported +133% rise to 2025. Dashed bar is IQVIA's best-case projection, not a result.</p>
+          </figure>
+          <figure class="chart-card">
+            <figcaption class="chart-cap">Where M&amp;A dollars went, by stage of the target</figcaption>
+            <div class="hstack" role="img" aria-label="Stacked bars. In 2024, about 50 percent of M&amp;A value went to pre-Phase 3 targets, about 42 percent to Phase 3, and 8 percent to commercial-stage. In 2025, about 23 percent went to pre-Phase 3, 28 percent to Phase 3, and 49 percent to commercial-stage.">
+              <div class="hs-row"><div class="hs-yr">2024</div>
+                <div class="hs-bar"><div class="seg pre" style="width:50%">~50%</div><div class="seg p3" style="width:42%">~42%</div><div class="seg com" style="width:8%"></div></div></div>
+              <div class="hs-row"><div class="hs-yr">2025</div>
+                <div class="hs-bar"><div class="seg pre" style="width:23%">~23%</div><div class="seg p3" style="width:28%">28%</div><div class="seg com" style="width:49%">49%</div></div></div>
+            </div>
+            <ul class="legend">
+              <li><i class="pre"></i>Pre-Phase 3</li><li><i class="p3"></i>Phase 3</li><li><i class="com"></i>Commercial</li>
+            </ul>
+            <p class="chart-note">Share of total M&amp;A deal value. Early-stage buying spiked in 2024's weak market (pre-Phase 3 averaged 19% in 2020&ndash;2023), then buyers returned to de-risked assets in 2025. Commercial-stage 2024 share: 8%.</p>
+          </figure>
+        </div>
+        <p class="chart-source" style="border-top:none;">Sources: IQVIA, &ldquo;Biopharma M&amp;A: Outlook for 2025&rdquo; (Jan 2025), &ldquo;Outlook for 2026&rdquo; (Jan 2026) and &ldquo;Mid-year 2026 update&rdquo; (Jul 2026), majority-stake acquisitions &ge;$250M; EY data as reported by BioXconomy (H1 2026); PitchBook data as reported by Fierce Biotech (2025).</p>
 
       </div>
     </div>
