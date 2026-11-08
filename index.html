@@ -7,19 +7,22 @@
   <meta name="description" content="Clinical and regulatory consulting for early-stage biotech. Strategy to execution." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 
   <style>
     :root {
-      --ink: #0e1219;
-      --paper: #f7f4ef;
-      --muted: #5a6a8a;
-      --accent: #1a2d6e;
-      --rule: #d4cfc7;
-      --serif: 'Libre Baskerville', Georgia, serif;
-      --sans: 'DM Sans', system-ui, sans-serif;
+      --ink: #17202e;
+      --paper: #ffffff;
+      --fog: #eef3f7;
+      --muted: #556178;
+      --accent: #1d3a8f;
+      --navy: #0f2350;
+      --rule: #dbe2ea;
+      --course: #e0457b;
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'Public Sans', system-ui, sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +39,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(247,244,239,.95);
+      background: rgba(255,255,255,.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--rule);
       padding: 0 48px;
@@ -53,115 +56,140 @@
       color: var(--ink);
     }
 
-    .brand-logo {
-      height: 72px;
-      width: auto;
-      display: block;
-    }
+    .brand { gap: 12px; }
+    .brand-mark { height: 50px; width: auto; display: block; }
+    .brand-name { display: flex; flex-direction: column; line-height: 1.1; }
+    .brand-line1 { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--navy); }
+    .brand-line2 { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: .02em; margin-top: 2px; }
 
-    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
 
     .nav-links a {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      color: var(--muted);
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--ink);
       text-decoration: none;
-      transition: color .15s;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color .15s, color .15s;
     }
 
-    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover { color: var(--accent); border-color: var(--course); }
 
     .hero {
-      min-height: 84vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 72px 48px;
-      border-bottom: 1px solid var(--rule);
+      background: var(--navy);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
     }
 
-    .eyebrow {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 22px;
-      display: flex;
+    .hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 88px 48px 96px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+      gap: 56px;
       align-items: center;
-      gap: 12px;
-      opacity: 0;
-      animation: up .6s ease .1s forwards;
-    }
-
-    .eyebrow::before {
-      content: '';
-      width: 24px;
-      height: 1px;
-      background: var(--muted);
-      flex-shrink: 0;
+      min-height: 78vh;
     }
 
     h1 {
       font-family: var(--serif);
-      font-size: clamp(34px, 5.5vw, 72px);
-      line-height: 1.08;
-      letter-spacing: -.02em;
-      max-width: 820px;
-      margin-bottom: 32px;
-      opacity: 0;
-      animation: up .7s ease .2s forwards;
+      font-weight: 400;
+      font-size: clamp(36px, 4.4vw, 58px);
+      line-height: 1.06;
+      letter-spacing: -.015em;
+      margin-bottom: 26px;
     }
-
-    h1 em { font-style: italic; color: var(--accent); }
-
-    .cta-row {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      opacity: 0;
-      animation: up .7s ease .33s forwards;
-    }
-
-    .btn {
-      background: var(--accent);
-      color: #fff;
-      padding: 13px 24px;
-      border-radius: 3px;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: .04em;
-      transition: opacity .15s;
-    }
-
-    .btn:hover { opacity: .85; }
 
     .hero-sub {
       font-size: 18px;
       line-height: 1.6;
-      color: var(--muted);
-      max-width: 640px;
-      margin: -12px 0 32px;
-      opacity: 0;
-      animation: up .7s ease .27s forwards;
+      color: #c9d3e6;
+      max-width: 520px;
+      margin-bottom: 36px;
     }
+
+    .cta-row { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+
+    .btn {
+      background: #fff;
+      color: var(--navy);
+      padding: 14px 26px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background .15s;
+    }
+
+    .btn:hover { background: #dfe7f5; }
+
+    .link-quiet {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 2px solid var(--course);
+      padding-bottom: 2px;
+    }
+
+    .btn:focus-visible, .link-quiet:focus-visible, .nav-links a:focus-visible, .contact-link:focus-visible {
+      outline: 2px solid var(--course);
+      outline-offset: 3px;
+    }
+
+    .chart { width: 100%; height: auto; display: block; }
+    .chart .contour { fill: none; stroke: rgba(160,190,230,.22); stroke-width: 1; }
+    .chart .grid { stroke: rgba(160,190,230,.10); stroke-width: 1; }
+    .chart .course { fill: none; stroke: var(--course); stroke-width: 2; stroke-dasharray: 8 7; opacity: .9; }
+    .chart .p-body { stroke: rgba(169,196,255,.55); stroke-width: .6; }
+    .chart .p-hi { fill: none; stroke: #a9c4ff; stroke-width: 1; opacity: .85; stroke-linecap: round; }
+    .chart .p-mouth { fill: none; stroke: #0c1a45; stroke-width: .7; stroke-linecap: round; }
+    .chart .p-eye { fill: #0c1a45; }
+    .chart .p-glint { fill: #fff; }
+    .chart .bb-base { fill: #fff; }
+    .chart .bb-a, .chart .bb-b { fill: var(--course); }
+    .chart .bb-c { fill: #f2c14e; }
+    .chart .bb-d { fill: #6fa8e0; }
+    .chart .bb-cap { fill: #fff; stroke: #dfe7f5; stroke-width: .6; }
+    .chart .bb-shine { fill: #fff; opacity: .6; }
+    .chart .dest-label { font-size: 16px; }
+    .chart .course-next { fill: none; stroke: rgba(224,69,123,.55); stroke-width: 2; stroke-dasharray: 3 6; }
+    .chart .arrowhead { fill: rgba(224,69,123,.75); }
+    .chart .wp-next { fill: var(--navy); stroke: rgba(224,69,123,.6); stroke-width: 2; }
+    .chart .next-label { fill: #b9c6de; font-weight: 500; }
+    .chart .wp { fill: var(--navy); stroke: var(--course); stroke-width: 2.5; }
+    .chart .wp-label { fill: #fff; font: 600 13px var(--sans); }
+    .chart .wp-sub { fill: #9fb0cf; font: 400 11.5px var(--sans); }
+    .chart .dest { fill: var(--course); }
+
+
+
+
 
     .engage-title {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 52px 0 16px;
+      font-family: var(--serif);
+      font-size: 26px;
+      color: var(--ink);
+      margin: 64px 0 20px;
     }
 
-    .svc-cols.engage-cols { grid-template-columns: repeat(2, 1fr); }
-    .engage-cols .svc-col { padding: 28px 24px; }
+    .svc-cols.engage-cols { grid-template-columns: repeat(4, 1fr); }
+    @media (min-width: 1000px) {
+      .bleed, .svc-cols.bleed { margin-left: -272px; width: calc(100% + 272px); }
+    }
+    @media (max-width: 999px) {
+      .svc-cols.engage-cols { grid-template-columns: repeat(2, 1fr); }
+    }
+    .engage-cols .svc-col { padding: 28px 22px; }
+    .engage-cols .svc-col-title { font-size: 21px; }
     .engage-cols .svc-desc { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
-    .svc-col.featured { background: #fff; }
+    .svc-col.featured { background: var(--navy); color: #fff; }
+    .svc-col.featured .svc-desc, .svc-col.featured .engage-best { color: #c9d3e6; }
+    .svc-col.featured .engage-commit { color: #fff; }
+    .svc-col.featured .engage-best b { color: #fff; }
     .engage-commit {
       font-size: 12px;
       font-weight: 600;
@@ -187,34 +215,41 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 9px;
+      top: 7px;
       width: 8px;
-      height: 2px;
-      background: var(--accent);
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid var(--course);
     }
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .step-num { font-family: var(--serif); font-size: 26px; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+    .step-num { font-family: var(--serif); font-size: 34px; color: var(--course); line-height: 1; margin-bottom: 8px; }
     .step-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
     .step-desc { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
 
-    section { border-bottom: 1px solid var(--rule); }
+    section { border-bottom: none; }
+    #services, #industrytrends { background: var(--fog); }
 
     .row {
       max-width: 1060px;
       margin: 0 auto;
-      padding: 72px 48px;
+      padding: 96px 48px;
       display: grid;
-      grid-template-columns: 180px 1fr;
+      grid-template-columns: 220px 1fr;
       gap: 52px;
     }
 
+    .row > div { min-width: 0; }
+    .title-row { display: grid; grid-template-columns: 220px 1fr; gap: 52px; align-items: end; margin: 48px 0 0 -272px; width: calc(100% + 272px); }
+    .title-row .engage-title { margin: 0 0 20px; }
+    .title-art { width: 100%; max-width: 220px; height: auto; display: block; }
+    .spot { display: block; width: 100%; max-width: 210px; height: auto; margin-top: 18px; }
+
     .label {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-top: 4px;
+      font-family: var(--serif);
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--ink);
+      padding-top: 0;
     }
 
     .body-lg {
@@ -226,15 +261,48 @@
 
     .body-lg:last-child { margin-bottom: 0; }
 
+    .ticker { background: #fff; border-bottom: 1px solid var(--rule); }
+    .ticker-head { display: flex; justify-content: space-between; align-items: center; max-width: 1240px; margin: 0 auto; padding: 14px 48px 0; }
+    .ticker-title { font-size: 13px; font-weight: 600; color: var(--course); }
+    .ticker-btn { font: 500 12.5px var(--sans); color: var(--muted); background: none; border: 1px solid var(--rule); border-radius: 4px; padding: 3px 10px; cursor: pointer; }
+    .ticker-btn:focus-visible { outline: 2px solid var(--course); outline-offset: 2px; }
+    .ticker-window { overflow: hidden; padding: 10px 0 16px; }
+    .ticker-track { list-style: none; display: flex; width: max-content; animation: tick var(--tick-dur, 90s) linear infinite; }
+    .ticker:hover .ticker-track, .ticker:focus-within .ticker-track, .ticker.paused .ticker-track { animation-play-state: paused; }
+    .ticker-track li { display: flex; align-items: baseline; gap: 8px; padding: 0 28px 0 18px; border-right: 1px solid var(--rule); white-space: nowrap; }
+    .ticker-src { font-size: 12px; font-weight: 600; color: var(--muted); }
+    .ticker-track a { font-size: 14.5px; color: var(--ink); text-decoration: none; }
+    .ticker-track a:hover { color: var(--accent); text-decoration: underline; }
+    .ticker-track a:focus-visible { outline: 2px solid var(--course); outline-offset: 2px; }
+    @keyframes tick { to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-window { overflow-x: auto; }
+      .ticker-track { animation: none; }
+      .ticker-btn { display: none; }
+    }
+
+    .xp { border-top: 1px solid var(--rule); margin-bottom: 14px; }
+    .xp-row {
+      display: grid;
+      grid-template-columns: 170px 1fr 170px;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: baseline;
+    }
+    .xp-area { font-family: var(--serif); font-size: 19px; color: var(--ink); }
+    .xp-what { font-size: 14.5px; color: var(--muted); line-height: 1.55; }
+    .xp-what strong { color: var(--ink); font-weight: 600; }
+    .xp-out { font-size: 13.5px; font-weight: 600; color: var(--accent); text-align: right; }
+    .xp-also { font-size: 14px; color: var(--muted); margin-bottom: 40px; }
+
     .tag-group { margin-bottom: 28px; }
     .tag-group:last-child { margin-bottom: 0; }
 
     .tag-group-title {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
       margin-bottom: 10px;
     }
 
@@ -243,10 +311,10 @@
     .tag {
       font-size: 13px;
       color: var(--ink);
-      border: 1px solid var(--rule);
-      padding: 5px 13px;
+      border: none;
+      padding: 6px 14px;
       border-radius: 999px;
-      background: #fff;
+      background: var(--fog);
     }
 
     .stat-grid {
@@ -262,7 +330,7 @@
     .stat-grid-3 { grid-template-columns: repeat(3, 1fr); }
 
     .stat-cell {
-      background: var(--paper);
+      background: #fff;
       padding: 24px 20px;
       text-align: center;
     }
@@ -270,8 +338,9 @@
     .stat-cell strong {
       display: block;
       font-family: var(--serif);
-      font-size: 36px;
-      color: var(--accent);
+      font-weight: 500;
+      font-size: 40px;
+      color: var(--navy);
       line-height: 1;
       margin-bottom: 8px;
     }
@@ -283,10 +352,8 @@
     }
 
     .stat-cell .stat-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .13em;
-      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
       color: var(--ink);
       margin-bottom: 4px;
     }
@@ -298,11 +365,9 @@
     }
 
     .chart-label {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
       margin-bottom: 14px;
       margin-top: 36px;
     }
@@ -342,20 +407,19 @@
       width: 100%;
     }
 
-    .svc-col { background: var(--paper); padding: 32px 28px; }
+    .svc-col { background: #fff; padding: 34px 30px; }
 
     .svc-col-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .17em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--course);
+      margin-bottom: 6px;
     }
 
     .svc-col-title {
       font-family: var(--serif);
-      font-size: 19px;
+      font-weight: 500;
+      font-size: 23px;
       line-height: 1.2;
       margin-bottom: 7px;
     }
@@ -373,9 +437,9 @@
 
     .svc-list li {
       font-size: 14px;
-      color: var(--muted);
+      color: var(--ink);
       line-height: 1.45;
-      padding-left: 14px;
+      padding-left: 16px;
       position: relative;
     }
 
@@ -384,9 +448,9 @@
       position: absolute;
       left: 0;
       top: 9px;
-      width: 5px;
-      height: 1px;
-      background: var(--rule);
+      width: 7px;
+      height: 2px;
+      background: var(--accent);
     }
 
     .about-body p {
@@ -411,7 +475,7 @@
 
     .contact-tag {
       font-family: var(--serif);
-      font-size: 25px;
+      font-size: 34px;
       line-height: 1.3;
       margin-bottom: 28px;
       max-width: 440px;
@@ -423,7 +487,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 16px;
+      font-size: 21px;
       font-weight: 500;
       color: var(--accent);
       text-decoration: none;
@@ -433,7 +497,7 @@
     }
 
     .contact-link:first-child { border-top: 1px solid var(--rule); }
-    .contact-link:hover { color: #2d5f8a; }
+    .contact-link:hover { color: var(--course); }
 
     .arr { transition: transform .15s; }
     .contact-link:hover .arr { transform: translateX(4px); }
@@ -441,19 +505,17 @@
     .contact-note { font-size: 13px; color: var(--muted); line-height: 1.65; max-width: 380px; }
 
     footer {
-      padding: 0 48px 48px;
+      padding: 0 48px 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0;
-      border-top: 1px solid var(--rule);
+      background: var(--navy);
     }
 
     .footer-logo {
-      height: 120px;
+      height: 96px;
       width: auto;
       display: block;
-      margin: 40px auto 20px;
     }
 
     .footer-meta {
@@ -464,18 +526,19 @@
       gap: 8px;
     }
 
-    footer p { font-size: 12px; color: var(--muted); }
+    footer p { font-size: 13px; color: #9fb0cf; }
+    .footer-logo-wrap { background: #fff; border-radius: 6px; padding: 14px 22px; margin: 44px auto 28px; }
 
     .map-container {
       border: 1px solid var(--rule);
       border-radius: 5px;
-      background: #cfe0ed;
+      background: #dbe7f2;
       overflow: hidden;
       position: relative;
       margin-top: 24px;
     }
     #map-svg { width: 100%; height: auto; display: block; }
-    .country-path { fill: #e2ddd7; stroke: #fff; stroke-width: 0.4; }
+    .country-path { fill: #ffffff; stroke: #fff; stroke-width: 0.4; }
     .country-path.active {
       fill: var(--accent);
       stroke: #fff;
@@ -515,28 +578,67 @@
     @media (max-width: 780px) {
       html { scroll-padding-top: 76px; }
       nav { padding: 0 16px; height: 68px; }
-      .brand-logo { height: 50px; }
+      .brand-mark { height: 38px; }
+      .brand-line1 { font-size: 17px; }
+      .brand-line2 { font-size: 11px; }
+      .brand { gap: 8px; }
       .nav-links { gap: 14px; }
-      .nav-links a { font-size: 10.5px; letter-spacing: .05em; }
+      .nav-links a { font-size: 12.5px; }
       .hide-sm { display: none; }
-      .hero { padding: 56px 20px; min-height: 68vh; }
+      .hero-inner { grid-template-columns: 1fr; padding: 48px 20px 56px; gap: 28px; min-height: 0; }
+      .label { font-size: 22px; }
+      .spot { max-width: 150px; margin-top: 10px; }
       .row { grid-template-columns: 1fr; gap: 14px; padding: 52px 20px; }
       .svc-cols, .svc-cols.engage-cols { grid-template-columns: 1fr; }
+      .bleed, .svc-cols.bleed { margin-left: 0; width: 100%; }
+      .title-row { grid-template-columns: 1fr; gap: 0; margin: 36px 0 0; width: 100%; }
+      .title-art { max-width: 150px; }
       .trigger-list, .steps { grid-template-columns: 1fr; }
+      .ticker-head { padding: 12px 20px 0; }
+      .xp-row { grid-template-columns: 1fr; gap: 4px; }
+      .xp-out { text-align: left; }
       .hero-sub { font-size: 16px; }
+      .nav-links { gap: 14px; }
       .stat-grid-4 { grid-template-columns: 1fr 1fr; }
       .stat-grid-3 { grid-template-columns: 1fr 1fr; }
       footer { padding: 0 20px 24px; }
-      .footer-logo { height: 90px; }
+      .footer-logo { height: 72px; }
     }
   </style>
 </head>
 
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="pg2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#5b7fe0"/><stop offset=".55" stop-color="#2d4bb0"/><stop offset="1" stop-color="#1c2f80"/>
+      </linearGradient>
+      <g id="porp">
+        <path d="M0 0 C -4 -3, -9 -6, -14 -7 C -18 -11, -26 -13.5, -34 -12.5 C -36 -15, -38 -18, -42 -20.5 C -42 -17, -42.5 -14, -44 -11.5 C -54 -9.5, -63 -5, -71 1 C -74 -1, -78 -3, -83 -3 C -81 0, -80 3, -82 8 C -78 6, -75 4, -72 4 C -60 4, -46 1.5, -32 2.5 C -22 3, -12 3, -6 2 C -4 1.5, -2 1, 0 0 Z" fill="url(#pg2)" stroke="#16245e" stroke-width=".9" stroke-linejoin="round"/>
+        <path d="M-15 -7.2 C -19 -10.6, -26 -12.6, -33 -11.8 M -45 -10.6 C -54 -8.6, -62 -4.6, -69 0.4" fill="none" stroke="#b9d0ff" stroke-width="1.1" stroke-linecap="round"/>
+        <path d="M-1 0.6 C -4 1.6, -7 2, -10 1.8" fill="none" stroke="#0c1a45" stroke-width=".8" stroke-linecap="round"/>
+        <circle cx="-15.5" cy="-3.9" r="1.9" fill="#0c1a45"/><circle cx="-14.9" cy="-4.6" r=".65" fill="#fff"/>
+      </g>
+      <g id="bb">
+        <circle r="10" fill="#fff"/>
+        <path d="M0 -10 C -7 -5.5, -7 5.5, 0 10 C -4.5 5.5, -4.5 -5.5, 0 -10 Z M0 -10 C 7 -5.5, 7 5.5, 0 10 C 4.5 5.5, 4.5 -5.5, 0 -10 Z" fill="#e0457b"/>
+        <path d="M0 -10 C -13.6 -5.5, -13.6 5.5, 0 10 C -10 6.4, -10 -6.4, 0 -10 Z" fill="#f2c14e"/>
+        <path d="M0 -10 C 13.6 -5.5, 13.6 5.5, 0 10 C 10 6.4, 10 -6.4, 0 -10 Z" fill="#6fa8e0"/>
+      </g>
+      <g id="hat">
+        <path d="M-8 0 C -8 -6, 8 -6, 8 0 Z" fill="#fff" stroke="#c9d3e6" stroke-width=".6"/>
+        <rect x="-8.5" y="-1.6" width="17" height="3" rx="1" fill="#0f2350"/>
+        <path d="M2 1.2 C 6 1.6, 10 2.4, 12 3.4 L 3 3.2 Z" fill="#0f2350"/>
+        <circle cx="0" cy="-3.2" r="1.3" fill="#f2c14e"/>
+      </g>
+      <path id="water" d="M0 122 C 25 114, 45 130, 70 122 S 115 114, 140 122 S 185 130, 200 120 L 200 150 L 0 150 Z" fill="#cfe0f2"/>
+    </defs>
+  </svg>
 
   <nav>
-    <a class="brand" href="#top">
-      <img class="brand-logo" src="CPCC_logo.png?v=3" alt="Cape Porpoise Clinical Consulting" />
+    <a class="brand" href="#top" aria-label="Cape Porpoise Clinical Consulting, home">
+      <img class="brand-mark" src="CPCC_mark.png?v=1" alt="" />
+      <span class="brand-name"><span class="brand-line1">Cape Porpoise</span><span class="brand-line2">Clinical Consulting</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
@@ -547,18 +649,85 @@
   </nav>
 
   <div class="hero" id="top">
-    <div class="eyebrow">Cape Porpoise Clinical Consulting, LLC &middot; Cambridge, MA</div>
-    <h1>Helping lean biotech<br>chart a course to <em>meaningful clinical inflection points</em></h1>
-    <p class="hero-sub">Hands-on clinical operations and program leadership, backed by development strategy: as your fractional clinical leader, on a defined project, or as a senior advisor.</p>
-    <div class="cta-row">
-      <a class="btn" href="#contact">Get in touch</a>
+    <div class="hero-inner">
+      <div>
+        <h1>Helping emerging biotech and biopharma chart a course to meaningful clinical inflection points</h1>
+        <p class="hero-sub">Hands-on clinical operations and program leadership, backed by development strategy: as your fractional clinical leader, on a defined project, or as a senior advisor.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="link-quiet" href="#engage">See how we work together</a>
+        </div>
+      </div>
+      <svg class="chart" viewBox="0 0 600 440" role="img" aria-label="A chart showing a porpoise balancing a beach ball on its nose as it swims a plotted course from candidate through IND and first-in-human to clinical proof of concept, with the course continuing on toward filing and market">
+        <g class="grid">
+          <line x1="0" y1="110" x2="600" y2="110"/><line x1="0" y1="220" x2="600" y2="220"/><line x1="0" y1="330" x2="600" y2="330"/>
+          <line x1="150" y1="0" x2="150" y2="440"/><line x1="300" y1="0" x2="300" y2="440"/><line x1="450" y1="0" x2="450" y2="440"/>
+        </g>
+        <path class="contour" d="M-20 380 C 80 340, 140 400, 230 360 S 380 300, 470 340 S 590 380, 640 330"/>
+        <path class="contour" d="M-20 300 C 70 270, 160 330, 250 290 S 400 220, 500 260 S 600 290, 640 250"/>
+        <path class="contour" d="M-20 210 C 90 190, 170 240, 270 200 S 420 130, 520 170 S 610 190, 640 160"/>
+        <path class="contour" d="M-20 120 C 100 110, 190 150, 300 110 S 450 50, 540 80 S 620 90, 640 70"/>
+        <path class="contour" d="M60 40 C 120 20, 180 60, 240 35 S 330 0, 380 20"/>
+
+        <path class="course" d="M50 380 L 180 318 L 300 258 L 410 186"/>
+        <path class="course-next" d="M410 186 L 492 124 L 562 62"/>
+        <path class="arrowhead" d="M574 52 L 552 58 L 566 72 Z"/>
+
+        <circle class="wp" cx="50" cy="380" r="6"/>
+        <text class="wp-label" x="26" y="410">Candidate</text>
+        <circle class="wp" cx="180" cy="318" r="6"/>
+        <text class="wp-label" x="168" y="350">IND</text>
+        <circle class="wp" cx="300" cy="258" r="6"/>
+        <text class="wp-label" x="280" y="290">First-in-human</text>
+        <path class="dest" d="M410 168 L 428 186 L 410 204 L 392 186 Z"/>
+        <text class="wp-label dest-label" x="436" y="212">CPoC</text>
+        <circle class="wp-next" cx="492" cy="124" r="5"/>
+        <text class="wp-label next-label" x="504" y="140">Filing</text>
+        <text class="wp-label next-label" x="512" y="40">Market</text>
+
+        <g class="swimmer" id="swimmer" transform="translate(50 380) rotate(-25.5)">
+          <g transform="scale(1.2)">
+            <defs>
+              <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#5b7fe0"/>
+                <stop offset=".55" stop-color="#2d4bb0"/>
+                <stop offset="1" stop-color="#1c2f80"/>
+              </linearGradient>
+            </defs>
+            <g class="porpoise">
+              <path class="p-body" fill="url(#pg)" d="M0 0 C -4 -3, -9 -6, -14 -7 C -18 -11, -26 -13.5, -34 -12.5 C -36 -15, -38 -18, -42 -20.5 C -42 -17, -42.5 -14, -44 -11.5 C -54 -9.5, -63 -5, -71 1 C -74 -1, -78 -3, -83 -3 C -81 0, -80 3, -82 8 C -78 6, -75 4, -72 4 C -60 4, -46 1.5, -32 2.5 C -22 3, -12 3, -6 2 C -4 1.5, -2 1, 0 0 Z"/>
+              <path class="p-hi" d="M-15 -7.2 C -19 -10.6, -26 -12.6, -33 -11.8 M -45 -10.6 C -54 -8.6, -62 -4.6, -69 0.4"/>
+              <path class="p-mouth" d="M-1 0.6 C -4 1.6, -7 2, -10 1.8"/>
+              <circle class="p-eye" cx="-15.5" cy="-3.8" r="1.5"/>
+              <circle class="p-glint" cx="-15" cy="-4.3" r=".5"/>
+            </g>
+            <g class="beachball" id="bball" transform="translate(-1 -11)">
+              <circle class="bb-base" r="10"/>
+              <path class="bb-a" d="M0 -10 C -7 -5.5, -7 5.5, 0 10 C -4.5 5.5, -4.5 -5.5, 0 -10 Z"/>
+              <path class="bb-b" d="M0 -10 C 7 -5.5, 7 5.5, 0 10 C 4.5 5.5, 4.5 -5.5, 0 -10 Z"/>
+              <path class="bb-c" d="M0 -10 C -13.6 -5.5, -13.6 5.5, 0 10 C -10 6.4, -10 -6.4, 0 -10 Z"/>
+              <path class="bb-d" d="M0 -10 C 13.6 -5.5, 13.6 5.5, 0 10 C 10 6.4, 10 -6.4, 0 -10 Z"/>
+              <circle class="bb-cap" cy="-8.7" r="1.8"/>
+              <ellipse class="bb-shine" cx="-3.6" cy="-4.5" rx="2.4" ry="1.5"/>
+            </g>
+          </g>
+        </g>
+      </svg>
     </div>
   </div>
 
   <!-- SERVICES -->
   <section id="services">
     <div class="row">
-      <div class="label">What we do</div>
+      <div class="label">What we do
+          <svg class="spot anim" viewBox="22 8 160 142" aria-hidden="true" focusable="false">
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="0.60s" begin="0s" repeatCount="indefinite" additive="sum"/>
+              <g transform="translate(104 64)"><g><animateMotion dur="1.8s" begin="0.00s" repeatCount="indefinite" path="M0 0 C -24 -18, -20 -54, 0 -54 C 20 -54, 24 -18, 0 0" calcMode="spline" keyPoints="0;0.5;1" keyTimes="0;0.5;1" keySplines=".15 .7 .35 1;.65 0 .85 .3"/><use href="#bb" transform="scale(.62)"/></g><g><animateMotion dur="1.8s" begin="-0.60s" repeatCount="indefinite" path="M0 0 C -24 -18, -20 -54, 0 -54 C 20 -54, 24 -18, 0 0" calcMode="spline" keyPoints="0;0.5;1" keyTimes="0;0.5;1" keySplines=".15 .7 .35 1;.65 0 .85 .3"/><use href="#bb" transform="scale(.62)"/></g><g><animateMotion dur="1.8s" begin="-1.20s" repeatCount="indefinite" path="M0 0 C -24 -18, -20 -54, 0 -54 C 20 -54, 24 -18, 0 0" calcMode="spline" keyPoints="0;0.5;1" keyTimes="0;0.5;1" keySplines=".15 .7 .35 1;.65 0 .85 .3"/><use href="#bb" transform="scale(.62)"/></g></g>
+              <use href="#porp" transform="translate(104 70) rotate(-80) scale(1.1)"/>
+            </g>
+            <use href="#water"/>
+          </svg>
+        </div>
       <div>
         <p class="body-lg">CPCC works exclusively with <strong>early-to-mid clinical-stage biotech companies</strong> to efficiently navigate the path from candidate selection and confirmation to meaningful clinical inflection points: the data, regulatory decisions, and milestones that unlock program advancement and company growth.</p>
         <p class="body-lg">CPCC does both halves of the job. On the <strong>operations</strong> side, that means someone who can actually run the program: lead the asset, stand up the trials, manage the CROs and vendors, keep budgets and timelines on track, and deliver submission-ready work. On the <strong>strategy</strong> side, it means a senior thought partner for development planning and for conversations with investors, the board, partners, and regulators.</p>
@@ -594,7 +763,19 @@
           </div>
         </div>
 
-        <div class="engage-title" id="engage">When teams bring CPCC in</div>
+        <div class="title-row">
+          <svg class="title-art anim" viewBox="0 20 220 110" aria-hidden="true" focusable="false">
+            <path d="M0 100 C 40 92, 70 108, 110 100 S 180 92, 220 100 L 220 130 L 0 130 Z" fill="#dce8f4"/>
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;3 -2;0 0" dur="2.4s" begin="0s" repeatCount="indefinite" additive="sum"/><use href="#porp" transform="translate(150 92) rotate(-6) scale(1.35)"/></g>
+            <g transform="translate(180 82)"><g><animateTransform attributeName="transform" type="translate" values="0 0;2 -4;0 0" dur="2.4s" begin="0.25s" repeatCount="indefinite" additive="sum"/>
+              <circle r="18" fill="none" stroke="#fff" stroke-width="9"/>
+              <circle r="18" fill="none" stroke="#e0457b" stroke-width="9" stroke-dasharray="14.1 14.1"/>
+              <circle r="22.5" fill="none" stroke="#b9c6de" stroke-width=".9"/>
+              <circle r="13.5" fill="none" stroke="#b9c6de" stroke-width=".9"/>
+            </g></g>
+          </svg>
+          <div class="engage-title" id="engage">When teams bring CPCC in</div>
+        </div>
         <ul class="trigger-list">
           <li>You're heading toward an IND and first-in-human without a clinical leader in place</li>
           <li>Your head of clinical has left, or the search is taking months</li>
@@ -604,31 +785,39 @@
           <li>You want to try out a role before committing to a full-time hire</li>
         </ul>
 
-        <div class="engage-title">How we engage</div>
-        <div class="svc-cols engage-cols">
+        <div class="title-row">
+          <svg class="title-art anim" viewBox="0 20 220 110" aria-hidden="true" focusable="false">
+            <path d="M0 100 C 40 92, 70 108, 110 100 S 180 92, 220 100 L 220 130 L 0 130 Z" fill="#dce8f4"/>
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;5 0;0 0" dur="5s" begin="0s" repeatCount="indefinite" additive="sum"/>
+              <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.5;0 0" dur="1.9s" begin="0.6s" repeatCount="indefinite" additive="sum"/><use href="#porp" transform="translate(58 100) rotate(-4) scale(.6)"/></g>
+              <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.5;0 0" dur="1.9s" begin="0.3s" repeatCount="indefinite" additive="sum"/><use href="#porp" transform="translate(130 94) rotate(-6) scale(.74)"/></g>
+              <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="1.9s" begin="0s" repeatCount="indefinite" additive="sum"/>
+                <g transform="translate(214 86) rotate(-8) scale(.9)"><use href="#porp"/><use href="#hat" transform="translate(-22 -12) rotate(-14) scale(.9)"/></g>
+              </g>
+            </g>
+          </svg>
+          <div class="engage-title">How we engage</div>
+        </div>
+        <div class="svc-cols engage-cols bleed">
           <div class="svc-col featured">
-            <div class="svc-col-label">Fractional leadership</div>
-            <div class="svc-col-title">Fractional Head of Clinical Operations, Clinical Development, or Program Lead</div>
-            <div class="engage-commit">Ongoing &middot; set days per week &middot; scales up or down</div>
-            <p class="svc-desc">A senior leader embedded in your team who owns the asset and the clinical function: trials, CROs and vendors, budgets and timelines, the cross-functional team, and board and investor updates. Time flexes with your milestones, and the function can be built out as you grow.</p>
+            <div class="svc-col-title">Fractional clinical or program lead</div>
+            <div class="engage-commit">Ongoing, a set number of days a week</div>
+            <p class="svc-desc">Your part-time Head of Clinical Operations, Head of Clinical Development, or Program Lead. Owns the asset and the clinical function, from trials, CROs, and budgets to board and investor updates.</p>
             <p class="engage-best"><b>Best when</b> you need a head of clinical but aren't ready for a full-time executive hire.</p>
           </div>
           <div class="svc-col">
-            <div class="svc-col-label">Interim leadership</div>
             <div class="svc-col-title">Interim clinical or program leader</div>
-            <div class="engage-commit">Defined period &middot; up to full-time</div>
+            <div class="engage-commit">A defined period, up to full-time</div>
             <p class="svc-desc">Steps into an open leadership seat to keep programs moving through a departure, a search, or a critical stretch, then hands off cleanly.</p>
             <p class="engage-best"><b>Best when</b> a key role is open and the program can't wait.</p>
           </div>
           <div class="svc-col">
-            <div class="svc-col-label">Project-based</div>
             <div class="svc-col-title">Defined deliverables</div>
-            <div class="engage-commit">Fixed scope &middot; clear timeline</div>
+            <div class="engage-commit">Fixed scope and timeline</div>
             <p class="svc-desc">Scoped work with a clear finish line: an IND or CTA, an FDA briefing package, a protocol, CRO selection, or study start-up.</p>
             <p class="engage-best"><b>Best when</b> you know exactly what needs to get done.</p>
           </div>
           <div class="svc-col">
-            <div class="svc-col-label">Advisory</div>
             <div class="svc-col-title">Senior counsel on call</div>
             <div class="engage-commit">A few days a month</div>
             <p class="svc-desc">Strategic input on development planning, regulatory meetings, board discussions, and partnering or diligence.</p>
@@ -661,7 +850,22 @@
   <!-- ABOUT + EXPERTISE -->
   <section id="about">
     <div class="row">
-      <div class="label">About</div>
+      <div class="label">About
+          <svg class="spot anim" viewBox="22 8 160 142" aria-hidden="true" focusable="false">
+            <ellipse cx="102" cy="62" rx="12" ry="30" fill="none" stroke="#e0457b" stroke-width="5" stroke-dasharray="9 5"/>
+            <g transform="translate(102 66)">
+              <g><animateTransform attributeName="transform" type="translate" values="-92 40;-46 10;0 0;46 10;92 40;92 40" dur="4.2s" begin="0s" repeatCount="indefinite" keyTimes="0;0.18;0.36;0.54;0.72;1" additive="sum"/>
+                <g><animateTransform attributeName="transform" type="rotate" values="-32;-14;0;14;32;32" dur="4.2s" begin="0s" repeatCount="indefinite" keyTimes="0;0.18;0.36;0.54;0.72;1" additive="sum"/>
+                  <g><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.1;0.62;0.72;1" dur="4.2s" repeatCount="indefinite"/>
+                    <use href="#porp" transform="translate(40 2) scale(1.1)"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <path d="M102 32 A 12 30 0 0 1 102 92" fill="none" stroke="#e0457b" stroke-width="5" stroke-dasharray="9 5"/>
+            <use href="#water"/>
+          </svg>
+        </div>
       <div>
 
         <div class="about-body" style="margin-bottom:48px;">
@@ -672,37 +876,43 @@
           <p>Amanda is an Executive Fellow at Harvard Business School, where she mentors new biotech entrepreneurs, and adjunct faculty in Northeastern University's MS in Regulatory Affairs program, where she teaches therapeutic product development and pharmacovigilance. She is a PhD candidate in Business Analytics at Bentley University, and holds a BA from the College of the Holy Cross and a Master of Research Methods in Psychology from the University of York.</p>
         </div>
 
-       <div class="tag-group">
-          <div class="tag-group-title">Therapeutic Areas</div>
-          <div class="tags">
-            <span class="tag">Cardiovascular</span>
-            <span class="tag">Neurology</span>
-            <span class="tag">Rare Disease</span>
-            <span class="tag">Oncology</span>
-            <span class="tag">Respiratory</span>
-            <span class="tag">Microbiome / GI</span>
+       <div class="engage-title" style="margin-top:0;">Experience across therapeutic areas and modalities</div>
+        <div class="xp">
+          <div class="xp-row">
+            <div class="xp-area">Rare disease</div>
+            <div class="xp-what"><strong>RNAi</strong> &mdash; nedosiran (Rivfloza) for primary hyperoxaluria; novel surrogate endpoint accepted by FDA</div>
+            <div class="xp-out">FDA &amp; EMA approval</div>
+          </div>
+          <div class="xp-row">
+            <div class="xp-area">Neurology</div>
+            <div class="xp-what"><strong>Inhaled drug-device combination, 505(b)(2)</strong> &mdash; Inbrija for Parkinson's disease, 13 countries and 72 sites</div>
+            <div class="xp-out">FDA approval</div>
+          </div>
+          <div class="xp-row">
+            <div class="xp-area">Cardiovascular</div>
+            <div class="xp-what"><strong>Antibody-protein fusion</strong> &mdash; JK07, a first-in-class ErbB4 agonist for heart failure; FDA End-of-Phase 1 alignment on adaptive Phase 2 designs</div>
+            <div class="xp-out">First-in-human to Phase 2</div>
+          </div>
+          <div class="xp-row">
+            <div class="xp-area">Oncology</div>
+            <div class="xp-what"><strong>Antibody-drug conjugate</strong> &mdash; biparatopic 5T4 ADC with an FDA-agreed, Project Optimus-aligned dose-optimization plan</div>
+            <div class="xp-out">Global Phase 1/2</div>
+          </div>
+          <div class="xp-row">
+            <div class="xp-area">Respiratory</div>
+            <div class="xp-what"><strong>Novel sodium channel blockers</strong> &mdash; Nocion, from pre-IND through first-in-human</div>
+            <div class="xp-out">Phase 2a proof of concept; Series B</div>
+          </div>
+          <div class="xp-row">
+            <div class="xp-area">Microbiome / GI</div>
+            <div class="xp-what"><strong>Microbiome therapeutics</strong> &mdash; Finch; built clinical operations and regulatory and initiated the company's first IND</div>
+            <div class="xp-out">First IND</div>
           </div>
         </div>
+        <p class="xp-also">Also: bispecific antibodies, ASOs, GLP-1 receptor agonists, and 505(b)(2) reformulations.</p>
 
         <div class="tag-group">
-          <div class="tag-group-title">Small &amp; Large Molecule Modalities</div>
-          <div class="tags">
-            <span class="tag">Antibody-Protein Fusions</span>
-            <span class="tag">Antibody-Drug Conjugates</span>
-            <span class="tag">Bispecific Antibodies</span>
-            <span class="tag">ASOs</span>
-            <span class="tag">GLP1-RAs</span>
-            <span class="tag">Novel Sodium Channel Blockers</span>
-            <span class="tag">RNAi / siRNA</span>
-            <span class="tag">Microbiome Therapeutics</span>
-            <span class="tag">Combination Drug / Device Products</span>
-            <span class="tag">Inhaled Drug Delivery</span>
-            <span class="tag">505(b)(2) Reformulation Products</span>
-          </div>
-        </div>
-
-        <div class="tag-group">
-          <div class="tag-group-title">Regulatory Pathways &amp; Designations</div>
+          <div class="tag-group-title">Regulatory pathways and designations</div>
           <div class="tags">
             <span class="tag">505(b)(2)</span>
             <span class="tag">Fast Track</span>
@@ -714,7 +924,7 @@
         </div>
 
         <div class="tag-group">
-          <div class="tag-group-title">Health Authority Interactions</div>
+          <div class="tag-group-title">Health authority interactions</div>
           <div class="tags">
             <span class="tag">FDA Pre-IND</span>
             <span class="tag">FDA EOP1 / EOP2</span>
@@ -729,22 +939,9 @@
           </div>
         </div>
 
-        <div class="tag-group">
-          <div class="tag-group-title">Focus Areas</div>
-          <div class="tags">
-            <span class="tag">Regulatory Affairs</span>
-            <span class="tag">Medical Writing</span>
-            <span class="tag">Clinical Operations</span>
-            <span class="tag">Data Management</span>
-            <span class="tag">Pharmacovigilance</span>
-            <span class="tag">Program Management</span>
-            <span class="tag">Vendor Selection &amp; Oversight</span>
-          </div>
-        </div>
-
-        <!-- TRACK RECORD + GLOBAL REACH -->
+                <!-- TRACK RECORD + GLOBAL REACH -->
         <div style="margin-top:52px;">
-          <div style="font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">Track Record &amp; Global Reach</div>
+          <div class="engage-title" style="margin-top:0;">Track record and global reach</div>
           <p class="body-lg" style="font-size:15.5px;margin-bottom:28px;">Over 16 years inside small and midsize biotech across Boston and Cambridge, Amanda has guided programs from first-in-human through FDA approval, exits, and partnerships. A career built entirely in small biotech — working across every function, and knowing how to move programs forward with lean teams and limited resources — spanning 25+ countries and four major regulatory regions.</p>
 
           <div class="stat-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px;">
@@ -808,8 +1005,35 @@
 
 <!-- INDUSTRY TRENDS -->
   <section id="industrytrends">
+    <div class="ticker" id="ticker" hidden>
+          <div class="ticker-head">
+            <span class="ticker-title">Latest industry news</span>
+            <button class="ticker-btn" id="ticker-btn" type="button" aria-pressed="false">Pause</button>
+          </div>
+          <div class="ticker-window">
+            <ul class="ticker-track" id="ticker-track"></ul>
+          </div>
+        </div>
     <div class="row">
-      <div class="label">Clinical Data Fuels Fundraising / M&amp;A</div>
+      <div class="label">Clinical data drives fundraising and M&amp;A
+          <svg class="spot anim" viewBox="22 8 160 142" aria-hidden="true" focusable="false">
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.5;0 0" dur="2.6s" begin="0s" repeatCount="indefinite" additive="sum"/>
+              <g transform="translate(112 106) rotate(-24) scale(1.1)">
+                <use href="#porp"/>
+                <g fill="none" stroke="#0c1a45" stroke-width="1"><circle cx="-15.5" cy="-3.9" r="3.8"/><path d="M-11.8 -4.6 l4 -1"/></g>
+              </g>
+              <g transform="translate(104 58) rotate(-4)">
+                <g><animateTransform attributeName="transform" type="rotate" values="-3 28 22;3 28 22;-3 28 22" dur="3.4s" begin="0s" repeatCount="indefinite" additive="sum"/>
+                  <rect x="0" y="0" width="56" height="44" rx="2" fill="#fff" stroke="#b9c6de"/>
+                  <rect x="6" y="6" width="44" height="6" fill="#17202e"/>
+                  <rect x="6" y="16" width="20" height="16" fill="#cfe0f2"/>
+                  <path d="M30 18 h20 M30 23 h20 M30 28 h16 M6 37 h44" stroke="#9fb0cf" stroke-width="2"/>
+                </g>
+              </g>
+            </g>
+            <use href="#water"/>
+          </svg>
+        </div>
       <div>
         <p class="body-lg">Dealmaking is back: 2026 is on pace to be the strongest year for biopharma M&amp;A since the pandemic. But capital still follows <strong>clinical evidence</strong>. Buyers are reaching earlier, before Phase 3, while IPO and venture investors save their largest checks for companies with clinical validation. For an early-stage company, the quality and timing of its first clinical data package is what turns into value.</p>
 
@@ -840,26 +1064,135 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="row">
-      <div class="label">Contact</div>
+      <div class="label">Contact
+          <svg class="spot anim" viewBox="22 8 160 142" aria-hidden="true" focusable="false">
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;3 -1.5;0 0" dur="2.4s" begin="0s" repeatCount="indefinite" additive="sum"/><use href="#porp" transform="translate(112 114) rotate(-8) scale(1.1)"/></g>
+            <g transform="translate(116 106) rotate(-14)">
+              <g><animateTransform attributeName="transform" type="translate" values="0 0;2 -3;0 0" dur="2.4s" begin="0.3s" repeatCount="indefinite" additive="sum"/><animateTransform attributeName="transform" type="rotate" values="-4 22 0;4 22 0;-4 22 0" dur="2.4s" begin="0.3s" repeatCount="indefinite" additive="sum"/>
+                <rect x="0" y="-8" width="36" height="16" rx="7" fill="#d7ecf0" fill-opacity=".9" stroke="#7fa9b5"/>
+                <rect x="34" y="-4" width="10" height="8" rx="1.5" fill="#d7ecf0" stroke="#7fa9b5"/>
+                <rect x="44" y="-3.5" width="5" height="7" rx="1" fill="#b98a5a"/>
+                <rect x="7" y="-4" width="20" height="8" rx="2" fill="#f4ead2"/>
+                <path d="M10 -1 h14 M10 2 h10" stroke="#c9b48a" stroke-width="1"/>
+              </g>
+            </g>
+            <use href="#water"/>
+          </svg>
+        </div>
       <div>
         <p class="contact-tag">Let's connect.</p>
         <div class="contact-links">
-          <a class="contact-link" href="mailto:amanda@capeporpoiseclinical.com">Email Amanda <span class="arr">&#8594;</span></a>
-          <a class="contact-link" href="tel:+16176459160">Call Amanda <span class="arr">&#8594;</span></a>
+          <a class="contact-link" href="mailto:amanda@capeporpoiseclinical.com">amanda@capeporpoiseclinical.com</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <img class="footer-logo" src="CPCC_logo.png?v=3" alt="Cape Porpoise Clinical Consulting" />
+    <div class="footer-logo-wrap"><img class="footer-logo" src="CPCC_logo.png?v=3" alt="Cape Porpoise Clinical Consulting" /></div>
     <div class="footer-meta">
       <p>&#169; <span id="y"></span> Cape Porpoise Clinical Consulting, LLC</p>
       <p>Cambridge, Massachusetts</p>
     </div>
   </footer>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      const scenes = document.querySelectorAll("svg.anim");
+      const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      scenes.forEach(svg => { try { svg.pauseAnimations(); } catch (e) {} });
+      if (reduce || !("IntersectionObserver" in window)) return;
+      const io = new IntersectionObserver(entries => entries.forEach(en => {
+        try { en.isIntersecting ? en.target.unpauseAnimations() : en.target.pauseAnimations(); } catch (e) {}
+      }), { threshold: 0.2 });
+      scenes.forEach(svg => io.observe(svg));
+    })();
+
+    (function () {
+      const box = document.getElementById("ticker"), track = document.getElementById("ticker-track"), btn = document.getElementById("ticker-btn");
+      if (!box || !track || !window.fetch) return;
+      fetch("headlines.json", { cache: "no-store" })
+        .then(r => r.ok ? r.json() : null)
+        .then(data => {
+          const raw = data && Array.isArray(data.items) ? data.items.filter(i => i.title && /^https?:/.test(i.link)) : [];
+          const groups = {};
+          raw.forEach(i => (groups[i.source] = groups[i.source] || []).push(i));
+          const lists = Object.values(groups), items = [];
+          for (let k = 0; lists.some(l => l[k]); k++) lists.forEach(l => l[k] && items.push(l[k]));
+          if (!items.length) return;
+          const build = hidden => items.forEach(i => {
+            const li = document.createElement("li");
+            if (hidden) li.setAttribute("aria-hidden", "true");
+            const src = document.createElement("span");
+            src.className = "ticker-src"; src.textContent = i.source || "";
+            const a = document.createElement("a");
+            a.href = i.link; a.target = "_blank"; a.rel = "noopener"; a.textContent = i.title;
+            if (hidden) a.tabIndex = -1;
+            li.append(src, a); track.append(li);
+          });
+          build(false); build(true);
+          box.hidden = false;
+          const pxPerSec = 40;
+          track.style.setProperty("--tick-dur", Math.max(60, Math.round((track.scrollWidth / 2) / pxPerSec)) + "s");
+          btn.addEventListener("click", () => {
+            const paused = box.classList.toggle("paused");
+            btn.textContent = paused ? "Play" : "Pause";
+            btn.setAttribute("aria-pressed", String(paused));
+          });
+        })
+        .catch(() => {});
+    })();
+
+    (function () {
+      const g = document.getElementById("swimmer"), ball = document.getElementById("bball");
+      if (!g) return;
+      let traveled = 0;
+      const pts = [[50, 380], [180, 318], [300, 258], [393, 197]];
+      const speed = 110, pause = 650, turn = 350;
+      const ang = (a, b) => Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI;
+      const place = (x, y, r) => {
+        g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${r.toFixed(1)})`);
+        if (ball) ball.setAttribute("transform", `translate(-1 -11) rotate(${(-r + traveled * 1.2).toFixed(1)})`);
+      };
+      const last = pts.length - 1;
+      const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce) { place(pts[last][0], pts[last][1], ang(pts[last - 1], pts[last])); return; }
+      const legs = [];
+      for (let i = 0; i < last; i++) {
+        const len = Math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]);
+        legs.push({ a: pts[i], b: pts[i + 1], len: len, start: legs.reduce((n, l) => n + l.len, 0), dur: len / speed * 1000, r: ang(pts[i], pts[i + 1]) });
+      }
+      const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      let start = null;
+      function frame(now) {
+        if (start === null) start = now + 400;
+        let t = now - start;
+        if (t < 0) { requestAnimationFrame(frame); return; }
+        for (let i = 0; i < legs.length; i++) {
+          const L = legs[i];
+          if (t <= L.dur) {
+            const k = ease(t / L.dur);
+            traveled = L.start + L.len * k;
+            place(L.a[0] + (L.b[0] - L.a[0]) * k, L.a[1] + (L.b[1] - L.a[1]) * k, L.r);
+            requestAnimationFrame(frame); return;
+          }
+          t -= L.dur;
+          if (i < legs.length - 1) {
+            if (t <= pause) {
+              const k = Math.min(1, Math.max(0, (t - (pause - turn)) / turn));
+              place(L.b[0], L.b[1], L.r + (legs[i + 1].r - L.r) * k);
+              requestAnimationFrame(frame); return;
+            }
+            t -= pause;
+          }
+        }
+        const L = legs[legs.length - 1];
+        place(L.b[0], L.b[1], L.r);
+      }
+      requestAnimationFrame(frame);
+    })();
+  </script>
 
   <script>
     const countryData = {
