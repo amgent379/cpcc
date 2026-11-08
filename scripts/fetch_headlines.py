@@ -6,6 +6,7 @@ import json
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
+from urllib.parse import urljoin
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 
@@ -13,7 +14,6 @@ FEEDS = [
     ("BioPharma Dive", "https://www.biopharmadive.com/feeds/news/"),
     ("Fierce Biotech", "https://www.fiercebiotech.com/rss/xml"),
     ("Fierce Pharma", "https://www.fiercepharma.com/rss/xml"),
-    ("Endpoints News", "https://endpts.com/feed/"),
     ("STAT", "https://www.statnews.com/category/biotech/feed/"),
 ]
 PER_SOURCE = 4
@@ -41,6 +41,8 @@ def fetch(source, url):
     req = urllib.request.Request(url, headers={"User-Agent": "CPCC-headlines/1.0 (+https://capeporpoiseclinical.com)"})
     with urllib.request.urlopen(req, timeout=20) as r:
         root = ET.fromstring(r.read())
+    channel = root.find("channel")
+    base = root.get("{http://www.w3.org/XML/1998/namespace}base") or (channel.findtext("link") if channel is not None else None) or url
     items = []
     for it in root.iter("item"):
         items.append((it.findtext("title"), it.findtext("link"), parse_date(it.findtext("pubDate"))))
@@ -50,9 +52,12 @@ def fetch(source, url):
                       parse_date(it.findtext(ATOM + "updated") or it.findtext(ATOM + "published"))))
     out = []
     for title, link, date in items:
-        if not title or not link or not link.startswith("http"):
+        if not title or not link:
             continue
-        out.append({"title": " ".join(title.split()), "link": link.strip(), "source": source,
+        link = urljoin(base, link.strip())
+        if not link.startswith("http"):
+            continue
+        out.append({"title": " ".join(title.split()), "link": link, "source": source,
                     "date": date.isoformat() if date else None})
     out.sort(key=lambda x: x["date"] or "", reverse=True)
     return out[:PER_SOURCE]
