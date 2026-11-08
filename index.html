@@ -1203,52 +1203,70 @@
     })();
 
     (function () {
-      const g = document.getElementById("swimmer"), ball = document.getElementById("bball");
+      const g = document.getElementById("swimmer"), ball = document.getElementById("bball"), chart = document.querySelector("svg.chart");
       if (!g) return;
-      let traveled = 0;
       const pts = [[50, 380], [180, 318], [300, 258], [393, 197]];
       const speed = 110, pause = 650, turn = 350;
       const ang = (a, b) => Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI;
+      let traveled = 0, hop = 0;
       const place = (x, y, r) => {
         g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${r.toFixed(1)})`);
-        if (ball) ball.setAttribute("transform", `translate(-1 -11) rotate(${(-r + traveled * 1.2).toFixed(1)})`);
+        if (ball) ball.setAttribute("transform", `translate(-1 ${(-11 - hop).toFixed(1)}) rotate(${(-r + traveled * 1.2).toFixed(1)})`);
       };
-      const last = pts.length - 1;
+      const last = pts.length - 1, endR = ang(pts[last - 1], pts[last]);
       const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduce) { place(pts[last][0], pts[last][1], ang(pts[last - 1], pts[last])); return; }
+      if (reduce) { place(pts[last][0], pts[last][1], endR); return; }
       const legs = [];
       for (let i = 0; i < last; i++) {
         const len = Math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]);
         legs.push({ a: pts[i], b: pts[i + 1], len: len, start: legs.reduce((n, l) => n + l.len, 0), dur: len / speed * 1000, r: ang(pts[i], pts[i + 1]) });
       }
       const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-      let start = null;
+      let start = null, raf = null, arrivedAt = null, visible = true, needsReset = false;
       function frame(now) {
+        raf = null;
+        if (!visible) return;
         if (start === null) start = now + 400;
         let t = now - start;
-        if (t < 0) { requestAnimationFrame(frame); return; }
-        for (let i = 0; i < legs.length; i++) {
-          const L = legs[i];
-          if (t <= L.dur) {
-            const k = ease(t / L.dur);
-            traveled = L.start + L.len * k;
-            place(L.a[0] + (L.b[0] - L.a[0]) * k, L.a[1] + (L.b[1] - L.a[1]) * k, L.r);
-            requestAnimationFrame(frame); return;
-          }
-          t -= L.dur;
-          if (i < legs.length - 1) {
-            if (t <= pause) {
-              const k = Math.min(1, Math.max(0, (t - (pause - turn)) / turn));
-              place(L.b[0], L.b[1], L.r + (legs[i + 1].r - L.r) * k);
-              requestAnimationFrame(frame); return;
+        if (arrivedAt === null) {
+          if (t < 0) { hop = 0; traveled = 0; place(pts[0][0], pts[0][1], legs[0].r); raf = requestAnimationFrame(frame); return; }
+          for (let i = 0; i < legs.length; i++) {
+            const L = legs[i];
+            if (t <= L.dur) {
+              const k = ease(t / L.dur);
+              traveled = L.start + L.len * k;
+              place(L.a[0] + (L.b[0] - L.a[0]) * k, L.a[1] + (L.b[1] - L.a[1]) * k, L.r);
+              raf = requestAnimationFrame(frame); return;
             }
-            t -= pause;
+            t -= L.dur;
+            if (i < legs.length - 1) {
+              if (t <= pause) {
+                const k = Math.min(1, Math.max(0, (t - (pause - turn)) / turn));
+                place(L.b[0], L.b[1], L.r + (legs[i + 1].r - L.r) * k);
+                raf = requestAnimationFrame(frame); return;
+              }
+              t -= pause;
+            }
           }
+          arrivedAt = now;
         }
-        const L = legs[legs.length - 1];
-        place(L.b[0], L.b[1], L.r);
+        // at CPoC: keep bouncing the ball on the nose
+        const bt = (now - arrivedAt) / 1000;
+        hop = Math.abs(Math.sin(bt * Math.PI * 1.25)) * 9;
+        traveled += 0.6;
+        place(pts[last][0], pts[last][1], endR);
+        raf = requestAnimationFrame(frame);
       }
-      requestAnimationFrame(frame);
+      function restart() { start = null; arrivedAt = null; traveled = 0; hop = 0; if (!raf) raf = requestAnimationFrame(frame); }
+      if ("IntersectionObserver" in window && chart) {
+        new IntersectionObserver(entries => entries.forEach(en => {
+          if (!en.isIntersecting) { visible = false; needsReset = true; return; }
+          visible = true;
+          if (needsReset) { needsReset = false; restart(); }
+          else if (!raf) raf = requestAnimationFrame(frame);
+        }), { threshold: 0.35 }).observe(chart);
+      }
+      raf = requestAnimationFrame(frame);
     })();
   </script>
 
