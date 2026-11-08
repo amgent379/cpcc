@@ -1,0 +1,24 @@
+name: Update industry headlines
+
+on:
+  schedule:
+    - cron: "23 10 * * *"   # daily, about 6:23am Eastern
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch headlines
+        run: python3 scripts/fetch_headlines.py
+      - name: Commit if changed
+        run: |
+          git config user.name "cpcc-headlines-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add headlines.json
+          git diff --cached --quiet || git commit -m "Update industry headlines"
+          git push
