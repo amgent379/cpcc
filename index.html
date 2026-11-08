@@ -23,7 +23,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 
     body {
       font-family: var(--sans);
@@ -138,6 +138,64 @@
     }
 
     .btn:hover { opacity: .85; }
+
+    .hero-sub {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 640px;
+      margin: -12px 0 32px;
+      opacity: 0;
+      animation: up .7s ease .27s forwards;
+    }
+
+    .engage-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 52px 0 16px;
+    }
+
+    .svc-cols.engage-cols { grid-template-columns: repeat(2, 1fr); }
+    .engage-cols .svc-col { padding: 28px 24px; }
+    .engage-cols .svc-desc { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+    .svc-col.featured { background: #fff; }
+    .engage-commit {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .engage-best {
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-top: 14px;
+    }
+    .engage-best b { font-weight: 600; }
+    .trigger-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; }
+    .trigger-list li {
+      font-size: 14.5px;
+      color: var(--ink);
+      line-height: 1.5;
+      padding-left: 18px;
+      position: relative;
+    }
+    .trigger-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 8px;
+      height: 2px;
+      background: var(--accent);
+    }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .step-num { font-family: var(--serif); font-size: 26px; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+    .step-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .step-desc { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
 
     section { border-bottom: 1px solid var(--rule); }
 
@@ -455,6 +513,7 @@
     }
 
     @media (max-width: 780px) {
+      html { scroll-padding-top: 76px; }
       nav { padding: 0 16px; height: 68px; }
       .brand-logo { height: 50px; }
       .nav-links { gap: 14px; }
@@ -462,7 +521,9 @@
       .hide-sm { display: none; }
       .hero { padding: 56px 20px; min-height: 68vh; }
       .row { grid-template-columns: 1fr; gap: 14px; padding: 52px 20px; }
-      .svc-cols { grid-template-columns: 1fr; }
+      .svc-cols, .svc-cols.engage-cols { grid-template-columns: 1fr; }
+      .trigger-list, .steps { grid-template-columns: 1fr; }
+      .hero-sub { font-size: 16px; }
       .stat-grid-4 { grid-template-columns: 1fr 1fr; }
       .stat-grid-3 { grid-template-columns: 1fr 1fr; }
       footer { padding: 0 20px 24px; }
@@ -488,6 +549,7 @@
   <div class="hero" id="top">
     <div class="eyebrow">Cape Porpoise Clinical Consulting, LLC &middot; Cambridge, MA</div>
     <h1>Helping lean biotech<br>chart a course to <em>meaningful clinical inflection points</em></h1>
+    <p class="hero-sub">Hands-on clinical operations and program leadership, backed by development strategy: as your fractional clinical leader, on a defined project, or as a senior advisor.</p>
     <div class="cta-row">
       <a class="btn" href="#contact">Get in touch</a>
     </div>
@@ -499,12 +561,27 @@
       <div class="label">What we do</div>
       <div>
         <p class="body-lg">CPCC works exclusively with <strong>early-to-mid clinical-stage biotech companies</strong> to efficiently navigate the path from candidate selection and confirmation to meaningful clinical inflection points: the data, regulatory decisions, and milestones that unlock program advancement and company growth.</p>
-        <p class="body-lg">Whether you need a senior thought partner to support interactions with inbounds, the board, or regulatory authorities, or just need someone to build the clinical and regulatory infrastructure and get the work done, CPCC covers the full range. High-level development strategy through hands-on execution and submission-ready deliverables.</p>
+        <p class="body-lg">CPCC does both halves of the job. On the <strong>operations</strong> side, that means someone who can actually run the program: lead the asset, stand up the trials, manage the CROs and vendors, keep budgets and timelines on track, and deliver submission-ready work. On the <strong>strategy</strong> side, it means a senior thought partner for development planning and for conversations with investors, the board, partners, and regulators.</p>
     
         <div class="svc-cols">
           <div class="svc-col">
-            <div class="svc-col-label">Strategic</div>
-            <div class="svc-col-title">Advisory and Consulting</div>
+            <div class="svc-col-label">Operations</div>
+            <div class="svc-col-title">Clinical Operations &amp; Program Leadership</div>
+            <p class="svc-desc">Hands-on leadership that runs the program and the trials and gets submissions out the door, with quality built in.</p>
+            <ul class="svc-list">
+              <li>Asset and program leadership: integrated development plans, cross-functional teams, and governance</li>
+              <li>Clinical trial management, from study start-up onward</li>
+              <li>CRO and vendor selection and oversight</li>
+              <li>Site, enrollment, and drug supply strategy and forecasting</li>
+              <li>Trial budgets and timelines</li>
+              <li>Data management, biostatistics, and pharmacovigilance oversight</li>
+              <li>IND and CTA preparation and submission</li>
+              <li>Regulatory and medical writing: briefing documents, IBs, protocols, ICFs, CSRs</li>
+            </ul>
+          </div>
+          <div class="svc-col">
+            <div class="svc-col-label">Strategy</div>
+            <div class="svc-col-title">Development Strategy &amp; Advisory</div>
             <p class="svc-desc">Credible senior experience at the table for investor and regulatory interactions and program-level planning.</p>
             <ul class="svc-list">
               <li>Clinical and regulatory development strategy</li>
@@ -515,19 +592,66 @@
               <li>Partnership and due diligence support</li>
             </ul>
           </div>
+        </div>
+
+        <div class="engage-title" id="engage">When teams bring CPCC in</div>
+        <ul class="trigger-list">
+          <li>You're heading toward an IND and first-in-human without a clinical leader in place</li>
+          <li>Your head of clinical has left, or the search is taking months</li>
+          <li>A readout, submission, or financing needs senior bandwidth now</li>
+          <li>Your CROs need a strong, experienced owner on the sponsor side</li>
+          <li>Investors or a partner want credible clinical leadership in the room</li>
+          <li>You want to try out a role before committing to a full-time hire</li>
+        </ul>
+
+        <div class="engage-title">How we engage</div>
+        <div class="svc-cols engage-cols">
+          <div class="svc-col featured">
+            <div class="svc-col-label">Fractional leadership</div>
+            <div class="svc-col-title">Fractional Head of Clinical Operations, Clinical Development, or Program Lead</div>
+            <div class="engage-commit">Ongoing &middot; set days per week &middot; scales up or down</div>
+            <p class="svc-desc">A senior leader embedded in your team who owns the asset and the clinical function: trials, CROs and vendors, budgets and timelines, the cross-functional team, and board and investor updates. Time flexes with your milestones, and the function can be built out as you grow.</p>
+            <p class="engage-best"><b>Best when</b> you need a head of clinical but aren't ready for a full-time executive hire.</p>
+          </div>
           <div class="svc-col">
-            <div class="svc-col-label">Execution</div>
-            <div class="svc-col-title">Clinical and Regulatory Work</div>
-            <p class="svc-desc">Clinical and regulatory deliverables with quality built in.</p>
-            <ul class="svc-list">
-              <li>Regulatory correspondence and dossier authoring (briefing documents, IND amendments, etc.)</li>
-              <li>Clinical trial project management</li>
-              <li>IND and CTA preparation and submission</li>
-              <li>Data management and pharmacovigilance oversight</li>
-              <li>Vendor oversight and operational problem-solving</li>
-              <li>QC and narrative coherence review</li>
-              <li>Medical writing: IBs, protocols, ICFs, CSRs</li>
-            </ul>
+            <div class="svc-col-label">Interim leadership</div>
+            <div class="svc-col-title">Interim clinical or program leader</div>
+            <div class="engage-commit">Defined period &middot; up to full-time</div>
+            <p class="svc-desc">Steps into an open leadership seat to keep programs moving through a departure, a search, or a critical stretch, then hands off cleanly.</p>
+            <p class="engage-best"><b>Best when</b> a key role is open and the program can't wait.</p>
+          </div>
+          <div class="svc-col">
+            <div class="svc-col-label">Project-based</div>
+            <div class="svc-col-title">Defined deliverables</div>
+            <div class="engage-commit">Fixed scope &middot; clear timeline</div>
+            <p class="svc-desc">Scoped work with a clear finish line: an IND or CTA, an FDA briefing package, a protocol, CRO selection, or study start-up.</p>
+            <p class="engage-best"><b>Best when</b> you know exactly what needs to get done.</p>
+          </div>
+          <div class="svc-col">
+            <div class="svc-col-label">Advisory</div>
+            <div class="svc-col-title">Senior counsel on call</div>
+            <div class="engage-commit">A few days a month</div>
+            <p class="svc-desc">Strategic input on development planning, regulatory meetings, board discussions, and partnering or diligence.</p>
+            <p class="engage-best"><b>Best when</b> your team runs the work and wants an experienced sounding board.</p>
+          </div>
+        </div>
+
+        <div class="engage-title">Getting started</div>
+        <div class="steps">
+          <div>
+            <div class="step-num">1</div>
+            <div class="step-title">Intro call</div>
+            <p class="step-desc">A conversation about your program, your milestones, and where you need help.</p>
+          </div>
+          <div>
+            <div class="step-num">2</div>
+            <div class="step-title">Scoped proposal</div>
+            <p class="step-desc">Engagement model, time commitment, deliverables, and a 90-day check-in to confirm the fit.</p>
+          </div>
+          <div>
+            <div class="step-num">3</div>
+            <div class="step-title">Embed and deliver</div>
+            <p class="step-desc">Work alongside your team, adjusting time up or down as the program's needs change.</p>
           </div>
         </div>
       </div>
@@ -541,10 +665,11 @@
       <div>
 
         <div class="about-body" style="margin-bottom:48px;">
-          <p>CPCC is led by <strong>Amanda McEwen</strong> — <a href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener">LinkedIn</a> — SVP of Clinical Development at Salubris Biotherapeutics, where she leads the JK07 program, a first-in-class ErbB4 agonist in Phase 2b for heart failure.</p>
-          <p>Amanda has spent her entire career working within small and mid-size biotech, where the boundaries between functional areas are rarely as clean as an org chart suggests. That breadth — built from years of doing the work across functions, not just overseeing it — is what CPCC brings to client teams. She embeds fluidly with both small founding teams that need a full clinical function built out, and larger organizations that need senior capacity on a specific workstream or at a critical juncture.</p>
-          <p>Her career highlights include key contributions to two FDA-approved therapies: <strong>Inbrija</strong>, for Parkinson's disease, and <strong>Rivfloza</strong>, for a rare genetic liver disease. She is especially passionate about early-phase development and has led several initiatives spanning preclinical research through clinical proof of concept.</p>
-          <p>Beyond her industry role, Amanda serves as an Executive Fellow at Harvard Business School, helping educate and mentor newly minted entrepreneurs in the biotech space and also serves as adjunct faculty in Northeastern University's MS in Regulatory Affairs program, where she teaches classes on therapeutic product development and pharmacovigilance. Amanda is a current PhD candidate in Business Analytics at Bentley University. She earned her BA from the College of the Holy Cross and a Master of Research Methods in Psychology from the University of York in England.</p>
+          <p>CPCC is led by <strong>Amanda McEwen</strong> (<a href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener">LinkedIn</a>), a clinical development leader with 16+ years taking novel therapeutics from IND-enabling work to approval, all of it inside small and mid-size biotech. She combines hands-on clinical operations and program leadership with development and regulatory strategy, and that combination is what CPCC brings to client teams.</p>
+          <p>She was program lead for nedosiran (<strong>Rivfloza</strong>) at Dicerna, an RNAi therapeutic for ultra-rare primary hyperoxaluria, where she defined the registrational strategy, drove FDA acceptance of a novel surrogate endpoint, and led global development through FDA and EMA approval. Earlier, she led Phase 1&ndash;3 operational execution of <strong>Inbrija</strong>, a drug-device combination for Parkinson's disease, across 13 countries and 72 sites through FDA approval. She has built clinical and regulatory functions from scratch at start-ups, taking Nocion from pre-IND through first-in-human and Phase 2a proof of concept, and at Salubris Biotherapeutics has led JK07, a first-in-class ErbB4 agonist for heart failure, from first-in-human into Phase 2.</p>
+          <p>Throughout, her focus has been generating the clinical data that companies raise money and do deals on. Nocion's Phase 2a proof-of-concept data supported its Series B, and nedosiran was Dicerna's lead program when Novo Nordisk acquired the company in 2021. She knows what investors, partners, and acquirers look for in a data package, and how to build a program that delivers it.</p>
+          <p>Because small biotech rarely has clean lines between functions, she embeds easily both with founding teams that need a full clinical function built out and with larger organizations that need senior capacity on a specific workstream or at a critical juncture.</p>
+          <p>Amanda is an Executive Fellow at Harvard Business School, where she mentors new biotech entrepreneurs, and adjunct faculty in Northeastern University's MS in Regulatory Affairs program, where she teaches therapeutic product development and pharmacovigilance. She is a PhD candidate in Business Analytics at Bentley University, and holds a BA from the College of the Holy Cross and a Master of Research Methods in Psychology from the University of York.</p>
         </div>
 
        <div class="tag-group">
@@ -686,124 +811,27 @@
     <div class="row">
       <div class="label">Clinical Data Fuels Fundraising / M&amp;A</div>
       <div>
-        <p class="body-lg">The market has fundamentally reoriented around clinical data. Pharma is spending more than ever on licensing and acquisitions, but concentrating it across <strong>fewer, higher-conviction deals</strong> — and those deals are increasingly targeting companies with clinical-stage assets and de-risked data packages. The inflection point is the value inflection point.</p>
+        <p class="body-lg">Dealmaking is back: 2026 is on pace to be the strongest year for biopharma M&amp;A since the pandemic. But capital still follows <strong>clinical evidence</strong>. Buyers are reaching earlier, before Phase 3, while IPO and venture investors save their largest checks for companies with clinical validation. For an early-stage company, the quality and timing of its first clinical data package is what turns into value.</p>
 
-        <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);margin-top:36px;margin-bottom:36px;">
+        <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);margin-top:36px;margin-bottom:20px;">
           <div class="stat-cell">
-            <strong>74%</strong>
-            <span>Of biopharma M&amp;A transactions in full-year 2023 focused on Phase 3 or commercial-stage assets — up from an average of 58% for 2019–2022. Source: IQVIA</span>
+            <strong>$130B</strong>
+            <span>Biopharma M&amp;A in the first half of 2026 alone, nearly matching the $133B total for all of 2025. Source: IQVIA</span>
           </div>
           <div class="stat-cell">
-            <strong>$138B</strong>
-            <span>Biopharma M&amp;A in 2025 across 129 deals — described as the strongest M&amp;A year since 2019, driven by patent cliff anxiety and clinical-stage targets. Source: DealForma / J.P. Morgan</span>
+            <strong>63%</strong>
+            <span>Of H1 2026 biopharma deals targeted pre-Phase 3 assets, up from 39% in 2025 and a record for early- and mid-stage acquisitions. Source: EY</span>
           </div>
           <div class="stat-cell">
-            <strong>$33.8B</strong>
-            <span>Biotech VC deployed in 2025 — across fewer deals than ever, with median round size up 34% vs. 2024 as investors concentrate larger checks into a smaller pool of clinical-stage companies. Source: PitchBook</span>
+            <strong>12 of 13</strong>
+            <span>US biotech IPOs in H1 2026 were companies with assets in Phase 2 or later. Source: IQVIA</span>
           </div>
           <div class="stat-cell">
-            <strong>75%</strong>
-            <span>Of 2025 follow-on equity raises came from companies with Phase 2 or Phase 3 lead programs — investors now require demonstrated clinical validation before committing capital. Source: Pharma Almanac / GlobalData</span>
+            <strong>32%</strong>
+            <span>Share of biopharma venture funding going to early-stage companies in 2025, down from 44% in 2020, as investors concentrate on later, de-risked programs. Source: PitchBook</span>
           </div>
         </div>
-
-        <div class="chart-label">Share of biopharma M&amp;A deals by asset stage &mdash; IQVIA 2019&ndash;2025</div>
-        <div class="chart-outer">
-          <div style="display:flex;gap:12px;align-items:flex-end;">
-            <!-- Y axis -->
-            <div style="display:flex;flex-direction:column;justify-content:space-between;height:160px;flex-shrink:0;padding-bottom:1px;">
-              <span style="font-size:10px;color:var(--muted);">100%</span>
-              <span style="font-size:10px;color:var(--muted);">75%</span>
-              <span style="font-size:10px;color:var(--muted);">50%</span>
-              <span style="font-size:10px;color:var(--muted);">25%</span>
-              <span style="font-size:10px;color:var(--muted);">0%</span>
-            </div>
-
-            <!-- Bars -->
-            <div style="flex:1;display:flex;align-items:flex-end;gap:8px;height:160px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule);">
-
-              <!-- 2019: Preclin+Ph1 31%, Ph2 10%, Ph3 31%, Commercial 28% -->
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-                <div style="flex:1;"></div>
-                <div style="height:28%;background:#c8d8e8;"></div>
-                <div style="height:31%;background:#6a9dbf;"></div>
-                <div style="height:10%;background:#2d6a8f;"></div>
-                <div style="height:31%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
-              </div>
-
-              <!-- 2022: Preclin+Ph1 26%, Ph2 ~0%, Ph3 29%, Commercial 45% -->
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-                <div style="flex:1;"></div>
-                <div style="height:45%;background:#c8d8e8;"></div>
-                <div style="height:29%;background:#6a9dbf;"></div>
-                <div style="height:0%;background:#2d6a8f;"></div>
-                <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
-              </div>
-
-              <!-- 2023 full year: Preclin+Ph1 26%, Ph2 ~0%, Ph3 18%, Commercial 56% -->
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-                <div style="flex:1;"></div>
-                <div style="height:56%;background:#c8d8e8;"></div>
-                <div style="height:18%;background:#6a9dbf;"></div>
-                <div style="height:0%;background:#2d6a8f;"></div>
-                <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
-              </div>
-
-              <!-- 2024: Preclin+Ph1 26%, Ph2 24%, Ph3 42%, Commercial 8% -->
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;">
-                <div style="flex:1;"></div>
-                <div style="height:8%;background:#c8d8e8;"></div>
-                <div style="height:42%;background:#6a9dbf;"></div>
-                <div style="height:24%;background:#2d6a8f;"></div>
-                <div style="height:26%;background:var(--accent);border-radius:2px 2px 0 0;"></div>
-              </div>
-
-              <!-- 2025: Commercial 49%, Ph3 28%, remainder ~23% — dashed/caveated -->
-              <div style="flex:1;display:flex;flex-direction:column;height:100%;opacity:.75;">
-                <div style="flex:1;"></div>
-                <div style="height:49%;background:#c8d8e8;border:1px dashed #aaa;border-bottom:none;box-sizing:border-box;"></div>
-                <div style="height:28%;background:#6a9dbf;border-left:1px dashed #aaa;border-right:1px dashed #aaa;box-sizing:border-box;"></div>
-                <div style="height:23%;background:var(--accent);opacity:.7;border-radius:2px 2px 0 0;border:1px dashed var(--accent);border-bottom:none;box-sizing:border-box;"></div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- X labels -->
-          <div style="display:flex;gap:8px;padding:8px 0 4px;padding-left:36px;">
-            <div class="bar-lbl">2019</div>
-            <div class="bar-lbl">2022</div>
-            <div class="bar-lbl">2023</div>
-            <div class="bar-lbl">2024</div>
-            <div class="bar-lbl" style="color:var(--muted);font-style:italic;">2025*</div>
-          </div>
-
-          <!-- Legend -->
-          <div style="display:flex;flex-wrap:wrap;gap:16px;padding:12px 0 8px;padding-left:36px;border-top:1px solid var(--rule);margin-top:8px;">
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-              <div style="width:12px;height:12px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
-              Preclinical + Phase 1
-            </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-              <div style="width:12px;height:12px;background:#2d6a8f;border-radius:2px;flex-shrink:0;"></div>
-              Phase 2
-            </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-              <div style="width:12px;height:12px;background:#6a9dbf;border-radius:2px;flex-shrink:0;"></div>
-              Phase 3
-            </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-              <div style="width:12px;height:12px;background:#c8d8e8;border-radius:2px;flex-shrink:0;"></div>
-              Commercial
-            </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);">
-              <div style="width:12px;height:12px;border:1px dashed #aaa;border-radius:2px;flex-shrink:0;"></div>
-              * 2025 per IQVIA 2026 Outlook; Ph2 share not separately reported
-            </div>
-          </div>
-
-          <p class="chart-source">Source: IQVIA Biopharma M&amp;A blog series. 2019–2023 from IQVIA "Biopharma M&amp;A Outlook for 2024"; 2024 and 2025 from IQVIA "Biopharma M&amp;A Outlook for 2025/2026." Analysis covers majority-stake acquisitions ≥$1B enterprise value. 2022 interpolated from reported step-changes. Phase 2 share not separately broken out for 2022, 2023, or 2025 by IQVIA; shown as combined with adjacent segments per source methodology.</p>
-        </div>
+        <p class="chart-source" style="border-top:none;">Sources: IQVIA, &ldquo;Biopharma M&amp;A: Outlook for 2026&rdquo; (Jan 2026) and &ldquo;Mid-year 2026 update&rdquo; (Jul 2026), majority-stake acquisitions &ge;$250M; EY data as reported by BioXconomy (H1 2026); PitchBook data as reported by Fierce Biotech (2025).</p>
 
       </div>
     </div>
