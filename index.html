@@ -135,7 +135,12 @@
       padding-bottom: 2px;
     }
 
-    .btn:focus-visible, .link-quiet:focus-visible, .nav-links a:focus-visible, .contact-link:focus-visible {
+    .link-li { display: inline-flex; align-items: center; gap: 8px; color: #c9d3e6; font-size: 15px; font-weight: 500; text-decoration: none; }
+    .link-li:hover { color: #fff; }
+    .li-icon { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+    .contact-link .li-icon { width: 20px; height: 20px; margin-right: 10px; }
+    .contact-link.contact-li { justify-content: flex-start; }
+    .link-li:focus-visible, .btn:focus-visible, .link-quiet:focus-visible, .nav-links a:focus-visible, .contact-link:focus-visible {
       outline: 2px solid var(--course);
       outline-offset: 3px;
     }
@@ -712,6 +717,7 @@
         <div class="cta-row">
           <a class="btn" href="#contact">Get in touch</a>
           <a class="link-quiet" href="#how">See how we work together</a>
+          <a class="link-li" href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener"><svg class="li-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11z"/></svg>Amanda on LinkedIn</a>
         </div>
       </div>
       <svg class="chart" viewBox="0 0 600 440" role="img" aria-label="A chart showing a porpoise balancing a beach ball on its nose as it swims a plotted course from candidate through IND and first-in-human to clinical proof of concept, with the course continuing on toward filing and market">
@@ -1139,6 +1145,7 @@
         <p class="contact-tag">Let's connect.</p>
         <div class="contact-links">
           <a class="contact-link" href="mailto:amanda@capeporpoiseclinical.com">amanda@capeporpoiseclinical.com</a>
+          <a class="contact-link contact-li" href="https://www.linkedin.com/in/amandamariegentilemcewen/" target="_blank" rel="noopener"><svg class="li-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11z"/></svg>Connect on LinkedIn</a>
         </div>
       </div>
     </div>
