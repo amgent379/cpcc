@@ -1,6 +1,42 @@
 {
- "updated": "2026-11-08T22:11+00:00",
+ "updated": "2026-11-09T20:49+00:00",
  "items": [
+  {
+   "title": "STAT+: FDA warns GLP-1 drugs carry potential risk of rare eye condition",
+   "link": "https://www.statnews.com/2026/11/09/glp-1-drugs-potential-risk-rare-eye-condition-naion-fda/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-09T15:56:55+00:00"
+  },
+  {
+   "title": "STAT+: Gene therapy\u2019s long-debated cancer risk materializes",
+   "link": "https://www.statnews.com/2026/11/09/biotech-news-gene-therapy-long-debated-cancer-risk-materializes/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-09T14:36:12+00:00"
+  },
+  {
+   "title": "Vir hepatitis D drug succeeds in first pivotal study",
+   "link": "https://www.biopharmadive.com/news/vir-chronic-hepatitis-d-drug-results-elebsiran-tobevibart/874089/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-09T12:09:00-05:00"
+  },
+  {
+   "title": "Argenx to buy peptide platform in potentially billion-dollar deal",
+   "link": "https://www.biopharmadive.com/news/argenx-unnatural-products-acquisition-deal-peptides-protein-macrocyclic-immune/874119/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-09T11:27:00-05:00"
+  },
+  {
+   "title": "Ramaswamy\u2019s biotech baggage haunted his political run",
+   "link": "https://www.biopharmadive.com/news/vivek-ramaswamy-biotech-axovant-roivant-ohio/874093/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-09T10:37:00-05:00"
+  },
+  {
+   "title": "State incentives for commercial-stage life sciences companies",
+   "link": "https://www.biopharmadive.com/spons/state-incentives-for-commercial-stage-life-sciences-companies/873753/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-09T05:00:00-05:00"
+  },
   {
    "title": "STAT+: Why the latest heart drug failures should make us all more skeptical of AI hype",
    "link": "https://www.statnews.com/2026/11/08/heart-drug-failures-lessons-for-artificial-intelligence-from-aha-conference/?utm_campaign=rss",
@@ -14,86 +50,50 @@
    "date": "2026-11-07T16:57:13+00:00"
   },
   {
-   "title": "STAT+: Failure of Novartis Lp(a) drug raises questions about cardiovascular strategy",
-   "link": "https://www.statnews.com/2026/11/07/aha-conference-news-novartis-lp-a-pelacarsen-heart-disease-trial-mystery/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-07T14:50:00+00:00"
-  },
-  {
-   "title": "STAT+: Despite Novo drug\u2019s failure, cardiologists say they will still pursue anti-inflammatories",
-   "link": "https://www.statnews.com/2026/11/07/aha-2026-conference-novo-nordisk-zeus-trial-ziltivekimab-results/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-07T14:35:00+00:00"
-  },
-  {
-   "title": "Novartis reveals cancer cases possibly linked to gene therapy Zolgensma",
-   "link": "https://www.biopharmadive.com/news/zolgensma-tumor-report-novartis-sma-spinal-muscular-atrophy/873990/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-06T11:51:00-05:00"
-  },
-  {
-   "title": "Lilly, Hims reach GLP-1 deal; Alnylam sales chief to step down",
-   "link": "https://www.biopharmadive.com/news/lilly-hims-alnylam-boehringer-ultragenyx-sevasemten-ani-egetis/873843/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-06T08:13:00-05:00"
-  },
-  {
-   "title": "This week in charts: 3 drug launches Wall Street is watching",
-   "link": "https://www.biopharmadive.com/news/biotech-charts-drug-launches-sales-wegovy-rezdiffra-auvelity/873549/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-06T07:00:00-05:00"
-  },
-  {
-   "title": "Medicare will cut billions from 340B, expand site-neutral payments in 2027",
-   "link": "https://www.biopharmadive.com/news/medicare-will-cut-billions-from-340b-expand-site-neutral-payments-in-2027/873909/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-05T16:06:00-05:00"
-  },
-  {
-   "title": "Novartis\u2019 Lp(a) drug shows zero benefit, casting shadow over Amgen and Lilly programs",
-   "link": "https://www.fiercebiotech.com/biotech/novartis-lpa-drug-shows-zero-benefit-casting-shadow-over-amgen-and-lilly-programs",
+   "title": "\u2018Cancer hasn't seen this molecule before\u2019: Onchilles\u2019 injection shows potential for solid tumors",
+   "link": "https://www.fiercebiotech.com/research/onchilles-believes-it-has-molecule-cancer-has-never-seen",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Chutes & Ladders\u2014Novo's longtime CFO to hang up gloves as Galderma exec steps in",
-   "link": "https://www.fiercebiotech.com/biotech/chutes-ladders-novos-longtime-cfo-hang-gloves-galderma-exec-steps",
+   "title": "J&J-backed Delix drums up $100M series C for non-hallucinatory psychedelic for depression",
+   "link": "https://www.fiercebiotech.com/biotech/delix-drums-100m-its-non-hallucinatory-psychedelic-therapy-depression",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "There's more than one way to build a biotech",
-   "link": "https://www.fiercebiotech.com/biotech/theres-more-one-way-build-biotech",
+   "title": "Recent Lisata prize Marea touts \u2018exciting\u2019 lipid disorder phase 2 win, mulls obesity potential",
+   "link": "https://www.fiercebiotech.com/biotech/marea-now-lisata-subsidiary-touts-mid-stage-hypertriglyceridemia-clinical-win",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Generate CEO sees \u2018huge opportunity\u2019 from using Claude to shorten CAR-T cell engines",
-   "link": "https://www.fiercebiotech.com/research/anthropic-extends-its-biological-footprint-generates-car-t-cells",
+   "title": "AHA: Boehringer aims for 2027 survodutide submission after obesity drug passes cardio test",
+   "link": "https://www.fiercebiotech.com/biotech/aha-boehringer-aims-2027-survodutide-submission-after-obesity-drug-passes-phase-3-cardio",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Hims & Hers inks deal with Eli Lilly to offer branded weight loss drugs",
-   "link": "https://www.fiercepharma.com/health-tech/hims-hers-inks-deal-eli-lilly-offer-branded-weight-loss-drugs",
+   "title": "Veradermics wraps phase 3 program in men with 'better-than-expected' hair growth at 1 year",
+   "link": "https://www.fiercepharma.com/pharma/veradermics-wraps-phase-3-program-men-better-expected-hair-growth-1-year",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "CMS makes it official, codifying Medicare drug price negotiations established under IRA",
-   "link": "https://www.fiercepharma.com/pharma/cms-makes-it-official-codifying-medicare-drug-price-negotiations-rolled-out-under-ira",
+   "title": "FDA opens safety probe into Novartis\u2019 Zolgensma over potential tumor risks",
+   "link": "https://www.fiercepharma.com/pharma/fda-opens-safety-probe-novartis-zolgensma-over-potential-tumor-risks",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Actor Jeremy Pope joins ViiV's 'PrEP Wisdom' campaign to educate on long-acting PrEP options",
-   "link": "https://www.fiercepharma.com/marketing/actor-jeremy-pope-joins-viivs-prep-wisdom-campaign-continuing-long-acting-injectable",
+   "title": "J&J\u2019s Icotyde pill drives biologic-like efficacy in psoriatic arthritis despite high-dose miss",
+   "link": "https://www.fiercepharma.com/pharma/jj-icotyde-pill-drives-biologic-efficacy-psoriatic-arthritis-despite-high-dose-miss",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Moderna's COVID vaccine carries stellar Q3 revenue beat",
-   "link": "https://www.fiercepharma.com/pharma/modernas-covid-vaccine-carries-stellar-q3-revenue-beat",
+   "title": "Lilly looks to gird Foundayo label after late-stage win in sleep apnea",
+   "link": "https://www.fiercepharma.com/pharma/lilly-heads-fda-phase-3-foundayo-win-sleep-apnea",
    "source": "Fierce Pharma",
    "date": null
   }
