@@ -1,6 +1,24 @@
 {
- "updated": "2026-11-10T17:55+00:00",
+ "updated": "2026-11-11T17:55+00:00",
  "items": [
+  {
+   "title": "Drug price hikes in Germany could push US costs higher, study says",
+   "link": "https://www.biopharmadive.com/news/germany-us-drug-price-study-healthcare-costs/874360/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-11T11:11:00-05:00"
+  },
+  {
+   "title": "AstraZeneca buys vaccine startup; FDA issues GLP-1 safety warning",
+   "link": "https://www.biopharmadive.com/news/glp1-naion-compass-zura-abeona/874076/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-11T08:42:00-05:00"
+  },
+  {
+   "title": "PepGen soars on promising early data for muscular dystrophy drug",
+   "link": "https://www.biopharmadive.com/news/pepgen-myotonic-dystrophy-dm1-drug-results-freedom/874249/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-10T16:48:00-05:00"
+  },
   {
    "title": "STAT+: GLP-1s are given an FDA warning for rare eye condition risk",
    "link": "https://www.statnews.com/2026/11/10/biotech-news-glp-1-given-an-fda-warning-for-rare-eye-condition-risk/?utm_campaign=rss",
@@ -20,28 +38,10 @@
    "date": "2026-11-10T12:05:00+00:00"
   },
   {
-   "title": "London biotech Oyster harvests $60M for tau-targeting brain drugs",
-   "link": "https://www.biopharmadive.com/news/oyster-venture-financing-tau-targeted-protein-degraders/874160/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-10T02:00:00-05:00"
-  },
-  {
-   "title": "BIO unveils plan for US to remain biotech\u2019s \u2018global leader\u2019",
-   "link": "https://www.biopharmadive.com/news/bio-bioadvance-proposal-us-trial-competition-china/874162/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-10T00:01:00-05:00"
-  },
-  {
    "title": "STAT+: FDA approves novel Bayer drug to reduce recurrence of stroke",
    "link": "https://www.statnews.com/2026/11/09/cardiovascular-stroke-recurrence-bayer-drug-fda-approval/?utm_campaign=rss",
    "source": "STAT",
    "date": "2026-11-09T22:28:43+00:00"
-  },
-  {
-   "title": "Bayer wins FDA nod for a new kind of blood thinner",
-   "link": "https://www.biopharmadive.com/news/bayer-sunharbo-asundexian-fda-approve-stroke-factor-xi/872837/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-09T17:40:00-05:00"
   },
   {
    "title": "STAT+: FDA warns GLP-1 drugs carry potential risk of rare eye condition",
@@ -50,50 +50,38 @@
    "date": "2026-11-09T15:56:55+00:00"
   },
   {
-   "title": "PepGen\u2019s stock doubles as midphase muscle dystrophy data wow analysts",
-   "link": "https://www.fiercebiotech.com/biotech/pepgens-stock-doubles-midphase-dm1-data-wow-analysts",
+   "title": "Valo and Montai become one as the Flagship AI-based biotechs tie the knot",
+   "link": "https://www.fiercebiotech.com/biotech/flagship-ai-based-biotechs-valo-montai-tie-knot",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "AstraZeneca buys partner Omniose for bacterial vaccine technology",
-   "link": "https://www.fiercebiotech.com/biotech/astrazeneca-buys-omniose-bacterial-vaccine-technology",
-   "source": "Fierce Biotech",
-   "date": null
-  },
-  {
-   "title": "Fierce Biotech Fundraising Tracker '26: Oyster cracks $60M in series A; Delix drums up $100M",
+   "title": "Fierce Biotech Fundraising Tracker '26: VectorY wins $83.5M; Oyster cracks $60M series A",
    "link": "https://www.fiercebiotech.com/biotech/fierce-biotech-fundraising-tracker-26",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Mirum scores again in hepatitis D phase 3, setting the stage for brelovitug\u2019s FDA run",
-   "link": "https://www.fiercebiotech.com/biotech/mirum-scores-again-hepatitis-d-phase-3-setting-stage-fda-run",
+   "title": "Could we see 10 Chinese Big Pharmas within a decade? Some CEOs think so",
+   "link": "https://www.fiercebiotech.com/biotech/will-we-see-10-chinese-big-pharmas-within-decade-some-ceos-think-so",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "J&J readies Caplyta for FDA label expansion after 2nd phase 3 win in bipolar mania",
-   "link": "https://www.fiercepharma.com/pharma/jj-readies-caplyta-fda-label-expansion-after-2nd-phase-3-win-bipolar-mania",
+   "title": "BioNTech pays $205M for FDA voucher to speed up \u2018late-stage oncology pipeline\u2019",
+   "link": "https://www.fiercebiotech.com/pharma/biontech-pays-205m-fda-voucher-speed-late-stage-oncology-pipeline",
+   "source": "Fierce Biotech",
+   "date": null
+  },
+  {
+   "title": "Legend Biotech shares fall 16% after first earnings report under new CEO",
+   "link": "https://www.fiercepharma.com/pharma/legend-biotech-shares-fall-16-after-first-earnings-report-under-new-ceo",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "\u2018Flying blind\u2019: Why experts fear Treasury\u2019s China biotech investment crackdown will backfire",
-   "link": "https://www.fiercepharma.com/biotech/treasury-coins-act-proposal-pharmaceuticals-china-newco-legal-maze-biotech-vc-warnings",
-   "source": "Fierce Pharma",
-   "date": null
-  },
-  {
-   "title": "After court win, WuXi AppTec scores removal from US list of Chinese military companies",
-   "link": "https://www.fiercepharma.com/pharma/after-court-win-wuxi-apptec-scores-removal-us-list-chinese-military-companies",
-   "source": "Fierce Pharma",
-   "date": null
-  },
-  {
-   "title": "FDA orders new eye risk be listed on a dozen GLP-1s, including Novo's Ozempic, Lilly's Zepbound",
-   "link": "https://www.fiercepharma.com/pharma/fda-orders-new-eye-risk-be-listed-ozempic-zepbound-labels",
+   "title": "Aurobindo unit Eugia recalls antibiotic lot, citing glass particle concerns",
+   "link": "https://www.fiercepharma.com/manufacturing/aurobindo-unit-eugia-recalls-one-lot-antibiotic-injectables-glass-particles",
    "source": "Fierce Pharma",
    "date": null
   }
