@@ -1,6 +1,36 @@
 {
- "updated": "2026-11-12T18:23+00:00",
+ "updated": "2026-11-13T17:48+00:00",
  "items": [
+  {
+   "title": "STAT+: HHS plans funding for research into ibogaine for PTSD",
+   "link": "https://www.statnews.com/2026/11/13/biotech-news-hhs-funding-for-research-into-ibogaine-for-ptsd/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-13T15:25:46+00:00"
+  },
+  {
+   "title": "Novo submits sickle cell drug; Flagship, Gates Foundation deepen ties",
+   "link": "https://www.biopharmadive.com/news/novo-etavopivat-flagship-gates-ascidian-immuneering-neurosterix/874120/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-13T09:36:00-05:00"
+  },
+  {
+   "title": "STAT+: Oura\u2019s acquisition of health tech startup raises conflict-of-interest questions for Eli Lilly, experts say",
+   "link": "https://www.statnews.com/2026/11/13/oura-acquisition-counsel-health-eli-lilly/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-13T09:30:00+00:00"
+  },
+  {
+   "title": "This week in charts: Brain drugs are back on venture capitalists\u2019 minds",
+   "link": "https://www.biopharmadive.com/news/charts-venture-neuroscience-oyster-vectory-acr-cell-therapy/874570/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-13T09:00:00-05:00"
+  },
+  {
+   "title": "Windward prices $175M IPO to advance China-licensed lung drugs",
+   "link": "https://www.biopharmadive.com/news/windward-ipo-pricing-immune-drugs-china-deals-tezspire/874533/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-12T20:22:00-05:00"
+  },
   {
    "title": "STAT+: Blackstone backs Pfizer\u2019s bet on monthly obesity treatment",
    "link": "https://www.statnews.com/2026/11/12/biotech-news-blackstone-backs-pfizer-bet-on-monthly-obesity-treatment/?utm_campaign=rss",
@@ -20,74 +50,50 @@
    "date": "2026-11-12T11:30:00+00:00"
   },
   {
-   "title": "STAT+: Alnylam, once in the hunt to be a $100 billion biotech, needs to solve its heart drug problem",
-   "link": "https://www.statnews.com/2026/11/12/alnylam-amvuttra-heart-drug-growth/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-12T11:30:00+00:00"
-  },
-  {
-   "title": "Bristol Myers research chief to depart in \u2018evolution\u2019 of company\u2019s structure",
-   "link": "https://www.biopharmadive.com/news/bristol-myers-robert-plenge-cristian-massacesi-research-transition/874476/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-12T11:03:00-05:00"
-  },
-  {
-   "title": "The FDA has over 1k open jobs \u2014 and the staffing shortage is hitting pharma",
-   "link": "https://www.biopharmadive.com/news/fda-staffing-shortages-drug-reviews-pharma/874480/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-12T09:38:00-05:00"
-  },
-  {
-   "title": "STAT+: Most-favored nations policy makes drugmakers rethink launches abroad",
-   "link": "https://www.statnews.com/2026/11/11/biotech-news-mfn-makes-drugmakers-rethink-launches-abroad/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-11T19:44:07+00:00"
-  },
-  {
-   "title": "Drug price hikes in Germany could push US costs higher, study says",
-   "link": "https://www.biopharmadive.com/news/germany-us-drug-price-study-healthcare-costs/874360/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-11T11:11:00-05:00"
-  },
-  {
-   "title": "FDA appears to pause controversial speedy review program, complete response letter disclosures",
-   "link": "https://www.fiercebiotech.com/pharma/fda-appears-pause-controversial-speedy-review-program-complete-response-letter-disclosures",
+   "title": "Charles River pays $470M for 2 Frontage bioanalysis labs in Pennsylvania",
+   "link": "https://www.fiercebiotech.com/cro/charles-river-shells-out-470m-tigermed-owned-frontage-bioanalysis-business",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Vor pays RemeGen $10M for long-acting addition to autoimmune pipeline",
-   "link": "https://www.fiercebiotech.com/biotech/vor-pays-remegen-10m-long-acting-successor-autoimmune-drug",
+   "title": "The promise of molecular gates and what comes next",
+   "link": "https://www.fiercebiotech.com/biotech/promise-molecular-gates-and-what-comes-next",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Kyverna abandons next-gen autoimmune CAR-T once touted as follow-up to miv-cel",
-   "link": "https://www.fiercebiotech.com/biotech/kyverna-abandons-next-gen-car-t-once-touted-follow-miv-cel",
+   "title": "Rezolute gets an uplift from phase 3 tumor hyperinsulinism win ahead of FDA meeting",
+   "link": "https://www.fiercebiotech.com/biotech/rezolute-gets-uplift-phase-3-win-ahead-fda-meeting",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Why a fresh approach to targeting G protein-coupled receptors could treat a rare eye cancer",
-   "link": "https://www.fiercebiotech.com/research/how-targeting-g-protein-coupled-receptors-can-reverse-cancer-signaling-rare-eye-cancer",
+   "title": "Cellectis will shed 70% of workforce as part of in vivo pivot",
+   "link": "https://www.fiercebiotech.com/biotech/cellectis-will-shed-70-workforce-part-vivo-pivot",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Orzeyful's 'lighter' DEA schedule paves way for Takeda's first-in-class narcolepsy launch",
-   "link": "https://www.fiercepharma.com/pharma/orzeyfuls-lighter-dea-schedule-paves-takedas-first-class-narcolepsy-launch",
+   "title": "Europe's CHMP backs Baxfendy, gives Hansoh's Aumseqa another chance",
+   "link": "https://www.fiercepharma.com/pharma/europes-chmp-signed-stack-new-medicines-including-azs-bp-med-and-2-entrants-china",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Regulatory tracker: Lilly beats Novo to land China's 1st oral GLP-1 weight loss nod",
-   "link": "https://www.fiercepharma.com/pharma/fierce-pharma-regulatory-tracker-2026-h2",
+   "title": "Teva CEO 'proud' of pipeline buzz as innovative-generics hybrid rolls out 1st R&D day",
+   "link": "https://www.fiercepharma.com/pharma/teva-ceo-proud-pipeline-buzz-innovative-generics-hybrid-rolls-out-1st-rd-day",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "BMS reunites R&D divisions under Cristian Massacesi, while Robert Plenge departs",
-   "link": "https://www.fiercepharma.com/biotech/bristol-myers-reunites-rd-divisions-under-cristian-massacesi",
+   "title": "Bavarian Nordic C-suite stability in question as CFO steps down amid Q3 beat",
+   "link": "https://www.fiercepharma.com/pharma/bavarian-nordic-c-suite-stability-question-cfo-steps-down-amid-q3-beat",
+   "source": "Fierce Pharma",
+   "date": null
+  },
+  {
+   "title": "Fierce Pharma Asia\u2014China\u2019s Big Pharma ambition; Treasury\u2019s China crackdown; Takeda\u2019s narcolepsy launch",
+   "link": "https://www.fiercepharma.com/pharma/china-big-pharma-dream-treasury-china-crackdown-takeda-narcolepsy-launch",
    "source": "Fierce Pharma",
    "date": null
   }
