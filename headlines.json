@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-14T16:38+00:00",
+ "updated": "2026-11-15T17:14+00:00",
  "items": [
+  {
+   "title": "STAT+: FDA rejects lung cancer treatment ivonescimab from Summit Therapeutics",
+   "link": "https://www.statnews.com/2026/11/15/fda-rejects-ivonescimab-lung-cancer-treatment-summit-therapeutics/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-15T15:05:15+00:00"
+  },
   {
    "title": "STAT+: HHS plans funding for research into ibogaine for PTSD",
    "link": "https://www.statnews.com/2026/11/13/biotech-news-hhs-funding-for-research-into-ibogaine-for-ptsd/?utm_campaign=rss",
@@ -44,10 +50,10 @@
    "date": "2026-11-12T11:44:00-05:00"
   },
   {
-   "title": "STAT+: What to know about Biogen\u2019s big lupus study readout",
-   "link": "https://www.statnews.com/2026/11/12/biogen-lupus-litifilimab-what-to-know/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-12T11:30:00+00:00"
+   "title": "FDA rejects Summit\u2019s ivonescimab, derailing US arrival of much-hyped PD-1xVEGF class",
+   "link": "https://www.fiercebiotech.com/pharma/fda-rejects-summit-therapeutics-pd-1-vegf-ivonescimab-nsclc",
+   "source": "Fierce Biotech",
+   "date": null
   },
   {
    "title": "Charles River pays $470M for 2 Frontage bioanalysis labs in Pennsylvania",
@@ -68,9 +74,9 @@
    "date": null
   },
   {
-   "title": "Cellectis will shed 70% of workforce as part of in vivo pivot",
-   "link": "https://www.fiercebiotech.com/biotech/cellectis-will-shed-70-workforce-part-vivo-pivot",
-   "source": "Fierce Biotech",
+   "title": "Genentech brings every day wins to life in patient-focused Hemlibra push",
+   "link": "https://www.fiercepharma.com/marketing/genentech-brings-everyday-wins-life-new-patient-focused-hemlibra-push",
+   "source": "Fierce Pharma",
    "date": null
   },
   {
@@ -82,18 +88,6 @@
   {
    "title": "AZ keeps pressure on Keytruda with Imfinzi expansion in chemo-ineligible bladder cancer",
    "link": "https://www.fiercepharma.com/pharma/az-keeps-pressure-keytruda-imfinzi-expansion-chemo-ineligible-bladder-cancer",
-   "source": "Fierce Pharma",
-   "date": null
-  },
-  {
-   "title": "The Oral GLP-1 Tracker: Foundayo, Wegovy pill keep scripts on the ascent",
-   "link": "https://www.fiercepharma.com/pharma/oral-glp-1-tracker-launch-trajectories-lilly-foundayo-novo-wegovy-pill",
-   "source": "Fierce Pharma",
-   "date": null
-  },
-  {
-   "title": "Europe's CHMP backs Baxfendy, gives Hansoh's Aumseqa another chance",
-   "link": "https://www.fiercepharma.com/pharma/europes-chmp-signed-stack-new-medicines-including-azs-bp-med-and-2-entrants-china",
    "source": "Fierce Pharma",
    "date": null
   }
