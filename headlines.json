@@ -1,17 +1,41 @@
 {
- "updated": "2026-11-17T19:13+00:00",
+ "updated": "2026-11-18T18:52+00:00",
  "items": [
+  {
+   "title": "STAT+: FDA discloses reasons for rejecting Summit drug",
+   "link": "https://www.statnews.com/2026/11/18/biotech-news-fda-discloses-reasons-for-rejecting-summit-drug/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-18T14:37:13+00:00"
+  },
+  {
+   "title": "\u2018Selling and marketing snake oil\u2019: The debate over compounded GLP-1s",
+   "link": "https://www.biopharmadive.com/news/compounded-glp-1s-telehealth-debate-snake-oil-fda/875065/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-18T13:51:00-05:00"
+  },
+  {
+   "title": "White House pulls nomination for FDA nominee Overton",
+   "link": "https://www.biopharmadive.com/news/white-house-withdraw-heidi-overton-fda-commissioner-nomination/874961/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-18T12:00:00-05:00"
+  },
+  {
+   "title": "Pfizer leaps into \u2018in vivo\u2019 CAR-T with latest China deal",
+   "link": "https://www.biopharmadive.com/news/pfizer-starna-in-vivo-cell-therapy-autoimmune-disease-deal/875018/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-18T10:55:00-05:00"
+  },
+  {
+   "title": "FDA publishes rejection letter for Summit drug; Nuvalent buyout pays more dividends for GSK",
+   "link": "https://www.biopharmadive.com/news/summit-crl-sellas-data-nelkarmi-lilly-astrazeneca-biogen/874825/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-18T09:21:00-05:00"
+  },
   {
    "title": "STAT+: Flagship opens biotech-creation outpost in the U.K.",
    "link": "https://www.statnews.com/2026/11/17/biotech-news-flagship-opens-biotech-creation-uk-outpost/?utm_campaign=rss",
    "source": "STAT",
    "date": "2026-11-17T17:05:10+00:00"
-  },
-  {
-   "title": "Roche breast cancer pill cleared by FDA",
-   "link": "https://www.biopharmadive.com/news/roche-fda-approve-wilserdly-giredestrant-breast-cancer/874884/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-17T12:18:00-05:00"
   },
   {
    "title": "STAT+: Sellas\u2019 experimental blood cancer immunotherapy reduced risk of death in clinical trial",
@@ -26,74 +50,50 @@
    "date": "2026-11-17T12:00:00+00:00"
   },
   {
-   "title": "AI drugmaker Isomorphic restocks with $5B fundraise",
-   "link": "https://www.biopharmadive.com/news/isomorphic-labs-ai-drug-discovery-financing/874863/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-17T10:51:00-05:00"
-  },
-  {
-   "title": "STAT+: After death in gene therapy trial for a brain disease, progress is reported",
-   "link": "https://www.statnews.com/2026/11/17/capsida-gene-therapy-trial-death-follow-up-investigation/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-17T09:30:00+00:00"
-  },
-  {
-   "title": "Marrow sets out to challenge genetic medicines for severe blood diseases",
-   "link": "https://www.biopharmadive.com/news/marrow-therapeutics-sickle-cell-beta-thalassemia-drug/874789/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-17T07:00:00-05:00"
-  },
-  {
-   "title": "Summit shares fall as FDA rejects closely watched PD-1/VEGF drug",
-   "link": "https://www.biopharmadive.com/news/summit-akeso-fda-ivonescimab-reject-egfr-lung-cancer/874745/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-16T12:14:00-05:00"
-  },
-  {
-   "title": "Medtronic pays $380M-plus for Contego Medical buyout",
-   "link": "https://www.fiercebiotech.com/medtech/medtronic-pays-380m-plus-contego-medical-buyout",
+   "title": "Less than a year into the job, Everett Cunningham steps down as Quanterix CEO",
+   "link": "https://www.fiercebiotech.com/medtech/less-year-job-everett-cunningham-steps-down-quanterix-ceo",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Kyntra axes mid-stage ADC, adding to years of stumbles",
-   "link": "https://www.fiercebiotech.com/biotech/kyntra-axes-mid-stage-adc-adding-years-myriad-stumbles",
+   "title": "Biogen\u2019s tau therapy drives bigger benefits in 2-year Alzheimer\u2019s update",
+   "link": "https://www.fiercebiotech.com/biotech/biogens-tau-therapy-drives-bigger-benefits-2-year-alzheimers-update",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Why 2027 could be \u2018Europe\u2019s year to shine\u2019: Panelists debate biotech funding at Fierce\u2019s London event",
-   "link": "https://www.fiercebiotech.com/biotech/fierce-biotech-llsw-its-europes-year-shine-all-ingredients-are-here-biotech-funding",
+   "title": "Clene Nanomedicine uses CRO Veristat\u2019s biostatistics platform for FDA submission",
+   "link": "https://www.fiercebiotech.com/cro/clene-nanomedicine-uses-cro-veristats-biostatistics-platform-fda-submission",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Isomorphic Labs raises $5B series C months after $2.1B round",
-   "link": "https://www.fiercebiotech.com/biotech/isomorphic-labs-raises-5b-series-c-months-after-21b-round",
+   "title": "Pfizer enters in vivo CAR-T space via 3-program, $2.6B deal with China\u2019s Starna",
+   "link": "https://www.fiercebiotech.com/biotech/pfizer-enters-vivo-car-t-space-3-program-26b-deal-chinas-starna",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Cosentyx bags FDA nod for 11th indication as Novartis looks to buffer 2029 patent cliff",
-   "link": "https://www.fiercepharma.com/pharma/cosentyx-bags-fda-nod-11th-indication-novartis-looks-2029-patent-cliff",
+   "title": "Beren clinches long-awaited FDA nod for cyclodextrin drug in Niemann-Pick disease",
+   "link": "https://www.fiercepharma.com/pharma/beren-clinches-long-awaited-fda-nod-niemann-pick-disease",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "GSK scores FDA approval for Nelkarmi, its 2nd lung cancer drug from Nuvalent deal",
-   "link": "https://www.fiercepharma.com/pharma/gsk-scores-fda-approval-nelkarmi-2nd-lung-cancer-drug-nuvalent-deal",
+   "title": "FDA moves to yank Salerno's liquid cholesterol drug approval on missing reports",
+   "link": "https://www.fiercepharma.com/pharma/fda-moves-yank-salernos-liquid-cholesterol-med-approval-missing-reports",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "AZ defeats health plan lawsuit alleging Soliris antitrust maneuvers",
-   "link": "https://www.fiercepharma.com/pharma/az-deflects-health-plan-lawsuit-alleging-soliris-antitrust-maneuvers",
+   "title": "Novo expands DTC program Novocare to support Wegovy users through holistic health journey",
+   "link": "https://www.fiercepharma.com/marketing/novo-expands-dtc-program-novocare-support-wegovy-users-through-holistic-health-journey",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Viatris takes the wheel as Cadillac F1 team's new global pharma partner",
-   "link": "https://www.fiercepharma.com/marketing/viatris-takes-wheel-cadillac-f1-teams-new-global-pharma-partner",
+   "title": "Heidi Overton\u2019s FDA nomination pulled by White House",
+   "link": "https://www.fiercepharma.com/pharma/overtons-fda-nomination-has-been-pulled-white-house",
    "source": "Fierce Pharma",
    "date": null
   }
