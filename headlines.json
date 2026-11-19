@@ -1,101 +1,53 @@
 {
- "updated": "2026-11-18T18:52+00:00",
+ "updated": "2026-11-19T19:01+00:00",
  "items": [
   {
-   "title": "STAT+: FDA discloses reasons for rejecting Summit drug",
-   "link": "https://www.statnews.com/2026/11/18/biotech-news-fda-discloses-reasons-for-rejecting-summit-drug/?utm_campaign=rss",
+   "title": "STAT+: Lawmakers want U.S. biotech to outcompete China",
+   "link": "https://www.statnews.com/2026/11/19/biotech-news-lawmakers-want-us-biotech-to-outcompete-china/?utm_campaign=rss",
    "source": "STAT",
-   "date": "2026-11-18T14:37:13+00:00"
+   "date": "2026-11-19T17:04:46+00:00"
+  },
+  {
+   "title": "STAT+: Peptide market poised to explode with new Hims and Noom launches",
+   "link": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-19T16:59:47+00:00"
+  },
+  {
+   "title": "Sanofi gains FDA clearance for Gaucher disease pill",
+   "link": "https://www.biopharmadive.com/news/sanofi-fda-infilbray-venglustat-approve-gaucher/875167/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-19T12:17:00-05:00"
+  },
+  {
+   "title": "STAT+: Merck, Isomorphic Labs partner to develop oncology drug candidates",
+   "link": "https://www.statnews.com/2026/11/19/merck-isomorphic-labs-partner-to-develop-oncology-drug-candidates/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-19T11:45:00+00:00"
+  },
+  {
+   "title": "China could \u2018corner\u2019 biopharma sector with new plan, US panel warns",
+   "link": "https://www.biopharmadive.com/news/us-china-biotech-report-commission-supply-chain-2026/875170/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-19T11:42:00-05:00"
+  },
+  {
+   "title": "STAT+: In cancer drug development, the spotlight shifts onto Erasca\u2019s KRAS-targeted treatment",
+   "link": "https://www.statnews.com/2026/11/19/erasca-kras-targeted-treatment-new-data-pancreatic-cancer/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-19T11:30:00+00:00"
+  },
+  {
+   "title": "With FDA nod, Regeneron brings an RNAi drug to autoimmune disease",
+   "link": "https://www.biopharmadive.com/news/regeneron-fda-approve-cemdisiran-livsayis-myasthenia-gravis-alnylam/875160/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-19T10:10:00-05:00"
   },
   {
    "title": "\u2018Selling and marketing snake oil\u2019: The debate over compounded GLP-1s",
    "link": "https://www.biopharmadive.com/news/compounded-glp-1s-telehealth-debate-snake-oil-fda/875065/",
    "source": "BioPharma Dive",
    "date": "2026-11-18T13:51:00-05:00"
-  },
-  {
-   "title": "White House pulls nomination for FDA nominee Overton",
-   "link": "https://www.biopharmadive.com/news/white-house-withdraw-heidi-overton-fda-commissioner-nomination/874961/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-18T12:00:00-05:00"
-  },
-  {
-   "title": "Pfizer leaps into \u2018in vivo\u2019 CAR-T with latest China deal",
-   "link": "https://www.biopharmadive.com/news/pfizer-starna-in-vivo-cell-therapy-autoimmune-disease-deal/875018/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-18T10:55:00-05:00"
-  },
-  {
-   "title": "FDA publishes rejection letter for Summit drug; Nuvalent buyout pays more dividends for GSK",
-   "link": "https://www.biopharmadive.com/news/summit-crl-sellas-data-nelkarmi-lilly-astrazeneca-biogen/874825/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-18T09:21:00-05:00"
-  },
-  {
-   "title": "STAT+: Flagship opens biotech-creation outpost in the U.K.",
-   "link": "https://www.statnews.com/2026/11/17/biotech-news-flagship-opens-biotech-creation-uk-outpost/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-17T17:05:10+00:00"
-  },
-  {
-   "title": "STAT+: Sellas\u2019 experimental blood cancer immunotherapy reduced risk of death in clinical trial",
-   "link": "https://www.statnews.com/2026/11/17/sellas-blood-cancer-immunotherapy-succeeds-clinical-trial/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-17T12:00:00+00:00"
-  },
-  {
-   "title": "STAT+: With $173 million, new startup takes aim at sickle cell",
-   "link": "https://www.statnews.com/2026/11/17/new-startup-developing-novel-sickle-cell-anemia-infusion-no-gene-therapy/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-17T12:00:00+00:00"
-  },
-  {
-   "title": "Less than a year into the job, Everett Cunningham steps down as Quanterix CEO",
-   "link": "https://www.fiercebiotech.com/medtech/less-year-job-everett-cunningham-steps-down-quanterix-ceo",
-   "source": "Fierce Biotech",
-   "date": null
-  },
-  {
-   "title": "Biogen\u2019s tau therapy drives bigger benefits in 2-year Alzheimer\u2019s update",
-   "link": "https://www.fiercebiotech.com/biotech/biogens-tau-therapy-drives-bigger-benefits-2-year-alzheimers-update",
-   "source": "Fierce Biotech",
-   "date": null
-  },
-  {
-   "title": "Clene Nanomedicine uses CRO Veristat\u2019s biostatistics platform for FDA submission",
-   "link": "https://www.fiercebiotech.com/cro/clene-nanomedicine-uses-cro-veristats-biostatistics-platform-fda-submission",
-   "source": "Fierce Biotech",
-   "date": null
-  },
-  {
-   "title": "Pfizer enters in vivo CAR-T space via 3-program, $2.6B deal with China\u2019s Starna",
-   "link": "https://www.fiercebiotech.com/biotech/pfizer-enters-vivo-car-t-space-3-program-26b-deal-chinas-starna",
-   "source": "Fierce Biotech",
-   "date": null
-  },
-  {
-   "title": "Beren clinches long-awaited FDA nod for cyclodextrin drug in Niemann-Pick disease",
-   "link": "https://www.fiercepharma.com/pharma/beren-clinches-long-awaited-fda-nod-niemann-pick-disease",
-   "source": "Fierce Pharma",
-   "date": null
-  },
-  {
-   "title": "FDA moves to yank Salerno's liquid cholesterol drug approval on missing reports",
-   "link": "https://www.fiercepharma.com/pharma/fda-moves-yank-salernos-liquid-cholesterol-med-approval-missing-reports",
-   "source": "Fierce Pharma",
-   "date": null
-  },
-  {
-   "title": "Novo expands DTC program Novocare to support Wegovy users through holistic health journey",
-   "link": "https://www.fiercepharma.com/marketing/novo-expands-dtc-program-novocare-support-wegovy-users-through-holistic-health-journey",
-   "source": "Fierce Pharma",
-   "date": null
-  },
-  {
-   "title": "Heidi Overton\u2019s FDA nomination pulled by White House",
-   "link": "https://www.fiercepharma.com/pharma/overtons-fda-nomination-has-been-pulled-white-house",
-   "source": "Fierce Pharma",
-   "date": null
   }
  ]
 }
