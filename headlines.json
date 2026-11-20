@@ -1,6 +1,30 @@
 {
- "updated": "2026-11-19T19:01+00:00",
+ "updated": "2026-11-20T18:38+00:00",
  "items": [
+  {
+   "title": "STAT+: Early results for Alterome\u2019s KRAS drug for pancreas, lung and colon cancer arrive",
+   "link": "https://www.statnews.com/2026/11/20/biotech-news-early-results-for-alterome-kras-drug-arrive/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-20T14:01:41+00:00"
+  },
+  {
+   "title": "Erasca data add to pressure facing Revolution\u2019s breakthrough cancer drug",
+   "link": "https://www.biopharmadive.com/news/erasca-kras-pancreatic-cancer-drug-results-revolution-rasonque/875314/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-20T12:18:00-05:00"
+  },
+  {
+   "title": "Celldex drug stumbles in eczema; Epigenetic editing startup cuts staff",
+   "link": "https://www.biopharmadive.com/news/celldex-eczema-nchroma-layoffs-isomorphic-merck-teva-vitrivax/875241/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-20T08:03:00-05:00"
+  },
+  {
+   "title": "This week in charts: Biotech investors\u2019 China bets are already paying off",
+   "link": "https://www.biopharmadive.com/news/biotech-china-deals-venture-returns-summit-stock/874912/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-20T07:00:00-05:00"
+  },
   {
    "title": "STAT+: Lawmakers want U.S. biotech to outcompete China",
    "link": "https://www.statnews.com/2026/11/19/biotech-news-lawmakers-want-us-biotech-to-outcompete-china/?utm_campaign=rss",
@@ -26,28 +50,52 @@
    "date": "2026-11-19T11:45:00+00:00"
   },
   {
-   "title": "China could \u2018corner\u2019 biopharma sector with new plan, US panel warns",
-   "link": "https://www.biopharmadive.com/news/us-china-biotech-report-commission-supply-chain-2026/875170/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-19T11:42:00-05:00"
+   "title": "Merck\u2019s TROP2 ADC extends survival in pivotal gastroesophageal cancer trial",
+   "link": "https://www.fiercebiotech.com/biotech/mercks-trop2-adc-extends-survival-pivotal-gastroesophageal-cancer-trial",
+   "source": "Fierce Biotech",
+   "date": null
   },
   {
-   "title": "STAT+: In cancer drug development, the spotlight shifts onto Erasca\u2019s KRAS-targeted treatment",
-   "link": "https://www.statnews.com/2026/11/19/erasca-kras-targeted-treatment-new-data-pancreatic-cancer/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-19T11:30:00+00:00"
+   "title": "Researchers may have to \u2018revise a lot\u2019 of theories about dementia after uncovering plastics in brain",
+   "link": "https://www.fiercebiotech.com/research/researchers-uncover-plastics-present-dementia-brains-after-death",
+   "source": "Fierce Biotech",
+   "date": null
   },
   {
-   "title": "With FDA nod, Regeneron brings an RNAi drug to autoimmune disease",
-   "link": "https://www.biopharmadive.com/news/regeneron-fda-approve-cemdisiran-livsayis-myasthenia-gravis-alnylam/875160/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-19T10:10:00-05:00"
+   "title": "FDA pushes decision on Belite\u2019s eye disease pill back to May",
+   "link": "https://www.fiercebiotech.com/biotech/fda-delays-belites-eye-disease-pill-decision-three-months-may",
+   "source": "Fierce Biotech",
+   "date": null
   },
   {
-   "title": "\u2018Selling and marketing snake oil\u2019: The debate over compounded GLP-1s",
-   "link": "https://www.biopharmadive.com/news/compounded-glp-1s-telehealth-debate-snake-oil-fda/875065/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-18T13:51:00-05:00"
+   "title": "\u2018It\u2019s a very healthy sector\u2019: Biopharma gathers in London as M&A shines and China clouds loom",
+   "link": "https://www.fiercebiotech.com/biotech/its-very-health-sector-biopharma-gathers-london-ma-shines-will-china-clouds-loom",
+   "source": "Fierce Biotech",
+   "date": null
+  },
+  {
+   "title": "The Oral GLP-1 Tracker: Foundayo holds steady as Wegovy pill takes a 5% dip",
+   "link": "https://www.fiercepharma.com/pharma/oral-glp-1-tracker-launch-trajectories-lilly-foundayo-novo-wegovy-pill",
+   "source": "Fierce Pharma",
+   "date": null
+  },
+  {
+   "title": "Another 215 layoffs linked to Novo's New Jersey HQ",
+   "link": "https://www.fiercepharma.com/pharma/another-215-layoffs-linked-novos-new-jersey-hq",
+   "source": "Fierce Pharma",
+   "date": null
+  },
+  {
+   "title": "FDA sets up new safety council to keep tabs on approved vaccines, cell and gene therapies",
+   "link": "https://www.fiercepharma.com/pharma/fda-sets-new-safety-council-under-cber-keep-tabs-approved-vaccines-cell-and-gene-therapies",
+   "source": "Fierce Pharma",
+   "date": null
+  },
+  {
+   "title": "Fierce Pharma Asia\u2014Ivonescimab\u2019s FDA snub; Pfizer\u2019s in vivo CAR-T deal; China fires scientists in fatal gene trial",
+   "link": "https://www.fiercepharma.com/pharma/ivonescimab-fda-rejection-pfizer-vivo-car-t-deal-china-fires-scientists-fatal-gene-trial",
+   "source": "Fierce Pharma",
+   "date": null
   }
  ]
 }
