@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-20T18:38+00:00",
+ "updated": "2026-11-21T17:36+00:00",
  "items": [
+  {
+   "title": "STAT+: FDA rejects Capricor Therapeutics\u2019 Duchenne therapy, a decision that was a long time coming",
+   "link": "https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-20T23:43:53+00:00"
+  },
+  {
+   "title": "Will the first approved psychedelic become a blockbuster?",
+   "link": "https://www.biopharmadive.com/news/race-first-psilocybin-blockbuster-compass-usona/875369/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-20T14:53:09-05:00"
+  },
   {
    "title": "STAT+: Early results for Alterome\u2019s KRAS drug for pancreas, lung and colon cancer arrive",
    "link": "https://www.statnews.com/2026/11/20/biotech-news-early-results-for-alterome-kras-drug-arrive/?utm_campaign=rss",
@@ -38,18 +50,6 @@
    "date": "2026-11-19T16:59:47+00:00"
   },
   {
-   "title": "Sanofi gains FDA clearance for Gaucher disease pill",
-   "link": "https://www.biopharmadive.com/news/sanofi-fda-infilbray-venglustat-approve-gaucher/875167/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-19T12:17:00-05:00"
-  },
-  {
-   "title": "STAT+: Merck, Isomorphic Labs partner to develop oncology drug candidates",
-   "link": "https://www.statnews.com/2026/11/19/merck-isomorphic-labs-partner-to-develop-oncology-drug-candidates/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-19T11:45:00+00:00"
-  },
-  {
    "title": "Merck\u2019s TROP2 ADC extends survival in pivotal gastroesophageal cancer trial",
    "link": "https://www.fiercebiotech.com/biotech/mercks-trop2-adc-extends-survival-pivotal-gastroesophageal-cancer-trial",
    "source": "Fierce Biotech",
@@ -74,26 +74,20 @@
    "date": null
   },
   {
-   "title": "The Oral GLP-1 Tracker: Foundayo holds steady as Wegovy pill takes a 5% dip",
-   "link": "https://www.fiercepharma.com/pharma/oral-glp-1-tracker-launch-trajectories-lilly-foundayo-novo-wegovy-pill",
+   "title": "Regulatory tracker: Novo's Sogroya wins 4th label expansion this year",
+   "link": "https://www.fiercepharma.com/pharma/fierce-pharma-regulatory-tracker-2026-h2",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Another 215 layoffs linked to Novo's New Jersey HQ",
-   "link": "https://www.fiercepharma.com/pharma/another-215-layoffs-linked-novos-new-jersey-hq",
+   "title": "Merck scores US, German wins over Halozyme in Keytruda Qlex patent fight",
+   "link": "https://www.fiercepharma.com/pharma/merck-scores-us-german-wins-over-halozyme-keytruda-qlex-patent-fight",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "FDA sets up new safety council to keep tabs on approved vaccines, cell and gene therapies",
-   "link": "https://www.fiercepharma.com/pharma/fda-sets-new-safety-council-under-cber-keep-tabs-approved-vaccines-cell-and-gene-therapies",
-   "source": "Fierce Pharma",
-   "date": null
-  },
-  {
-   "title": "Fierce Pharma Asia\u2014Ivonescimab\u2019s FDA snub; Pfizer\u2019s in vivo CAR-T deal; China fires scientists in fatal gene trial",
-   "link": "https://www.fiercepharma.com/pharma/ivonescimab-fda-rejection-pfizer-vivo-car-t-deal-china-fires-scientists-fatal-gene-trial",
+   "title": "Mapping psychedelics\u2019 commercial summit",
+   "link": "https://www.fiercepharma.com/pharma/mapping-psychedelics-commercial-summit",
    "source": "Fierce Pharma",
    "date": null
   }
