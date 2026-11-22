@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-21T17:36+00:00",
+ "updated": "2026-11-22T17:52+00:00",
  "items": [
+  {
+   "title": "FDA again turns back Capricor Duchenne cell therapy",
+   "link": "https://www.biopharmadive.com/news/capricor-fda-duchenne-cell-therapy-deramiocel/875384/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-21T15:46:00-05:00"
+  },
   {
    "title": "STAT+: FDA rejects Capricor Therapeutics\u2019 Duchenne therapy, a decision that was a long time coming",
    "link": "https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/?utm_campaign=rss",
@@ -32,12 +38,6 @@
    "date": "2026-11-20T08:03:00-05:00"
   },
   {
-   "title": "This week in charts: Biotech investors\u2019 China bets are already paying off",
-   "link": "https://www.biopharmadive.com/news/biotech-china-deals-venture-returns-summit-stock/874912/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-20T07:00:00-05:00"
-  },
-  {
    "title": "STAT+: Lawmakers want U.S. biotech to outcompete China",
    "link": "https://www.statnews.com/2026/11/19/biotech-news-lawmakers-want-us-biotech-to-outcompete-china/?utm_campaign=rss",
    "source": "STAT",
@@ -48,6 +48,12 @@
    "link": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/?utm_campaign=rss",
    "source": "STAT",
    "date": "2026-11-19T16:59:47+00:00"
+  },
+  {
+   "title": "Danaher teams up with Microsoft to boost \u2018experimental execution\u2019",
+   "link": "https://www.fiercebiotech.com/medtech/danaher-teams-microsoft-boost-experimental-execution",
+   "source": "Fierce Biotech",
+   "date": null
   },
   {
    "title": "Merck\u2019s TROP2 ADC extends survival in pivotal gastroesophageal cancer trial",
@@ -64,12 +70,6 @@
   {
    "title": "FDA pushes decision on Belite\u2019s eye disease pill back to May",
    "link": "https://www.fiercebiotech.com/biotech/fda-delays-belites-eye-disease-pill-decision-three-months-may",
-   "source": "Fierce Biotech",
-   "date": null
-  },
-  {
-   "title": "\u2018It\u2019s a very healthy sector\u2019: Biopharma gathers in London as M&A shines and China clouds loom",
-   "link": "https://www.fiercebiotech.com/biotech/its-very-health-sector-biopharma-gathers-london-ma-shines-will-china-clouds-loom",
    "source": "Fierce Biotech",
    "date": null
   },
