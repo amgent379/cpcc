@@ -1,6 +1,48 @@
 {
- "updated": "2026-11-22T17:52+00:00",
+ "updated": "2026-11-23T22:04+00:00",
  "items": [
+  {
+   "title": "STAT+: Limb-girdle muscular dystrophy gets its first FDA-approved drug, from BridgeBio",
+   "link": "https://www.statnews.com/2026/11/23/fda-approves-bridgebio-lgmd-drug-welgemda/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-23T21:23:42+00:00"
+  },
+  {
+   "title": "STAT+: A big win for a potential competitor for Dupixent eczema treatment",
+   "link": "https://www.statnews.com/2026/11/23/biotech-news-a-big-win-for-potential-dupixent-competitor-eczema-treatment/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-23T14:43:21+00:00"
+  },
+  {
+   "title": "STAT+: Invivyd reports positive results in Sisyphean Covid antibody quest",
+   "link": "https://www.statnews.com/2026/11/23/invivyd-covid-monoclonal-antibody-declaration-trial-vyd2311/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-23T12:01:00+00:00"
+  },
+  {
+   "title": "STAT+: Kymera Therapeutics reports mid-stage eczema trial success for would-be Dupixent rival",
+   "link": "https://www.statnews.com/2026/11/23/kymera-therapeutics-eczema-trial-success-potential-dupixent-rival/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-23T12:00:00+00:00"
+  },
+  {
+   "title": "Lilly buys Huntington\u2019s drug developer LoQus23 in potentially $725M deal",
+   "link": "https://www.biopharmadive.com/news/lilly-loqus-huntingtons-drug-acquisition-deal/875448/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-23T11:17:09-05:00"
+  },
+  {
+   "title": "Kymera eczema pill meets goals in mid-stage trial",
+   "link": "https://www.biopharmadive.com/news/kymera-eczema-pill-phase2-data-protein-degrader-dupixent-ebglyss/875462/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-23T09:53:55-05:00"
+  },
+  {
+   "title": "Why today\u2019s leading drug developers are fine-tuning open models on their own data",
+   "link": "https://www.biopharmadive.com/spons/why-todays-leading-drug-developers-are-fine-tuning-open-models-on-their-ow/875153/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-23T05:00:00-05:00"
+  },
   {
    "title": "FDA again turns back Capricor Duchenne cell therapy",
    "link": "https://www.biopharmadive.com/news/capricor-fda-duchenne-cell-therapy-deramiocel/875384/",
@@ -8,86 +50,50 @@
    "date": "2026-11-21T15:46:00-05:00"
   },
   {
-   "title": "STAT+: FDA rejects Capricor Therapeutics\u2019 Duchenne therapy, a decision that was a long time coming",
-   "link": "https://www.statnews.com/2026/11/20/fda-rejects-capricor-duchenne-therapy/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-20T23:43:53+00:00"
-  },
-  {
-   "title": "Will the first approved psychedelic become a blockbuster?",
-   "link": "https://www.biopharmadive.com/news/race-first-psilocybin-blockbuster-compass-usona/875369/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-20T14:53:09-05:00"
-  },
-  {
-   "title": "STAT+: Early results for Alterome\u2019s KRAS drug for pancreas, lung and colon cancer arrive",
-   "link": "https://www.statnews.com/2026/11/20/biotech-news-early-results-for-alterome-kras-drug-arrive/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-20T14:01:41+00:00"
-  },
-  {
-   "title": "Erasca data add to pressure facing Revolution\u2019s breakthrough cancer drug",
-   "link": "https://www.biopharmadive.com/news/erasca-kras-pancreatic-cancer-drug-results-revolution-rasonque/875314/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-20T12:18:00-05:00"
-  },
-  {
-   "title": "Celldex drug stumbles in eczema; Epigenetic editing startup cuts staff",
-   "link": "https://www.biopharmadive.com/news/celldex-eczema-nchroma-layoffs-isomorphic-merck-teva-vitrivax/875241/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-20T08:03:00-05:00"
-  },
-  {
-   "title": "STAT+: Lawmakers want U.S. biotech to outcompete China",
-   "link": "https://www.statnews.com/2026/11/19/biotech-news-lawmakers-want-us-biotech-to-outcompete-china/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-19T17:04:46+00:00"
-  },
-  {
-   "title": "STAT+: Peptide market poised to explode with new Hims and Noom launches",
-   "link": "https://www.statnews.com/2026/11/19/hims-noom-enter-peptide-market-mainstream-products-health-risks/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-19T16:59:47+00:00"
-  },
-  {
-   "title": "Danaher teams up with Microsoft to boost \u2018experimental execution\u2019",
-   "link": "https://www.fiercebiotech.com/medtech/danaher-teams-microsoft-boost-experimental-execution",
+   "title": "House panel pushes to reverse 'hollowing out' of US biotech amid China's rise",
+   "link": "https://www.fiercebiotech.com/biotech/select-committee-china-makes-final-push-us-biotech-vs-china",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Merck\u2019s TROP2 ADC extends survival in pivotal gastroesophageal cancer trial",
-   "link": "https://www.fiercebiotech.com/biotech/mercks-trop2-adc-extends-survival-pivotal-gastroesophageal-cancer-trial",
+   "title": "Kymera\u2019s oral eczema drug impresses analysts with Dupixent-like phase 2 efficacy",
+   "link": "https://www.fiercebiotech.com/biotech/kymeras-oral-eczema-drug-impresses-analysts-dupixent-phase-2-efficacy",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Researchers may have to \u2018revise a lot\u2019 of theories about dementia after uncovering plastics in brain",
-   "link": "https://www.fiercebiotech.com/research/researchers-uncover-plastics-present-dementia-brains-after-death",
+   "title": "Arcus halts phase 3 pancreatic cancer study of CD73 inhibitor that looked destined to fail",
+   "link": "https://www.fiercebiotech.com/biotech/arcus-halts-phase-3-study-cd73-inhibitor-looked-destined-fail",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "FDA pushes decision on Belite\u2019s eye disease pill back to May",
-   "link": "https://www.fiercebiotech.com/biotech/fda-delays-belites-eye-disease-pill-decision-three-months-may",
+   "title": "Invivyd aims for Q1\u201927 submission after Pemgarda successor shows potential in phase 3",
+   "link": "https://www.fiercebiotech.com/biotech/invivyd-aims-q127-approval-submission-after-pemgarda-successor-shows-potential-phase-3",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Regulatory tracker: Novo's Sogroya wins 4th label expansion this year",
-   "link": "https://www.fiercepharma.com/pharma/fierce-pharma-regulatory-tracker-2026-h2",
+   "title": "Novo nets NBA partnership, courting health education with the Philadelphia 76ers",
+   "link": "https://www.fiercepharma.com/marketing/novo-nets-nba-partnership-courting-health-education-philadelphia-76ers",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Merck scores US, German wins over Halozyme in Keytruda Qlex patent fight",
-   "link": "https://www.fiercepharma.com/pharma/merck-scores-us-german-wins-over-halozyme-keytruda-qlex-patent-fight",
+   "title": "Roche opens key early-stage breast cancer market for oral SERDs with Wilserdly FDA nod",
+   "link": "https://www.fiercepharma.com/pharma/roche-opens-key-early-stage-breast-cancer-market-oral-serds-wilserdly-fda-nod",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Mapping psychedelics\u2019 commercial summit",
-   "link": "https://www.fiercepharma.com/pharma/mapping-psychedelics-commercial-summit",
+   "title": "Breckenridge recalls US beta-blocker batch after suspected metal contamination",
+   "link": "https://www.fiercepharma.com/pharma/breckenridge-recalls-one-lot-beta-blockers-after-suspected-metal-contamination",
+   "source": "Fierce Pharma",
+   "date": null
+  },
+  {
+   "title": "Novartis girds $5B Leqvio sales forecast with early look at cardiovascular disease ph. 3 data",
+   "link": "https://www.fiercepharma.com/pharma/novartis-girds-5b-leqvio-sales-forecast-early-look-cardiovascular-disease-ph-3",
    "source": "Fierce Pharma",
    "date": null
   }
