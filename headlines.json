@@ -1,6 +1,24 @@
 {
- "updated": "2026-11-24T20:42+00:00",
+ "updated": "2026-11-25T19:58+00:00",
  "items": [
+  {
+   "title": "Medicare sets 2028 prices for 13 new drugs under Biden-era law",
+   "link": "https://www.biopharmadive.com/news/inflation-reduction-act-2028-final-medicare-drug-price/875717/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-25T11:26:00-05:00"
+  },
+  {
+   "title": "Amgen takes next step toward biosimilar Opdivo; Bristol Myers taps a new finance head",
+   "link": "https://www.biopharmadive.com/news/arcus-quemliclustat-belite-amgen-opdivo-biosimilar/875512/",
+   "source": "BioPharma Dive",
+   "date": "2026-11-25T11:24:00-05:00"
+  },
+  {
+   "title": "Opinion: Washington and Beijing are building walls around biotechnology. That\u2019s the wrong approach",
+   "link": "https://www.statnews.com/2026/11/25/us-china-biotech-race-policy-data/?utm_campaign=rss",
+   "source": "STAT",
+   "date": "2026-11-25T09:30:00+00:00"
+  },
   {
    "title": "STAT+: Roche\u2019s potential breast cancer blockbuster drug wins second FDA nod",
    "link": "https://www.statnews.com/2026/11/24/biotech-news-roche-potential-breast-cancer-blockbluster-drug-wins-second-fda-nod/?utm_campaign=rss",
@@ -20,12 +38,6 @@
    "date": "2026-11-24T10:36:00-05:00"
   },
   {
-   "title": "Sanofi, with $41B Insmed buy, inks year\u2019s biggest biopharma acquisition",
-   "link": "https://www.biopharmadive.com/news/sanofi-insmed-acquisition-deal-immunology-rare-disease/875627/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-24T08:50:59-05:00"
-  },
-  {
    "title": "STAT+: Medicare estimates $9.2 billion in savings from third round of negotiated drug prices",
    "link": "https://www.statnews.com/2026/11/23/medicare-drug-price-negotiations-announcement-third-round/?utm_campaign=rss",
    "source": "STAT",
@@ -38,62 +50,50 @@
    "date": "2026-11-23T21:23:42+00:00"
   },
   {
-   "title": "STAT+: A big win for a potential competitor for Dupixent eczema treatment",
-   "link": "https://www.statnews.com/2026/11/23/biotech-news-a-big-win-for-potential-dupixent-competitor-eczema-treatment/?utm_campaign=rss",
-   "source": "STAT",
-   "date": "2026-11-23T14:43:21+00:00"
-  },
-  {
-   "title": "Lilly buys Huntington\u2019s drug developer LoQus23 in potentially $725M deal",
-   "link": "https://www.biopharmadive.com/news/lilly-loqus-huntingtons-drug-acquisition-deal/875448/",
-   "source": "BioPharma Dive",
-   "date": "2026-11-23T11:17:09-05:00"
-  },
-  {
-   "title": "DiaMedica shares signs that drug extends pregnancy in fetal growth restriction trial",
-   "link": "https://www.fiercebiotech.com/biotech/diamedica-shares-signs-drug-extends-pregnancy-fetal-growth-restriction-trial",
+   "title": "Bayer becomes latest Big Pharma to head to Hansoh in $3.3B deal for phase 1 ADC",
+   "link": "https://www.fiercebiotech.com/biotech/bayer-becomes-latest-big-pharma-head-hansoh-33b-deal-phase-1-adc",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "Why Iambic\u2019s CEO believes preclinical cancer therapy could be \u2018holy grail\u2019 for CDK inhibitors",
-   "link": "https://www.fiercebiotech.com/research/iambic-ceo-says-they-have-holy-grail-cdk-inhibitors-cancer-therapies",
+   "title": "Schr\u00f6dinger signs \u20ac22M biologics collab with sequencing automation outfit Enpicom",
+   "link": "https://www.fiercebiotech.com/biotech/schrodinger-forms-ties-sequencing-automation-outfit-enpicom-eur22m",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "\u2018We\u2019ve been a quiet company\u2019: Why viral biotech Vyriad attracts Big Pharmas despite low profile",
-   "link": "https://www.fiercebiotech.com/biotech/vyriad-tells-fierce-how-it-manages-quietly-attract-big-pharmas",
+   "title": "FDA issues noncompliance letters to 2 biotechs over lack of trial data reporting",
+   "link": "https://www.fiercebiotech.com/biotech/fda-issues-noncompliance-letters-biotechs-over-lack-trial-data-reporting",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "FDA signs off on Siemens Healthineers next gen multiple sclerosis blood test",
-   "link": "https://www.fiercebiotech.com/medtech/fda-signs-siemens-healthineers-next-gen-multiple-sclerosis-blood-test",
+   "title": "Finnish biotech delivers durable symptom relief in phase 2 birch pollen allergy trial",
+   "link": "https://www.fiercebiotech.com/biotech/desentum-delivers-durable-symptom-relief-phase-2-birch-pollen-allergy-trial",
    "source": "Fierce Biotech",
    "date": null
   },
   {
-   "title": "CMS touts nearly $10B in savings potential as latest round of Medicare negotiated prices unveiled",
-   "link": "https://www.fiercepharma.com/pharma/medicare-projects-92b-drug-cost-savings-latest-round-price-negotiations",
+   "title": "Bayer to pull kidney blockbuster Kerendia in Germany amid reimbursement dispute",
+   "link": "https://www.fiercepharma.com/pharma/bayer-pulls-kidney-blockbuster-kerendia-german-health-system-amid-pricing-dispute",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Rinvoq secures FDA nod in vitiligo, portending market showdown with Incyte",
-   "link": "https://www.fiercepharma.com/pharma/rinvoq-secures-fda-nod-vitiligo-ramping-competition-incyte",
+   "title": "Bristol Myers' Sotyktu posts a hit and a miss in pair of ph. 3 lupus trials",
+   "link": "https://www.fiercepharma.com/pharma/bristol-myers-sotyktu-posts-hit-and-miss-pair-ph-3-lupus-trials",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Marksans Pharma flagged for 6 observations in wake of FDA inspection",
-   "link": "https://www.fiercepharma.com/manufacturing/marksans-pharma-flagged-six-observations-wake-fda-inspection",
+   "title": "Cogent secures 2nd-line approval in rare GI cancer, the first in 20 years",
+   "link": "https://www.fiercepharma.com/pharma/cogent-secures-2nd-line-approval-rare-stomach-cancer-first-20-years",
    "source": "Fierce Pharma",
    "date": null
   },
   {
-   "title": "Sanofi inks massive $41B Insmed buyout for post-Dupixent growth drivers",
-   "link": "https://www.fiercepharma.com/pharma/sanofi-inks-41b-insmed-buyout-post-dupixent-growth-drivers",
+   "title": "GSK eyes approval filings after asthma med Exdensur scores in rare vascular disease",
+   "link": "https://www.fiercepharma.com/pharma/gsk-eyes-approval-filings-after-asthma-med-exdensur-scores-rare-vascular-disease",
    "source": "Fierce Pharma",
    "date": null
   }
